@@ -10,7 +10,7 @@
 
 get_header();
 ?>
-	<main id="home" class="home" tabindex="-1" role="main">
+	<main id="home1" class="home" tabindex="-1" role="main">
 		<h1 class="desabilitado"><?php the_title(); ?></h1>
 		<title><?php the_title(); ?></title>
 		<section class="banner">
