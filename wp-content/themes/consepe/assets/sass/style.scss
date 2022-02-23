@@ -1,0 +1,256 @@
+// ==========================================================================
+// Theme Style Main
+// ==========================================================================
+
+/*!
+Theme Name: Odin
+Author URI: http://wpod.in/
+Description: Odin main stylesheet.
+Author: the Odin team
+Author URI: http://wpod.in/#colaboradores
+*/
+
+@import
+        "variables",           // Theme       Custom Variables
+        "bootstrap/bootstrap", // Bootstrap   Styles Core
+        "wordpress/wordpress", // WordPress   Styles Core
+        //"woocommerce",       // WooCommerce Styles Core
+        "odin/core",           // Odin        Styles Core
+        "layout",              // Theme       Custom Layout
+        url('https://fonts.googleapis.com/css2?family=Exo:wght@400;600&display=swap')
+;
+body{
+        font-family: 'Exo', sans-serif;
+}
+.desabilitado{
+        display: none;
+}
+@media (min-width: 1200px){
+        .container {
+            width: 1340px;
+        }
+}
+main{
+        @extend .col-md-12;
+        padding: 0px;     
+        position: relative;
+        background-image: url(../images/fundo.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+}
+header{
+        .container:before, .container:after {
+            content: " ";
+            display: none;
+        }
+        .navbar:before, .navbar:after {
+           content: " ";
+           display: none;
+        }
+        .main-navigation {
+                background: transparent;
+                background-color: transparent;
+                margin: 0 !important;   
+                border: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                transition: all .4s;
+                padding: 20px 0;
+                @media screen and (max-width: 770px) and (min-width: 220px) {
+                        display: block;
+                }       
+                .logo-principal{
+                        img{
+                                max-width: 100%;
+                                transform: scale(1.00);
+                                transition: all .4s;
+                                &:hover{
+                                        transition: all .4s;
+                                        transform: scale(1.04);
+                                }
+                        }
+                }
+                .collapse{
+                        padding: 0;
+                }       
+                .navbar-header{
+                        margin-top: -40px;
+                        button{
+                                background-color: #fed638;
+                                border: 1px solid #fed638;
+                                outline: -webkit-focus-ring-color auto 0px;
+                                @media screen and (max-width: 770px) and (min-width: 220px) {
+                                        display: block;
+                                }
+                                &:hover{
+                                        background-color: #fed638;
+                                }
+                        }
+                        .icon-bar{
+                                background-color: #fff;
+                        }
+                }
+
+                .navbar-nav {
+                        float: none;
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-end;
+                        transition: all .4s;
+                        @media screen and (max-width: 480px) and (min-width: 220px) {
+                                display: block;
+                                background: transparent;
+                                margin: 0 -15px;
+                                height: inherit;
+                                transition: all .4s;
+                        }       
+                        li {
+                                padding: 0 20px;
+                                float: none;
+                                display: inline-block;  
+                                @media screen and (max-width: 770px) and (min-width: 220px) {
+                                        width: 100%;
+                                }       
+                                a {
+                                        position:relative;
+                                        display: block;
+                                        padding: 0 0 5px 0px;
+                                        margin-left: 10px;
+                                        text-transform: uppercase;
+                                        color: #FFFFFF;
+                                        font-weight: 600;
+                                        font-size: 28px;
+                                        background: transparent;
+                                        transition: all 0.3s;
+                                        &:before{
+                                                transition: all .3s;
+                                                content: ''; //obrigatorio
+                                                background: #fff;
+                                                height: 2px;
+                                                width: 0%;
+                                                position: absolute;
+                                                bottom: -5px;
+                                                left: 0px;
+                                        }
+                                        &:hover {  
+                                                transition: all 0.3s;
+                                                color: #FFFFFF;
+                                                &:before{
+                                                        width: 100%;
+                                                        transition: all .3s;
+                                                }
+                                        }
+                                        &:focus {
+                                            outline: 0px auto -webkit-focus-ring-color; 
+                                            outline-offset: 0px; 
+                                            color: #fff;
+                                        }                                               
+                                }
+                                &.active a { 
+                                        padding: 0 0 5px 0px;
+                                        background-color: transparent;
+                                        color: #FFFFFF;
+                                        position: relative;
+                                        border-bottom: 2px solid #FFFFFF;
+                                        &:hover { 
+                                                color: #FFFFFF;
+                                                border-bottom: 2px solid #FFFFFF;  
+                                                transition: all 0.3s;
+                                                background-color: transparent;
+                                        }       
+                                }
+                        }
+                }                               
+        }
+        .menu{
+                position: fixed;
+                top: 0;
+                background-color:transparent;
+                width: 100%;
+                z-index: 999;
+                transition: all .4s;
+                .logo-principal{
+                        img{
+                                width: 136px;
+                        }
+                }  
+        }
+        .menu-fixo{
+                transition: all .4s;
+                width: 100%;
+                z-index: 999;
+                background-color: #01244e;   
+                .main-navigation {                      
+                        padding: 10px 0;
+                }
+                .logo-principal{
+                        img{
+                                width: 100px;
+                        }
+                }  
+        }       
+}
+.home{
+        @extend .col-md-12;
+        padding: 0px;
+        position: relative;
+        .banner{
+                @extend .col-md-12;
+                padding: 0px;       
+                background-image: url(../images/fundo-banner.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: bottom;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                font-weight: 600;
+                position: relative;
+                height: 80vh;
+                /*.container{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-flow: wrap;
+                        margin-bottom: 140px;
+                }*/
+                .conteudo{
+                        position: absolute;
+                        top: 25%;
+                        left: 50%; 
+                        transform: translateX(-50%);
+                        width: 100%;                     
+                        .box{
+                                display: flex;
+                                justify-content: space-around;
+                                align-items: flex-start;
+                                padding: 0 70px;
+                        }
+                        h2{
+                                font-size: 64px;
+                                font-weight: 600;
+                                text-transform: uppercase;
+                                width: 630px;
+                                padding-top: 75px;
+                        }
+                }
+                /*.titulo{
+                        @extend .col-md-5;
+                        
+                }
+                .imagem{                      
+                        @extend .col-md-6, .col-md-offset-1;
+                        margin-bottom: -25%;
+                        img{
+                                width: 600px;
+                        }
+                }*/
+        }
+        .texto{
+                position:relative;
+                @extend .col-md-12;
+                padding: 0;               
+        }
+}
