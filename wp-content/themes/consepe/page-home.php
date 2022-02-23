@@ -35,18 +35,27 @@ get_header();
                 wp_reset_postdata(); ?>
            
 		</section>
-        <section class="texto">
+        <section class="texto-home">
             <article class="texto-imagem">
-                <?php the_post_thumbnail();?>
-                <div class="texto-info">
-                    <h2 class="texto-titulo">Há 7 anos colaborando com a segurança pública de Extrema</h2>
+                <div class="imagem"><?php the_post_thumbnail();?></div>
+                <div class="texto">
+                    <h2 class="titulo">Há 7 anos colaborando com a segurança pública de Extrema</h2>
                     <?php the_content(); ?>
-                    <button class="saiba-mais">Saiba mais sobre   </button>
+                    <a class="saiba-mais" href="#">Saiba mais sobre 
+                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.00003 0L0.590027 1.41L5.17003 6L0.590027 10.59L2.00003 12L8.00003 6L2.00003 0Z" fill="#01244e"/>
+                        </svg>
+                    </a>
                 </div>
             </article>
         </section>
-        <section>
-            
+        <section class="editais">
+            <div class="container">
+                <h3>Fique por dentro das nossas atualizações</h3>
+                <article>
+                    
+                </article>
+            </div>
         </section>
 	</main>
 <?php
