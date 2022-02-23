@@ -14,8 +14,7 @@ get_header();
 		<h1 class="desabilitado"><?php the_title(); ?></h1>
 		<title><?php the_title(); ?></title>
 		<section class="banner">
-			
-                <?php 
+			<?php 
                     $args = array('post_type' => 'banner','posts_per_page' => 1);
                     $var = new WP_Query($args);    
 
@@ -29,8 +28,7 @@ get_header();
                                     <h2><?php the_title(); ?></h2>
                                     <?php the_post_thumbnail();?>
                                 </div>                                
-                            </div>
-                                
+                            </div>                                
                             <?php
                         endwhile;
                     endif;
@@ -39,12 +37,16 @@ get_header();
 		</section>
         <section class="texto">
             <article class="texto-imagem">
-                
+                <?php the_post_thumbnail();?>
+                <div class="texto-info">
+                    <h2 class="texto-titulo">Há 7 anos colaborando com a segurança pública de Extrema</h2>
+                    <?php the_content(); ?>
+                    <button class="saiba-mais">Saiba mais sobre   </button>
+                </div>
             </article>
-            <article class="texto-info">
-                <h2 class="texto-titulo">Há 7 anos colaborando com a segurança pública de Extrema</h2>
-                <p class="texto-descricao"><?php the_content(); ?></p>
-            </article>
+        </section>
+        <section>
+            
         </section>
 	</main>
 <?php

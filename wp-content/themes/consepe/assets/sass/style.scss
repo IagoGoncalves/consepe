@@ -78,14 +78,14 @@ header{
                 .navbar-header{
                         margin-top: -40px;
                         button{
-                                background-color: #fed638;
-                                border: 1px solid #fed638;
+                                background-color: #01244e;
+                                border: 1px solid #01244e;
                                 outline: -webkit-focus-ring-color auto 0px;
                                 @media screen and (max-width: 770px) and (min-width: 220px) {
                                         display: block;
                                 }
                                 &:hover{
-                                        background-color: #fed638;
+                                        background-color: #01244e;
                                 }
                         }
                         .icon-bar{
@@ -209,13 +209,6 @@ header{
                 font-weight: 600;
                 position: relative;
                 height: 80vh;
-                /*.container{
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        flex-flow: wrap;
-                        margin-bottom: 140px;
-                }*/
                 .conteudo{
                         position: absolute;
                         top: 25%;
@@ -235,22 +228,42 @@ header{
                                 width: 630px;
                                 padding-top: 75px;
                         }
-                }
-                /*.titulo{
-                        @extend .col-md-5;
-                        
-                }
-                .imagem{                      
-                        @extend .col-md-6, .col-md-offset-1;
-                        margin-bottom: -25%;
-                        img{
-                                width: 600px;
-                        }
-                }*/
+                }               
         }
         .texto{
-                position:relative;
                 @extend .col-md-12;
-                padding: 0;               
+                position: relative;
+                padding: 200px 150px;
+                .texto-imagem{
+                        @extend .col-md-12;
+                        align-items: center;
+                        img{
+                                @extend .col-md-6;
+                        }
+                        .texto-info{
+                                @extend .col-md-6;
+                                padding-left: 90px;
+                                h2{
+                                        padding-bottom: 40px;
+                                        font-weight: 600;
+                                        font-size: 38px;
+                                }
+                                p{
+                                        font-weight: 400;
+                                        font-size: 28px;
+                                        padding-bottom: 60px;
+                                }
+                                .saiba-mais{
+                                        background-color: transparent;
+                                        color: #01244e;
+                                        border-color:#01244e;
+                                        font-weight: 600;
+                                        font-size: 16px;
+                                        border-radius: 10px;
+                                        padding: 25px;
+                                        border: 2px solid 
+                                }
+                        }
+                }             
         }
 }
