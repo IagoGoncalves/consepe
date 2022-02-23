@@ -36,26 +36,64 @@ get_header();
            
 		</section>
         <section class="texto-home">
-            <article class="texto-imagem">
-                <div class="imagem"><?php the_post_thumbnail();?></div>
-                <div class="texto">
-                    <h2 class="titulo">Há 7 anos colaborando com a segurança pública de Extrema</h2>
-                    <?php the_content(); ?>
-                    <a class="saiba-mais" href="#">Saiba mais sobre 
-                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M2.00003 0L0.590027 1.41L5.17003 6L0.590027 10.59L2.00003 12L8.00003 6L2.00003 0Z" fill="#01244e"/>
-                        </svg>
-                    </a>
-                </div>
-            </article>
-        </section>
-        <section class="editais">
             <div class="container">
-                <h3>Fique por dentro das nossas atualizações</h3>
-                <article>
-                    
+                <article class="texto-imagem">
+                    <div class="imagem"><?php echo odin_thumbnail(806, 680, true,true);?></div>
+                    <div class="texto">
+                        <h2>Há 7 anos colaborando com a segurança pública de Extrema</h2>
+                        <?php the_content(); ?>
+                        <a class="saiba-mais" href="#">Saiba mais sobre 
+                            <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.00003 0L0.590027 1.41L5.17003 6L0.590027 10.59L2.00003 12L8.00003 6L2.00003 0Z" fill="#01244e"/>
+                            </svg>
+                        </a>
+                    </div>
                 </article>
             </div>
+        </section>
+
+        <section class="editais-home">
+            <div class="container">
+                <article>
+                    <h2>Fique por dentro das nossas atualizações</h2>
+                    <div class="imagem">
+                         <img class="logo-edital" src="<?php echo get_template_directory_uri(); ?>/assets/images/editais 1.png"/>
+                    </div>
+                   
+                   <div class="tds-box">
+                        <?php 
+                            $args = array('post_type' => 'editais','posts_per_page' => 4);
+                            $var = new WP_Query($args);    
+
+                            if($var->have_posts()):
+                                while($var->have_posts()):
+                                    $var->the_post(); ?>
+                                        <!-- <a href="<?php the_permalink()?>">  -->
+                                         <a href=""> 
+                                            <div class="box">
+                                                <div class="titulo-data">
+                                                    <h4>Edital nº <?php the_title(); ?> - <?php the_date(); ?></h4>
+                                                </div>
+                                                <div class="botao">
+                                                    <span>Conferir</span>
+                                                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M2.00003 0L0.590027 1.41L5.17003 6L0.590027 10.59L2.00003 12L8.00003 6L2.00003 0Z" fill="#01244e"/>
+                                                    </svg>
+                                                </div>
+                                            </div>  
+                                         </a>                           
+                                    <?php
+                                endwhile;
+                            endif;
+                        wp_reset_postdata(); ?>
+                        <a class="ver-todos" href="">Ver todos
+                            <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.00003 0L0.590027 1.41L5.17003 6L0.590027 10.59L2.00003 12L8.00003 6L2.00003 0Z" fill="#01244e"/>
+                            </svg>
+                        </a>
+                   </div>
+                </article>
+            </div>            
         </section>
 	</main>
 <?php

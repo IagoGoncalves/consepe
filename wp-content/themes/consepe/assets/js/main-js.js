@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
 
 	// Menu fixo 
 	jQuery(window).scroll(function () {
-		if (jQuery(this).scrollTop() > 300) {
+		if (jQuery(this).scrollTop() > 90) {
 	    	$("#menu").addClass("menu-fixo");
 	    } else {
 	    	$("#menu").removeClass("menu-fixo");

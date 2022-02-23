@@ -27,7 +27,7 @@ body{
 }
 @media (min-width: 1200px){
         .container {
-            width: 1340px;
+            width: 1550px;
         }
 }
 main{
@@ -38,6 +38,13 @@ main{
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+}
+
+h2{
+        font-weight: 600;
+        color: #112D4E;
+        font-size: 38px;
+        padding-top: 40px;                        
 }
 header{
         .container:before, .container:after {
@@ -159,10 +166,27 @@ header{
                                                 border-bottom: 2px solid #FFFFFF;  
                                                 transition: all 0.3s;
                                                 background-color: transparent;
+                                        }
+                                        &:before{
+                                                transition: all .3s;
+                                                content: ''; //obrigatorio
+                                                background: #fff;
+                                                height: 2px;
+                                                width: 0%;
+                                                position: absolute;
+                                                bottom: -5px;
+                                                left: 0px;
                                         }       
                                 }
                         }
                 }                               
+        }
+        #menu{
+                @media (min-width: 1200px){
+                        .container {
+                                width: 1550px;
+                        }
+                }
         }
         .menu{
                 position: fixed;
@@ -181,7 +205,7 @@ header{
                 transition: all .4s;
                 width: 100%;
                 z-index: 999;
-                background-color: #01244e;   
+                background-color: #01244ed6;   
                 .main-navigation {                      
                         padding: 10px 0;
                 }
@@ -227,63 +251,130 @@ header{
                                 text-transform: uppercase;
                                 width: 630px;
                                 padding-top: 75px;
+                                color: #fff;
                         }
                 }               
         }
         .texto-home{
                 @extend .col-md-12;
                 position: relative;
-                padding: 200px 150px;
-                .texto-imagem{
-                        @extend .col-md-12;
-                        align-items: center;
-                        .imagem{
-                                @extend .col-md-6;
-                        }
-                        .texto{
-                                @extend .col-md-6;
-                                padding-left: 90px;
-                                .titulo{
-                                        padding-bottom: 40px;
-                                        font-weight: 600;
-                                        font-size: 38px;
-                                }
-                                p{
-                                        font-weight: 400;
-                                        font-size: 28px;
-                                        padding-bottom: 60px;
-                                }
-                                .saiba-mais{
-                                        text-decoration: none;
-                                        background-color: transparent;
-                                        color: #01244e;
-                                        border-color:#01244e;
-                                        font-weight: 600;
-                                        font-size: 16px;
-                                        border-radius: 10px;
-                                        padding: 25px 45px 25px 25px;
-                                        border: 2px solid;
-                                        text-transform: uppercase;
-                                        transition: all .4s;
-                                        svg{
-                                                margin-left: 15px;
-                                                path{
-                                                        transition: all .4s;
-                                                }
+                width: 100%;
+                padding: 200px 0 200px 0;
+                        .texto-imagem{
+                                @extend .col-md-12;
+                                align-items: center;
+                                padding: 0;
+                                .imagem{
+                                        padding-left: 0;
+                                        @extend .col-md-6;
+                                        img{
+                                                border-radius: 40px;
                                         }
-                                        &:hover{
-                                                color: #fff;
-                                                background-color: #01244e;
+                                }
+                                .texto{
+                                        @extend .col-md-5, .col-md-offset-1;
+                                        .titulo{
+                                                padding-bottom: 40px;
+                                                font-weight: 600;
+                                                font-size: 38px;
+                                        }
+                                        p{
+                                                font-weight: 400;
+                                                font-size: 28px;
+                                                padding-bottom: 100px;
+                                        }
+                                        .saiba-mais{
+                                                text-decoration: none;
+                                                background-color: transparent;
+                                                color: #01244e;
+                                                border-color:#01244e;
+                                                font-weight: 600;
+                                                font-size: 16px;
+                                                border-radius: 10px;
+                                                padding: 25px 45px 25px 25px;
+                                                border: 2px solid;
+                                                text-transform: uppercase;
                                                 transition: all .4s;
                                                 svg{
+                                                        transition: all .4s;
+                                                        margin-left: 15px;
                                                         path{
                                                                 transition: all .4s;
-                                                                fill: #fff;
+                                                        }
+                                                }
+                                                &:hover{
+                                                        color: #fff;
+                                                        background-color: #01244e;
+                                                        transition: all .4s;
+                                                        svg{
+                                                                transition: all .4s;
+                                                                margin-left: 20px;
+                                                                path{
+                                                                        margin-left: 20px;
+                                                                        transition: all .4s;
+                                                                        fill: #fff;
+                                                                }
                                                         }
                                                 }
                                         }
                                 }
+                        }             
+        }
+        .editais-home{
+                @extend .col-md-12;
+                padding: 0;
+                position: relative;
+                article{
+                        @extend .col-md-12;
+                        padding: 0;
+                        background-color:#DBE2EF;
+                        border-radius:40px;
+                        h2{
+                                text-align: center;
                         }
-                }             
+                        .imagem{
+                                padding: 0px;
+                                @extend .col-md-5;
+                        }   
+                        .tds-box{
+                                @extend .col-md-7;
+                                padding: 0px;
+                                margin-top: 60px;
+                                .box{
+                                        text-align: center;
+                                        padding-bottom: 100px;
+                                        .titulo-data{
+                                                @extend .col-md-7, .col-md-offset-1;
+                                                margin-right: 40px;
+                                                width: 468px;
+                                                height: 70px;
+                                                padding-top: 13px;
+                                                font-size: 16px;
+                                                font-weight: 600;
+                                                color: #112D4E99;
+                                                border: 2px solid rgba(17, 45, 78, 0.6);
+                                                border-radius:10px;
+                                        }
+                                        .botao{
+                                                @extend .col-md-4;
+                                                width: 160px;
+                                                height: 70px;
+                                                padding-top: 23px;
+                                                font-size: 16px;
+                                                font-weight: 600;
+                                                color: #112D4E99;
+                                                border: 2px solid rgba(17, 45, 78, 0.6);
+                                                border-radius:10px;
+                                        }
+                                }
+                                .ver-todos{
+                                        padding-left: 74%;
+                                        font-size: 16px;
+                                        font-weight: 600;
+                                        color: #112D4E;   
+                                }
+                        }
+                }          
+                 
         }
 }
