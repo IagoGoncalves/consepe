@@ -326,55 +326,136 @@ header{
                 position: relative;
                 article{
                         @extend .col-md-12;
-                        padding: 0;
                         background-color:#DBE2EF;
                         border-radius:40px;
                         h2{
                                 text-align: center;
                         }
                         .imagem{
-                                padding: 0px;
                                 @extend .col-md-5;
                         }   
                         .tds-box{
                                 @extend .col-md-7;
-                                padding: 0px;
-                                margin-top: 60px;
+                                margin-top: 100px;
                                 .box{
-                                        text-align: center;
-                                        padding-bottom: 100px;
+                                        display: flex;
+                                        justify-content: flex-start;
+                                        align-items: center;
+                                        margin-bottom: 40px;
                                         .titulo-data{
-                                                @extend .col-md-7, .col-md-offset-1;
-                                                margin-right: 40px;
-                                                width: 468px;
-                                                height: 70px;
-                                                padding-top: 13px;
-                                                font-size: 16px;
-                                                font-weight: 600;
-                                                color: #112D4E99;
-                                                border: 2px solid rgba(17, 45, 78, 0.6);
-                                                border-radius:10px;
+                                                border: 2px solid #112d4e;
+                                                border-radius: 10px;
+                                                padding: 11px 0px;
+                                                width: 500px;
+                                                text-align: center;
+                                                margin-right: 22px;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                svg{
+                                                        margin-right: 7%;
+                                                }
+                                                h4{
+                                                        font-size: 16px;
+                                                        font-weight: 600;
+                                                        
+                                                }
                                         }
                                         .botao{
-                                                @extend .col-md-4;
+                                                border: 2px solid #112d4e;
+                                                border-radius: 10px;
+                                                padding: 18px 0px;
                                                 width: 160px;
-                                                height: 70px;
-                                                padding-top: 23px;
-                                                font-size: 16px;
-                                                font-weight: 600;
-                                                color: #112D4E99;
-                                                border: 2px solid rgba(17, 45, 78, 0.6);
-                                                border-radius:10px;
+                                                text-align: center;
+                                                svg{
+                                                        transition: all .3s;
+                                                        margin-left: 5%;
+                                                }
+                                                &:hover{
+                                                        background-color:#112D4E;
+                                                        color:#fff;
+                                                        transition: all .3s;
+                                                        border:none;
+                                                        box-shadow: 0 5px 5px black;
+                                                        svg{
+                                                                transition: all .3s;
+                                                                margin-left: 10%;
+                                                                path{
+                                                                        fill: white;
+                                                                }
+                                                        }
+                                                }
+                                                span{
+                                                        font-size: 16px;
+                                                        font-weight: 600;
+                                                        text-transform: uppercase;
+                                                }
+                                        }
+                                        &:nth-child(1) {
+                                                .titulo-data{
+                                                        background-color: #fff;
+                                                        color:#112D4E;
+                                                        border: 2px solid #112d4e00;
+                                                        -webkit-box-shadow: 4px 16px 32px -11px rgba(0,0,0,0.62); 
+                                                        box-shadow: 4px 9px 21px -11px rgba(0,0,0,0.62);
+                                                }
+                                                .botao{
+                                                        background-color: #fff;
+                                                        color:#112D4E;
+                                                        border: 2px solid #112d4e00;
+                                                        -webkit-box-shadow: 4px 16px 32px -11px rgba(0,0,0,0.62); 
+                                                        box-shadow: 4px 9px 21px -11px rgba(0,0,0,0.62);
+                                                        &:hover{
+                                                                background-color:#112D4E;
+                                                                color:#fff;
+                                                                transition: all .3s;
+                                                                border:none;
+                                                                box-shadow: 0 5px 5px black;
+                                                                svg{
+                                                                        transition: all .3s;
+                                                                        margin-left: 10%;
+                                                                        path{
+                                                                                fill:white;
+                                                                        }
+                                                                }
+                                                }
+                                                }
                                         }
                                 }
+                                
                                 .ver-todos{
-                                        padding-left: 74%;
-                                        font-size: 16px;
-                                        font-weight: 600;
-                                        color: #112D4E;   
+                                        text-align: right;
+                                        padding-right: 19%;
+                                        svg{
+                                                transition: all .3s;
+                                        }
+                                        &:hover{
+                                                svg{
+                                                        transition: all .3s;
+                                                        margin-left:15px;    
+                                                }
+                                        }
+                                        a{
+                                                font-size: 16px;
+                                                font-weight: 600;
+                                                text-transform: uppercase;
+                                                color: #112D4E;
+                                        }
                                 }
+                                
                         }
-                }          
-                 
+                }                  
         }
-}
+        .noticias-home{
+                @extend .col-md-12;
+                padding: 0;
+                position: relative;
+                margin-top: 120px;
+                .info-noticias{
+                        @extend .col-md-6;
+                }
+                .noticias-imagem{
+                        @extend .col-md-6;
+                }
+        }
+}       
