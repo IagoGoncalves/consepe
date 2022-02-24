@@ -34,7 +34,7 @@ get_header();
                     endif;
                 wp_reset_postdata(); ?>
 		</section>
-        
+
         <section class="texto-home">
             <div class="container">
                 <article class="texto-imagem">
@@ -104,33 +104,66 @@ get_header();
 
         <section class="noticias-home">
             <div class="container">
-                <?php 
-                    $args = array('post_type' => 'noticia','posts_per_page' => 1);
-                    $var = new WP_Query($args);    
+                <div class="swiper-container  mySwiper col-md-12">     
+                    <div class="swiper-wrapper">
+                        <?php 
+                            $args = array('post_type' => 'noticia','posts_per_page' => 4);
+                            $var = new WP_Query($args);    
 
-                    if($var->have_posts()):
-                        while($var->have_posts()):
-                            $var->the_post(); ?>
-                                <article class="info-noticias">
-                                    <h2><?php the_title(); ?></h2>
-                                    <?php the_content(); ?>
-                                    <div class="botoes" >
-                                        <a href="" class="cnt-lendo">continuar lendo
-                                            <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M2.00003 0L0.590027 1.41L5.17003 6L0.590027 10.59L2.00003 12L8.00003 6L2.00003 0Z" fill="#01244e"/>
-                                            </svg>
-                                        </a>
-                                        <a href="" class="veja-mais">ver mais notícias</a>
+                            if($var->have_posts()):
+                                while($var->have_posts()):
+                                    $var->the_post(); ?>
+                                    <div class="swiper-slide">
+                                        <article class="info-noticias">
+                                            <h2 data-swiper-parallax="-900"><?php the_title(); ?></h2>
+                                           <div class=""data-swiper-parallax="-700">    
+                                              <p><?php echo excerpt(45); ?></p>
+                                           </div> 
+                                            <div class="botoes" data-swiper-parallax="-800">
+                                                <a href="" class="cnt-lendo">continuar lendo
+                                                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M2.00003 0L0.590027 1.41L5.17003 6L0.590027 10.59L2.00003 12L8.00003 6L2.00003 0Z" fill="#01244e"/>
+                                                    </svg>
+                                                </a>
+                                                <a href="" class="veja-mais" data-swiper-parallax="-800">ver mais notícias</a>
+                                            </div>
+                                        </article>
+                                        <article class="noticia-imagem">
+                                            <div class="foto-banner" data-swiper-parallax="1">
+                                                <?php echo odin_thumbnail(806, 680, true,true);?>
+                                            </div>
+                                        </article>
                                     </div>
-                                </article>
-                                <article class="noticia-imagem">
-                                    <?php echo odin_thumbnail(806, 680, true,true);?>
-                                </article>
-                            <?php
-                        endwhile;
-                    endif;
-                wp_reset_postdata(); ?>
+                                    <?php
+                                endwhile;
+                            endif;
+                        wp_reset_postdata(); ?>
+                    </div>
+                </div>                
             </div>
+            <article class="container">
+                <div class="page">
+                    <p class="borda-left" ></p>
+                    <div class="swiper-pagination"></div>
+                    <p class="borda-middle"></p>
+                    <article>
+                        <div href="" class="esquerda swiper-button-prev">
+                            <svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="1" y="1" width="58" height="38" rx="9" stroke="#112D4E" stroke-width="2"/>
+                                <path d="M32 26L33.41 24.59L28.83 20L33.41 15.41L32 14L26 20L32 26Z" fill="#112D4E"/>
+                            </svg>
+                        </div>
+                        <div href="" class="direita swiper-button-next">
+                            <svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="1" y="1" width="58" height="38" rx="9" stroke="#112D4E" stroke-width="2"/>
+                                <path d="M28 14L26.59 15.41L31.17 20L26.59 24.59L28 26L34 20L28 14Z" fill="#112D4E"/>
+                            </svg>
+                        </div>
+                    </article>
+                    <p class="borda-right"></p>
+                </div>      
+            </article>
+          
         </section>
 	</main>
 <?php

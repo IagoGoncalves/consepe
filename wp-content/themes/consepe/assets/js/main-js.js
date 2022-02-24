@@ -12,7 +12,7 @@ jQuery(document).ready(function($) {
 	//---------------------------------------
 
 	// Banners Swiper
-		var swiper = new Swiper('.banner-principal', {
+		var swiper = new Swiper('.mySwiper', {
 			speed: 1000,
 			parallax: true,
 			loop: true,
@@ -28,6 +28,13 @@ jQuery(document).ready(function($) {
 			},
 			autoplay: {
 				delay: 5000,
+			},
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+				renderBullet: function (index, className) {
+					return '<span class="' + className + '">' + (index + 1) + "</span>";
+				},
 			},
 		});
 });
