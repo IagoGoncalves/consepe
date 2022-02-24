@@ -273,7 +273,7 @@ header{
                                 }
                                 .texto{
                                         @extend .col-md-5, .col-md-offset-1;
-                                        .titulo{
+                                        h2{
                                                 padding-bottom: 40px;
                                                 font-weight: 600;
                                                 font-size: 38px;
@@ -342,8 +342,11 @@ header{
                                         justify-content: flex-start;
                                         align-items: center;
                                         margin-bottom: 40px;
+                                        a{
+                                                text-decoration: none;
+                                        }
                                         .titulo-data{
-                                                border: 2px solid #112d4e;
+                                                border: 2px solid rgba(17, 45, 78, 0.6);
                                                 border-radius: 10px;
                                                 padding: 11px 0px;
                                                 width: 500px;
@@ -358,11 +361,12 @@ header{
                                                 h4{
                                                         font-size: 16px;
                                                         font-weight: 600;
+                                                        color:rgba(17, 45, 78, 0.6);
                                                         
                                                 }
                                         }
                                         .botao{
-                                                border: 2px solid #112d4e;
+                                                border: 2px solid rgba(17, 45, 78, 0.6);
                                                 border-radius: 10px;
                                                 padding: 18px 0px;
                                                 width: 160px;
@@ -371,12 +375,20 @@ header{
                                                         transition: all .3s;
                                                         margin-left: 5%;
                                                 }
+                                                span{
+                                                        font-size: 16px;
+                                                        font-weight: 600;
+                                                        text-transform: uppercase;
+                                                        color:rgba(17, 45, 78, 0.6);
+                                                }
                                                 &:hover{
                                                         background-color:#112D4E;
-                                                        color:#fff;
                                                         transition: all .3s;
                                                         border:none;
                                                         box-shadow: 0 5px 5px black;
+                                                        span{
+                                                                color:#fff;
+                                                        }
                                                         svg{
                                                                 transition: all .3s;
                                                                 margin-left: 10%;
@@ -385,11 +397,7 @@ header{
                                                                 }
                                                         }
                                                 }
-                                                span{
-                                                        font-size: 16px;
-                                                        font-weight: 600;
-                                                        text-transform: uppercase;
-                                                }
+                                                
                                         }
                                         &:nth-child(1) {
                                                 .titulo-data{
@@ -418,7 +426,7 @@ header{
                                                                                 fill:white;
                                                                         }
                                                                 }
-                                                }
+                                                        }
                                                 }
                                         }
                                 }
@@ -451,11 +459,108 @@ header{
                 padding: 0;
                 position: relative;
                 margin-top: 120px;
-                .info-noticias{
-                        @extend .col-md-6;
+                margin-bottom: 140px;
+                .container{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        .info-noticias{
+                                @extend .col-md-6;
+                                padding-right: 145px;
+                                h2{
+                                        padding-bottom:40px;     
+                                        font-size: 38px;
+                                        font-weight: 600;
+                                        color: #112D4E;
+                                }
+                                p{
+                                        padding-bottom:60px;
+                                        font-size: 28px;
+                                        font-weight: 400;
+                                        color: #112D4E;
+                                }
+                                .botoes{
+                                        margin-bottom: 25px;
+                                        transition: all .3s;
+                                        .cnt-lendo{
+                                                text-decoration: none;
+                                                color: #01244e;
+                                                border-color:#01244e;
+                                                font-weight: 600;
+                                                font-size: 16px;
+                                                border-radius: 10px;
+                                                padding: 25px 45px 25px 25px;
+                                                border: 2px solid;
+                                                text-transform: uppercase;
+                                                &:hover{
+                                                        background-color:#112D4E;
+                                                        color:#fff;
+                                                        transition: all .3s;
+                                                        border:none;
+                                                        box-shadow: 0 5px 5px black;
+                                                        svg{
+                                                                margin-left: 3%;
+                                                                path{
+                                                                        fill:white;
+                                                                }
+                                                        }
+                                                }
+                                        }
+                                        .veja-mais{
+                                                font-weight: 600;
+                                                font-size: 16px;
+                                                color: rgba(64, 64, 64, 0.6);
+                                                margin-left: 16px;
+                                                text-transform: uppercase;
+                                        }
+                                }
+                        }
+                        .noticias-imagem{
+                                @extend .col-md-6;
+                                img{
+                                        border-radius:40px;
+                                }
+                        }
                 }
-                .noticias-imagem{
-                        @extend .col-md-6;
+        }
+}
+
+footer{
+        @extend .col-md-12;
+        background-color: #112D4E;
+        .footer-email{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                height: 150px;
+                border-bottom: 1px solid white;
+                .info{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        span{
+                                padding-left: 12px;
+                                color: white;
+                                font-weight: 600;
+                                font-size: 20px;
+                        }
                 }
+                .inc{
+                }
+        }
+        .footer-copy{
+                height: 50px; 
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 70%;
+                margin-right: auto;
+                margin-left: auto;
+                .right{
+                        color: #fff;
+                        font-weight: 600;
+                        font-size: 14px;
+                        text-transform: uppercase;
+                }  
         }
 }       

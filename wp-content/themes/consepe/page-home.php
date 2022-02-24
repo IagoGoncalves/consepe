@@ -33,8 +33,8 @@ get_header();
                         endwhile;
                     endif;
                 wp_reset_postdata(); ?>
-           
 		</section>
+        
         <section class="texto-home">
             <div class="container">
                 <article class="texto-imagem">
@@ -104,26 +104,32 @@ get_header();
 
         <section class="noticias-home">
             <div class="container">
-                <article class="info-noticias">
-                    <h2>exercitation ullamco laboris nisi</h2>
-                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
-                    <div class="botoes" >
-                        <a href="" class="cnt-lendo">continuar lendo
-                            <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2.00003 0L0.590027 1.41L5.17003 6L0.590027 10.59L2.00003 12L8.00003 6L2.00003 0Z" fill="#01244e"/>
-                            </svg>
-                        </a>
-                        <a href="" class="veja-mais">ver mais notícias</a>
-                    </div>
-                </article>
-                <article class="noticia-imagem">
-                    
-                </article>
+                <?php 
+                    $args = array('post_type' => 'noticia','posts_per_page' => 1);
+                    $var = new WP_Query($args);    
+
+                    if($var->have_posts()):
+                        while($var->have_posts()):
+                            $var->the_post(); ?>
+                                <article class="info-noticias">
+                                    <h2><?php the_title(); ?></h2>
+                                    <?php the_content(); ?>
+                                    <div class="botoes" >
+                                        <a href="" class="cnt-lendo">continuar lendo
+                                            <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M2.00003 0L0.590027 1.41L5.17003 6L0.590027 10.59L2.00003 12L8.00003 6L2.00003 0Z" fill="#01244e"/>
+                                            </svg>
+                                        </a>
+                                        <a href="" class="veja-mais">ver mais notícias</a>
+                                    </div>
+                                </article>
+                                <article class="noticia-imagem">
+                                    <?php echo odin_thumbnail(806, 680, true,true);?>
+                                </article>
+                            <?php
+                        endwhile;
+                    endif;
+                wp_reset_postdata(); ?>
             </div>
         </section>
 	</main>
