@@ -46,6 +46,33 @@ h2{
         font-size: 38px;
         padding-top: 40px;                        
 }
+.breadcrumb{
+        background-color:transparent;
+        padding: 0 0 0;
+        ul{
+                display: inline-flex;
+                list-style: none;
+                align-items: baseline;
+                li{
+                        padding-right: 5px;
+                        a{
+                                font-weight: 600;
+                                font-size: 16px;
+                                color: #404040;
+                                svg{
+                                        margin-right: 5px;
+                                }
+                        }
+                }
+                .atual{
+                        h1{
+                                font-weight: 600;
+                                font-size: 16px;
+                                color: rgba(64, 64, 64, 0.6);
+                        }
+                }
+        }
+}
 header{
         .container:before, .container:after {
             content: " ";
@@ -636,6 +663,72 @@ header{
         @extend .col-md-12;
         padding: 0px;
         position: relative;
+        text-transform: uppercase;
+        .info{
+                .destaque{
+                        text-align: center;
+                        padding:61px 0 80px 0;
+                        font-weight: 600;
+                        font-size: 38px;
+                        color: #112D4E;
+                }
+                .sobre{
+                        p{
+                                text-align: center;
+                                font-size: 28px;
+                                text-align: center;
+                                color: rgba(64, 64, 64, 0.8);
+                                text-transform: none;
+                        }
+                }
+        }
+        .fluxo{
+                h2{
+                        font-weight: 600;
+                        font-size: 38px;
+                        line-height: 51px;
+                        color: #404040;
+                        padding: 121px 0 80px 0;
+                        text-transform: none;    
+                }
+                img{
+                        padding-bottom:120px;
+                }
+        }
+        .estatuto{
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                background-color: #DBE2EF;
+                border-radius: 20px;
+                height: 160px;
+                margin-bottom:120px;
+                .confira{
+                        font-weight: 600;
+                        font-size: 38px;
+                        line-height: 51px;
+                        color: #112D4E;
+                        text-transform: none;
+                }
+                .down-estatuto{
+                        background-color: #112D4E;
+                        border-radius: 20px;
+                        color: #fff;
+                        font-weight: 600;
+                        font-size: 16px;
+                        padding: 25px 80px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        &:hover{
+                                text-decoration: none;
+                        }
+                        span{
+                                padding-right: 15px;
+
+                        }
+                }
+        }
 }
 footer{
         @extend .col-md-12;
