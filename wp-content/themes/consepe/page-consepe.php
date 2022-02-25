@@ -11,13 +11,13 @@
 get_header();
 ?>
 
-	<main id="consepe" class="consepe" tabindex="-1" role="main">
+	<main id="consepe" class="consepe" tabindex="-1" role="consepe">
 		<section class="breadcrumb">
 			<img class="logo-edital" src="<?php echo get_template_directory_uri(); ?>/assets/images/background_sobre1.png"/>
 			<div class="container">
 				<ul>
 					<li>
-						<a href="">
+						<a href="<?php echo esc_url( home_url( 'home' ) ); ?>">
 							<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M6.00003 12L7.41003 10.59L2.83003 6L7.41004 1.41L6.00004 -1.23266e-07L3.48568e-05 6L6.00003 12Z" fill="#404040"/>
 							</svg>

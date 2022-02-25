@@ -163,7 +163,6 @@ get_header();
                     <p class="borda-right"></p>
                 </div>      
             </article>
-          
         </section>
 	</main>
 <?php

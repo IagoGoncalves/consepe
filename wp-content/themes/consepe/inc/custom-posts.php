@@ -30,7 +30,9 @@ function type_post_porsonalizados() {
             'public' => true,
             'supports' => array('title','thumbnail'),
             'has_archive' => true,
-            'menu_icon' => 'dashicons-format-image'   
+            'menu_icon' => 'dashicons-format-image',
+            'show_in_nav_menus' => true,
+            'show_in_rest' => true   
          ),
       );
    //Noticia--------------------------------------
