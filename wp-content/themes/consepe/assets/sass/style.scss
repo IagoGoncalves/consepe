@@ -402,17 +402,21 @@ header{
                                         &:nth-child(1) {
                                                 .titulo-data{
                                                         background-color: #fff;
-                                                        color:#112D4E;
                                                         border: 2px solid #112d4e00;
                                                         -webkit-box-shadow: 4px 16px 32px -11px rgba(0,0,0,0.62); 
                                                         box-shadow: 4px 9px 21px -11px rgba(0,0,0,0.62);
+                                                        h4{
+                                                                color:#112D4E;
+                                                        }
                                                 }
                                                 .botao{
                                                         background-color: #fff;
-                                                        color:#112D4E;
                                                         border: 2px solid #112d4e00;
                                                         -webkit-box-shadow: 4px 16px 32px -11px rgba(0,0,0,0.62); 
                                                         box-shadow: 4px 9px 21px -11px rgba(0,0,0,0.62);
+                                                        span{
+                                                                color:#112D4E;
+                                                        }
                                                         &:hover{
                                                                 background-color:#112D4E;
                                                                 color:#fff;
@@ -434,13 +438,10 @@ header{
                                 .ver-todos{
                                         text-align: right;
                                         padding-right: 19%;
-                                        svg{
-                                                transition: all .3s;
-                                        }
                                         &:hover{
-                                                svg{
-                                                        transition: all .3s;
-                                                        margin-left:15px;    
+                                                a{
+                                                        transition: all .2s;
+                                                        color: #112d4ec9;
                                                 }
                                         }
                                         a{
@@ -448,6 +449,7 @@ header{
                                                 font-weight: 600;
                                                 text-transform: uppercase;
                                                 color: #112D4E;
+                                                transition: all .2s;
                                         }
                                 }
                                 
@@ -481,7 +483,6 @@ header{
                                 }
                                 .botoes{
                                         margin-bottom: 25px;
-                                        transition: all .3s;
                                         .cnt-lendo{
                                                 text-decoration: none;
                                                 color: #01244e;
@@ -492,15 +493,19 @@ header{
                                                 padding: 25px 45px 25px 25px;
                                                 border: 2px solid;
                                                 text-transform: uppercase;
+                                                svg{
+                                                        transition: all .3s;
+                                                }
                                                 &:hover{
                                                         background-color:#112D4E;
                                                         color:#fff;
-                                                        transition: all .3s;
                                                         border:none;
                                                         box-shadow: 0 5px 5px black;
+                                                        transition: all .3s;
                                                         svg{
-                                                                margin-left: 3%;
+                                                                margin-left: 2%;
                                                                 path{
+                                                                        margin-left: 3%;
                                                                         fill:white;
                                                                 }
                                                         }
@@ -512,6 +517,10 @@ header{
                                                 color: rgba(64, 64, 64, 0.6);
                                                 margin-left: 16px;
                                                 text-transform: uppercase;
+                                                text-decoration: none;
+                                                &:hover{
+                                                        color: #112D4E;
+                                                }
                                         }
                                 }
                         }
@@ -581,6 +590,36 @@ header{
                                         width: initial;
                                         height: initial;
                                 }
+                                .esquerda{
+                                        svg{
+                                                transition: all .3s;
+                                        }
+                                        &:hover{
+                                                svg{
+                                                        border-radius: 10px;
+                                                        background-color: #112D4E;
+                                                        transition: all .3s;
+                                                        path{
+                                                                fill:#fff
+                                                        }
+                                                }
+                                        }
+                                }
+                                .direita{
+                                        svg{
+                                                transition: all .3s;
+                                        }
+                                        &:hover{
+                                                svg{
+                                                        border-radius: 10px;
+                                                        background-color: #112D4E;
+                                                        transition: all .3s;
+                                                        path{
+                                                                fill:#fff
+                                                        }
+                                                }
+                                        }
+                                }
                         }
                         .borda-right{
                                 @extend .col-md-1;
@@ -593,16 +632,20 @@ header{
                 
         }
 }
-
+.consepe{
+        @extend .col-md-12;
+        padding: 0px;
+        position: relative;
+}
 footer{
         @extend .col-md-12;
         background-color: #112D4E;
         .footer-email{
                 display: flex;
-                justify-content: space-around;
+                justify-content: space-between;
                 align-items: center;
-                height: 150px;
-                border-bottom: 1px solid white;
+                height: 220px;
+                padding: 0px 100px 0;
                 .info{
                         display: flex;
                         align-items: center;
@@ -614,15 +657,20 @@ footer{
                                 font-size: 20px;
                         }
                 }
-                .inc{
+                .icn{
+                        svg{
+                                margin-right: 20px;
+                        }
                 }
+        }
+        .border-line{
+                border-bottom: 1px solid white;
         }
         .footer-copy{
                 height: 50px; 
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                width: 70%;
                 margin-right: auto;
                 margin-left: auto;
                 .right{
