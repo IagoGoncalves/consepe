@@ -49,6 +49,7 @@ main{
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        user-select: none;
 }
 
 h2{
@@ -459,10 +460,12 @@ header{
                                                         }
                                                         &:hover{
                                                                 background-color:#112D4E;
-                                                                color:#fff;
                                                                 transition: all .3s;
                                                                 border:none;
                                                                 box-shadow: 0 5px 5px black;
+                                                                span{
+                                                                        color:#fff;
+                                                                }
                                                                 svg{
                                                                         transition: all .3s;
                                                                         margin-left: 10%;
@@ -803,6 +806,66 @@ header{
                         }
                 }
         }
+}
+.noticias{
+        .container{
+                .first-block{
+                        position: relative;                        
+                        .box{
+                                @extend .col-md-4;
+                                position: relative;
+                                padding: 0px;
+                                margin-bottom: 15px;
+                                .imagem{
+                                        img{
+                                                border-radius:40px;
+                                                width: 100%;
+                                                max-width: 100%;
+                                                height: auto;
+                                        }
+                                }
+                                .conteudo{
+                                        position: absolute;
+                                        z-index: 99;
+                                        bottom: 0;
+                                        background: linear-gradient(360deg, #3F72AF 20%, rgba(63, 114, 175, 0) 100%);
+                                        border-radius: 0px 0px 40px 40px;
+                                        width: 100%;
+                                        padding: 10px;
+                                        h3{
+                                                font-weight: 600;
+                                                font-size: 28px;
+                                                color: #FFFFFF;
+                                        }
+                                        p{
+                                                display: none;
+                                                font-size: 18px;
+                                                color: #FFFFFF;
+                                        }
+                                }
+                                &:nth-child(1) {
+                                        @extend .col-md-8;
+                                        width: 64.666667%;
+                                        padding: 0;
+                                        margin: 0 1%;
+                                        p{
+                                                display: block;
+                                                font-weight: 600;
+                                                font-size: 20px;
+                                                color: #FFFFFF;
+                                        }
+                                }
+                        }
+                        .borda-first{
+                                @extend .col-md-12;
+                                width: 11.333333%;
+                                height: 5px;
+                                background: #112D4E;
+                                margin: 0;
+                        }                        
+                }
+        }
+
 }
 footer{
         @extend .col-md-12;
