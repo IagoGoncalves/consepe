@@ -22,6 +22,17 @@ Author URI: http://wpod.in/#colaboradores
 body{
         font-family: 'Exo', sans-serif;
 }
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(64, 64, 64, 0.6);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    background: #404040; 
+}
 .desabilitado{
         display: none;
 }
@@ -733,22 +744,63 @@ header{
         }
 }
 .editais-bloco{
+        padding-bottom: 120px;
         article{
                 background: #DBE2EF;
                 border-radius: 20px;
+                padding-bottom: 100px;
                 h2{
                         text-align: center;
                         font-size: 38px;
+                        padding-top:67px
                 }
                 .logo-edital{
                         display: flex;
                         justify-content: center;
+                        padding: 80px 0 80px 0;
                 }
                 .tds-box{
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        flex-direction: column;
+                        height: 430px;
+                        overflow: overlay;
+                        margin: 0 124px;
+                        .box{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 100%;
+                                    margin-bottom: 50px;
+                                .titulo-edital{
+                                        font-weight: 600;
+                                        font-size: 16px;
+                                        color: #112D4E; 
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        background-color: #fff;
+                                        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                                        border-radius: 20px;
+                                        padding: 20px 90px;
+                                }
+                                a{
+                                        padding-left: 40px;
+                                        .down-edit{
+                                                font-weight: 600;
+                                                font-size: 16px;
+                                                color: #fff; 
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                background-color: #112D4E;
+                                                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+                                                border-radius: 20px;
+                                                text-transform: uppercase;
+                                                padding: 20px 80px;
+                                        }
+                                }
+                                span{
+                                        padding: 0 20px;
+                                }
+                        }
                 }
         }
 }
