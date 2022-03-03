@@ -45,15 +45,16 @@ get_header(); ?>
 		            if($var->have_posts()):
 		                while($var->have_posts()):
 		                    $var->the_post(); ?>
-		                        <!-- <a href="<?php the_permalink()?>">  -->
 		                        <div class="box">
-		                        	<div class="imagem">
-		                        		<?php echo odin_thumbnail(1000, 650, true,true);?>
-		                        	</div>
-		                        	<div class="conteudo">
-			                        	<h3><?php the_title(); ?></h3>
-			                        	<p><?php echo excerpt(30); ?></p>
-		                        	</div>
+			                        <a href="<?php the_permalink()?>">
+			                        	<div class="imagem">
+			                        		<?php echo odin_thumbnail(1000, 650, true,true);?>
+			                        	</div>
+			                        	<div class="conteudo">
+				                        	<h3><?php the_title(); ?></h3>
+				                        	<p><?php echo excerpt(30); ?></p>
+			                        	</div>
+			                        </a>
 		                        </div>		                        
 		                    <?php
 		                endwhile;
@@ -61,7 +62,49 @@ get_header(); ?>
 		        wp_reset_postdata(); ?>
 		        <p class="borda-first"></p>
 			</article>
+			<article class="second-block">
+				<?php 
+		            $args = array('post_type' => 'noticia','posts_per_page' => 6, 'offset'=> 3);
+		            $var = new WP_Query($args);    
 
+		            if($var->have_posts()):
+		                while($var->have_posts()):
+		                    $var->the_post(); ?>
+		                        <div class="box">
+		                        	<a href="<?php the_permalink()?>">
+		                        	<div class="imagem">
+		                        		<?php echo odin_thumbnail(1000, 650, true,true);?>
+		                        	</div>
+		                        	<div class="conteudo">
+			                        	<h3><?php the_title(); ?></h3>
+		                        	</div>
+		                        	</a>  
+		                        </div>
+		                    <?php
+		                endwhile;
+		            endif;
+		        wp_reset_postdata(); ?>
+		        <div class="page">
+                    <p class="borda-left" ></p>
+                    <div class="swiper-pagination"></div>
+                    <p class="borda-middle"></p>
+                    <article>
+                        <div href="" class="esquerda swiper-button-prev">
+                            <svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="1" y="1" width="58" height="38" rx="9" stroke="#112D4E" stroke-width="2"/>
+                                <path d="M32 26L33.41 24.59L28.83 20L33.41 15.41L32 14L26 20L32 26Z" fill="#112D4E"/>
+                            </svg>
+                        </div>
+                        <div href="" class="direita swiper-button-next">
+                            <svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="1" y="1" width="58" height="38" rx="9" stroke="#112D4E" stroke-width="2"/>
+                                <path d="M28 14L26.59 15.41L31.17 20L26.59 24.59L28 26L34 20L28 14Z" fill="#112D4E"/>
+                            </svg>
+                        </div>
+                    </article>
+                    <p class="borda-right"></p>
+                </div>  
+			</article>
 		</section>
 	</main>
 
