@@ -66,7 +66,6 @@ get_header(); ?>
                                                     <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M0 17.1458H14V15.1458H0V17.1458ZM14 6.14575H10V0.145752H4V6.14575H0L7 13.1458L14 6.14575Z" fill="white"/>
 													</svg>
-
                                                 </div>
                                             </a>  
                                         </div>  

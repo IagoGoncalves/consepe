@@ -38,10 +38,35 @@ get_header();
 
 		            if($var->have_posts()):
 		                while($var->have_posts()):
-		                    $var->the_post(); ?>
-		                        <div class="box">
-		                        	<?php the_title(); ?>
-		                        </div>
+		                    $var->the_post();?>
+		                    <?php
+		                    	$telefone =  get_post_meta( $post->ID,'telefone', true);
+								$logradouro =  get_post_meta( $post->ID,'logradouro-gratuito', true);
+		                    	$endereco =  get_post_meta( $post->ID,'endereco-gratuito', true);
+								$numero =  get_post_meta( $post->ID,'numero-gratuito', true);
+								$complemento =  get_post_meta( $post->ID,'complemento-gratuito', true);
+								$bairro =  get_post_meta( $post->ID,'bairro-gratuito', true);
+								$cidade =  get_post_meta( $post->ID,'cidade-gratuito', true);
+								$estado =  get_post_meta( $post->ID,'estado-gratuito', true);
+							?>
+
+	                        <div class="box">
+	                        	<span class="nome">
+		                        	<p><?php the_title(); ?> - </p>
+		                        	<?php if ($telefone != '') { ?>
+										<p class="telefone"><?php echo $telefone?> <br></p>
+										<?php } else { ?>
+											<p style="display: none;"></p>
+									<?php } ?>
+	                        	</span>
+	                        	<?php if ($endereco != '') { ?>
+									<p><?php echo $logradouro?> <?php echo $endereco?>, <?php echo $numero?> <?php echo $complemento?> <?php echo $bairro?> <?php echo $cidade?> - <?php echo $estado?></p>
+
+									<?php } else { ?>
+										<p style="display: none;"></p>
+								<?php } ?>
+	                        </div>
+
 		                    <?php
 		                endwhile;
 		            endif;
@@ -49,10 +74,17 @@ get_header();
 			</article>
 			<article class="formulario">
 					<h2 class="fontzero">Fale conosco!</h2>
-					<form id="formulario" class="form-contato" name="enviar-email" method="post">
-						
+					<form id="formulario" class="form" name="enviar-email" method="post">
+						<div class="input-field">		
+							<input type="text" name="nome" autocomplete="off" placeholder="Nome">
+							<input type="text" name="assunto" autocomplete="off" placeholder="Assunto">
+							<input type="text" name="msg" autocomplete="off" placeholder="Mensagem">
+							<div class="botao-enviar">
+								<button value="submit">Enviar</button>	
+							</div>
+						</div>
 		            </form>
-				</article>
+			</article>
 		</section>
 	</main>
 <?php

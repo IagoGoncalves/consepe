@@ -1126,111 +1126,107 @@ header{
 }
 .contato{
         .container{
-                .banner{
-
-                }
-                .formulario{
-                        @extend .col-md-7;
-                        margin-top: 30px;
-                        form{
-                                margin-left: 40px;
-                                input, textarea{
-                                        display: block;
-                                        background-color: #f8f9fa;
-                                        width: 100%;
-                                        padding: 10px 10px;
-                                        margin: 12px 0px;
-                                        font-weight: 500;
-                                        font-style: italic;
-                                        border: 1px solid #99a1a2;
-                                        &:focus{
-                                                outline: 0;
-                                                padding: 9px 9px;
-                                                border: 2px solid #99a1a2;
-                                        }
-                                }
-                                textarea{
-                                        height: 150px;
-                                }
+                .infos{
+                        padding-bottom: 120px;
+                        @extend .col-md-6;
+                        .box{
+                                padding-top: 35px;
                                 p{
-                                        color: #7e7f7f;
-                                        font-size: .9em;
-                                        span{
-                                                font-weight: 700;
-                                        }
+                                        margin: 0;
+                                        font-weight: 600;
+                                        font-size: 20px;
+                                        color: #404040;
                                 }
-                                .botao-captcha{
+                                .nome{
                                         display: flex;
-                                        align-items: flex-end;
-                                        flex-direction: column;
-                                        margin-top: -60px;
-                                        .botao-enviar{
-                                                button{                         
-                                                        background-color: #8e0000;
-                                                        color: #fff;
-                                                        font-size: 1em;
-                                                        text-transform: uppercase;
-                                                        padding: 8px 25px;
-                                                        font-weight: 500;
-                                                        border-radius: 0;
-                                                        margin-top: 0px;
-                                                        position: relative;
-                                                        right: 0%;
-                                                        transition: all .2s;
-                                                        &:hover{
-                                                                transition: all .2s;
-                                                                color: #fff;
-                                                                background-color: rgba(195, 19, 19, 0.7);
-                                                        }
-                                                        &:focus{
-                                                                outline: 0;
-                                                        }
-                                                }
-                                        }
-                                        .g-recaptcha_align{
-                                                margin-bottom: 15px;
-                                        }
-                                        svg{
-                                                display: none;
-                                        }
-                                }
-                                .oportunidade{
-                                        margin: 40px 0;
-                                        text-align: center;
-                                        p{
-                                                color: #57161b;
-                                                font-size: 1em;
-                                                font-weight: 700;
-                                                text-align: center;
-                                                text-transform: uppercase;
-                                        }
-                                        .link{
-                                                display: flex;
-                                                justify-content: center;
-                                                a{
-                                                        font-size: 1.2em;
-                                                        color: #fff;
-                                                        background-color: #f2cc4f;
-                                                        text-align: center;
-                                                        text-transform: uppercase;
-                                                        text-decoration: none;
-                                                        font-weight: 600;
-                                                        padding: 12px 0;
-                                                        border: none;
-                                                        border-radius: 0;
-                                                        width: 100%;
-                                                        transition: all .5s;
-                                                        &:hover{
-                                                                box-shadow: 1px 5px 14px 0px #c1c1c1;
-                                                                transition: all .5s;
-                                                        }
-                                                }
+                                        .telefone{
+                                                padding-left: 5px;
                                         }
                                 }
                         }
                 }
-                .infos{
-
+                .formulario{  
+                        @extend .col-md-5;
+                        background: #DBE2EF;
+                        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
+                        border-radius: 20px;
+                        margin-top: -100px;
+                        padding: 75px;  
+                        .fontzero{
+                                text-align: center;
+                                font-weight: 600;
+                                font-size: 32px;
+                                color: #3F72AF;
+                                padding-top:0px
+                        }        
+                        .form{
+                                .input-field{
+                                        input{
+                                                width: 100%;
+                                                background: none;
+                                                border: none;
+                                                border-bottom:  2px solid rgba(64, 64, 64, 0.4);
+                                                font-weight: 600;
+                                                font-size: 20px;
+                                                color: #112D4E;
+                                                padding-top: 60px;
+                                                &:focus-visible{
+                                                        outline:0px;
+                                                }
+                                                &:focus{
+                                                        background: yellow;     
+                                                }
+                                        }
+                                        input::-webkit-input-placeholder { /* Chrome, Safari, Opera */
+                                                font-weight: 600;
+                                                font-size: 20px;
+                                                color: #404040;
+                                                opacity: 0.4;
+                                        }
+                                        input:-moz-placeholder { /* Firefox 18- */
+                                                font-weight: 600;
+                                                font-size: 20px;
+                                                color: #404040;
+                                                opacity: 0.4;
+                                                opacity: 1;
+                                        }
+                                        input::-moz-placeholder {  /* Firefox 19+ */
+                                                font-weight: 600;
+                                                font-size: 20px;
+                                                color: #404040;
+                                                opacity: 0.4;
+                                                opacity: 1;
+                                        }
+                                        input:-ms-input-placeholder { /* IE10+ */ 
+                                                font-weight: 600;
+                                                font-size: 20px;
+                                                color: #404040;
+                                                opacity: 0.4;
+                                        }
+                                        .botao-enviar{
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                padding: 60px 0 0 0;
+                                                button{
+                                                        background: #112D4E;
+                                                        box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.2);
+                                                        border-radius: 10px;
+                                                        font-weight: 600;
+                                                        font-size: 16px;
+                                                        color: #FFFFFF;
+                                                        text-transform: uppercase;
+                                                        width: 240px;
+                                                        height: 70px;
+                                                        transition: all .3s;
+                                                        &:hover{
+                                                                transition: all .3s;
+                                                                font-size: 18px;
+                                                        }
+                                                }          
+                                        }
+                                }  
+                        }
                 }
         }
 }
