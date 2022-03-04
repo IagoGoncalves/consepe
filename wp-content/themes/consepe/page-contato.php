@@ -85,7 +85,7 @@ get_header();
 								<label>Assunto</label>
 							</div>
 							<div class="float-label">
-								<input type="text" name="msg" autocomplete="off" data-empty>
+								<input type="textarea" name="msg" autocomplete="off" data-empty>
 								<label>Mensagem</label>
 							</div>
 							<div class="botao-enviar">
