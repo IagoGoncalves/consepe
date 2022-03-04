@@ -76,13 +76,21 @@ get_header();
 					<h2 class="fontzero">Fale conosco!</h2>
 					<form id="formulario" class="form" name="enviar-email" method="post">
 						<div class="input-field">		
-							<input type="text" name="nome" autocomplete="off" placeholder="Nome">
-							<input type="text" name="assunto" autocomplete="off" placeholder="Assunto">
-							<input type="text" name="msg" autocomplete="off" placeholder="Mensagem">
+							<div class="float-label">
+								<input type="text" name="nome" autocomplete="off" data-empty>
+								<label>Nome</label>
+							</div>
+							<div class="float-label">
+								<input type="text" name="assunto" autocomplete="off" data-empty>
+								<label>Assunto</label>
+							</div>
+							<div class="float-label">
+								<input type="text" name="msg" autocomplete="off" data-empty>
+								<label>Mensagem</label>
+							</div>
 							<div class="botao-enviar">
 								<button value="submit">Enviar</button>	
 							</div>
-						</div>
 		            </form>
 			</article>
 		</section>

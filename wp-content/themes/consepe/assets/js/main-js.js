@@ -37,4 +37,20 @@ jQuery(document).ready(function($) {
 				},
 			},
 		});
+
+	//label animada
+		var floatLabel = document.querySelectorAll(".float-label");
+		var onFloatLabelChange = function () {
+			if (this.value.length == 0) {
+				this.dataset.empty = null;
+			} else {
+				delete this.dataset.empty;
+			}
+		}
+
+		floatLabel = [].slice.apply(floatLabel);
+		floatLabel.forEach(function (container) {
+			var input = container.querySelector("input");
+			input.addEventListener("keyup", onFloatLabelChange);
+		});
 });

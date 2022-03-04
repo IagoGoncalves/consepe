@@ -1161,53 +1161,51 @@ header{
                         }        
                         .form{
                                 .input-field{
-                                        input{
+                                        .float-label {
+                                                position: relative;
+                                                width: 100%;
+                                                margin-top: 60px;
+                                        }
+                                        .float-label label,
+                                        .float-label input {
+                                                display: block;
+                                                box-sizing: border-box;
                                                 width: 100%;
                                                 background: none;
                                                 border: none;
-                                                border-bottom:  2px solid rgba(64, 64, 64, 0.4);
                                                 font-weight: 600;
                                                 font-size: 20px;
                                                 color: #112D4E;
-                                                padding-top: 60px;
-                                                &:focus-visible{
-                                                        outline:0px;
-                                                }
-                                                &:focus{
-                                                        background: yellow;     
-                                                }
+                                                outline:0px;
                                         }
-                                        input::-webkit-input-placeholder { /* Chrome, Safari, Opera */
-                                                font-weight: 600;
+
+                                        .float-label label {
+                                                transition-duration: 0.2s;
+                                                left: 2px;
+                                                top: 0px;    
                                                 font-size: 20px;
                                                 color: #404040;
                                                 opacity: 0.4;
+                                                z-index: 0;
+                                                position: absolute;
                                         }
-                                        input:-moz-placeholder { /* Firefox 18- */
-                                                font-weight: 600;
-                                                font-size: 20px;
-                                                color: #404040;
-                                                opacity: 0.4;
-                                                opacity: 1;
+
+                                        .float-label input {
+                                                top: 25px;
+                                                border-bottom:  2px solid rgba(64, 64, 64, 0.4);
+                                                z-index: 2;
+                                                position: relative;
+                                        }       
+
+                                        .float-label input[data-empty] + label {
+                                                top: 15px;
                                         }
-                                        input::-moz-placeholder {  /* Firefox 19+ */
-                                                font-weight: 600;
-                                                font-size: 20px;
-                                                color: #404040;
-                                                opacity: 0.4;
-                                                opacity: 1;
-                                        }
-                                        input:-ms-input-placeholder { /* IE10+ */ 
-                                                font-weight: 600;
-                                                font-size: 20px;
-                                                color: #404040;
-                                                opacity: 0.4;
-                                        }
+                                
                                         .botao-enviar{
                                                 display: flex;
                                                 align-items: center;
                                                 justify-content: center;
-                                                padding: 60px 0 0 0;
+                                                padding: 100px 0 0 0;
                                                 button{
                                                         background: #112D4E;
                                                         box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.2);
@@ -1218,7 +1216,7 @@ header{
                                                         text-transform: uppercase;
                                                         width: 240px;
                                                         height: 70px;
-                                                        transition: all .3s;
+                                                        transition: all .4s;
                                                         &:hover{
                                                                 transition: all .3s;
                                                                 font-size: 18px;
