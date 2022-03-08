@@ -140,7 +140,6 @@ header{
                                 background-color: #fff;
                         }
                 }
-
                 .navbar-nav {
                         float: none;
                         display: flex;
@@ -284,82 +283,144 @@ header{
                                 display: flex;
                                 justify-content: space-around;
                                 align-items: flex-start;
+                                flex-flow: wrap;
                                 padding: 0 70px;
+                                .imagem{
+                                        @extend .col-md-5;
+                                        padding: 0;
+                                }
+                                h2{
+                                        @extend .col-md-7;
+                                        padding: 0;
+                                        font-size: 64px;
+                                        font-weight: 600;
+                                        text-transform: uppercase;
+                                        width: 630px;
+                                        padding-top: 75px;
+                                        color: #fff;
+                                }
+                                @media screen and (max-width: 770px) and (min-width: 425px) {
+                                        text-align: center;
+                                        align-items:center;
+                                        padding:0px;
+                                        h2{
+                                                font-size:60px
+                                        }
+                                        .imagem{
+                                                img{
+                                                        width: 350px;
+                                                }
+                                        }
+                                }
+                        }                        
+                }        
+                @media screen and (max-width: 425px) and (min-width: 220px) {
+                        .conteudo{
+                                .box{
+                                        h2{
+                                                font-size: 45px;
+                                        }
+                                }
                         }
-                        h2{
-                                font-size: 64px;
-                                font-weight: 600;
-                                text-transform: uppercase;
-                                width: 630px;
-                                padding-top: 75px;
-                                color: #fff;
-                        }
-                }               
+                }         
         }
         .texto-home{
                 @extend .col-md-12;
                 position: relative;
                 width: 100%;
                 padding: 200px 0 200px 0;
-                        .texto-imagem{
-                                @extend .col-md-12;
-                                align-items: center;
-                                padding: 0;
-                                .imagem{
-                                        padding-left: 0;
-                                        @extend .col-md-6;
-                                        img{
-                                                border-radius: 40px;
-                                        }
+                .texto-imagem{
+                        @extend .col-md-12;
+                        align-items: center;
+                        padding: 0;
+                        .imagem{
+                                padding-left: 0;
+                                @extend .col-md-6;
+                                img{
+                                        border-radius: 40px;
                                 }
-                                .texto{
-                                        @extend .col-md-5, .col-md-offset-1;
-                                        h2{
-                                                padding-bottom: 40px;
-                                                font-weight: 600;
-                                                font-size: 38px;
+                        }
+                        .texto{
+                                @extend .col-md-5, .col-md-offset-1;
+                                h2{
+                                        padding-bottom: 40px;
+                                        font-weight: 600;
+                                        font-size: 38px;
+                                }
+                                p{
+                                        font-weight: 400;
+                                        font-size: 28px;
+                                        padding-bottom: 100px;
+                                }
+                                .saiba-mais{
+                                        text-decoration: none;
+                                        background-color: transparent;
+                                        color: #01244e;
+                                        border-color:#01244e;
+                                        font-weight: 600;
+                                        font-size: 16px;
+                                        border-radius: 10px;
+                                        padding: 25px 45px 25px 25px;
+                                        border: 2px solid;
+                                        text-transform: uppercase;
+                                        transition: all .4s;
+                                        svg{
+                                                transition: all .4s;
+                                                margin-left: 15px;
+                                                path{
+                                                        transition: all .4s;
+                                                }
                                         }
-                                        p{
-                                                font-weight: 400;
-                                                font-size: 28px;
-                                                padding-bottom: 100px;
-                                        }
-                                        .saiba-mais{
-                                                text-decoration: none;
-                                                background-color: transparent;
-                                                color: #01244e;
-                                                border-color:#01244e;
-                                                font-weight: 600;
-                                                font-size: 16px;
-                                                border-radius: 10px;
-                                                padding: 25px 45px 25px 25px;
-                                                border: 2px solid;
-                                                text-transform: uppercase;
+                                        &:hover{
+                                                color: #fff;
+                                                background-color: #01244e;
                                                 transition: all .4s;
                                                 svg{
                                                         transition: all .4s;
-                                                        margin-left: 15px;
+                                                        margin-left: 20px;
                                                         path{
-                                                                transition: all .4s;
-                                                        }
-                                                }
-                                                &:hover{
-                                                        color: #fff;
-                                                        background-color: #01244e;
-                                                        transition: all .4s;
-                                                        svg{
-                                                                transition: all .4s;
                                                                 margin-left: 20px;
-                                                                path{
-                                                                        margin-left: 20px;
-                                                                        transition: all .4s;
-                                                                        fill: #fff;
-                                                                }
+                                                                transition: all .4s;
+                                                                fill: #fff;
                                                         }
                                                 }
                                         }
                                 }
-                        }             
+                                @media screen and (max-width: 1024px) and (min-width: 220px) {
+                                        h2{
+                                                font-size: 30px;
+                                        }
+                                        p{
+                                                font-size: 20px;;
+                                        }
+                                } 
+                        }
+                        @media screen and (max-width: 770px) and (min-width: 220px) {
+                                .imagem{
+                                        display: flex;
+                                        justify-content: center;
+                                        margin: 100px 0 0 0;
+                                }
+                                .texto{
+                                        h2, p{
+                                                text-align: center;
+                                        }
+                                        p{
+                                                padding-bottom: 70px;
+                                        }
+                                        .saiba-mais{
+                                                display: flex;
+                                                justify-content: center;
+                                        }
+                                }
+                        }
+                }  
+                @media screen and (max-width: 770px) and (min-width: 376px) {
+                        padding: 200px 0 150px 0;        
+                }
+                @media screen and (max-width: 375px) and (min-width: 220px) {
+                        padding: 100px 0 100px 0;
+                }    
         }
         .editais-home{
                 @extend .col-md-12;
@@ -376,15 +437,17 @@ header{
                                 @extend .col-md-5;
                         }   
                         .tds-box{
-                                @extend .col-md-7;
+                                @extend .col-md-6;
                                 margin-top: 100px;
                                 .box{
                                         display: flex;
                                         justify-content: flex-start;
                                         align-items: center;
                                         margin-bottom: 40px;
+                                        flex-flow: wrap;
                                         a{
                                                 text-decoration: none;
+                                                max-width: 100%;
                                         }
                                         .titulo-data{
                                                 border: 2px solid rgba(17, 45, 78, 0.6);
@@ -396,6 +459,7 @@ header{
                                                 display: flex;
                                                 align-items: center;
                                                 justify-content: center;
+                                                max-width: 100%;
                                                 svg{
                                                         margin-right: 7%;
                                                 }
@@ -480,7 +544,7 @@ header{
                                 
                                 .ver-todos{
                                         text-align: right;
-                                        padding-right: 19%;
+                                        padding-right: 5%;
                                         &:hover{
                                                 a{
                                                         transition: all .2s;
@@ -495,7 +559,59 @@ header{
                                                 transition: all .2s;
                                         }
                                 }
+                                @media screen and (max-width: 1024px) and (min-width: 770px) {
+                                        .box{
+                                                .titulo-data{
+                                                        margin: 0 0 6px 0;
+                                                }
+                                                .btn{
+                                                        width: 100%;
+                                                        display: flex;
+                                                        justify-content: center;
+                                                }
+                                        }
+                                        .ver-todos{
+                                              padding-right:0%;
+                                              margin: 0 0 20px 0;  
+                                        }
+                                }
                                 
+                        }
+                        @media screen and (max-width: 770px) and (min-width: 425px) {
+                               .imagem{
+                                        display: flex;
+                                        justify-content: center;
+                               } 
+                               .tds-box{
+                                        .box{
+                                                flex-flow: initial;
+                                                .titulo-data{
+                                                        margin-right: 0;
+                                                }
+                                        }
+                                        .ver-todos{
+                                                padding-bottom: 20px;
+                                        }
+                               }
+                        }
+                        @media screen and (max-width: 425px) and (min-width: 220px) {
+                                .tds-box{
+                                        .box{
+                                                flex-flow: wrap;
+                                                justify-content: center;
+                                        }
+                                }
+                        }
+                        @media screen and (max-width: 375px) and (min-width: 220px) {
+                               .tds-box{
+                                        .box{
+                                                .titulo-data{
+                                                        h4{
+                                                            font-size: 14px;    
+                                                        }
+                                                }
+                                        }
+                                } 
                         }
                 }                  
         }
@@ -564,6 +680,16 @@ header{
                                                 &:hover{
                                                         color: #112D4E;
                                                 }
+                                        }
+                                }
+                                @media screen and (max-width: 1024px) and (min-width: 220px) {
+                                        padding-right:0px;
+                                        margin-top: -50px;
+                                        h2{
+                                                font-size: 30px;
+                                        }
+                                        p{
+                                                font-size: 20px;
                                         }
                                 }
                         }
@@ -671,8 +797,60 @@ header{
                                 background: #112D4E;
                                 margin: 0;
                         }
+                        @media screen and (max-width: 1024px) and (min-width: 425px) {
+                                .swiper-pagination-bullet{
+                                        width: 12px;
+                                        font-size: 15px;
+                                }
+                                .esquerda, .direita{
+                                        svg{
+                                             width: 35px;   
+                                        }
+                                }
+                        }
                 }
-                
+                @media screen and (max-width: 770px) and (min-width: 220px) {
+                        padding:0px 0 30px 0;
+                        margin-bottom: 0px;;
+                        .info-noticias{
+                                h2{
+                                        text-align: center;
+                                }
+                                .botoes{
+                                        margin-bottom: 85px;
+                                        display: flex;
+                                        justify-content: center;
+                                        position: relative;
+                                        align-items: center;
+                                }     
+                        }
+                        .noticia-imagem{
+                                width: 100%;
+                                top: 0;
+                                .foto-banner{
+                                        img{
+                                        }
+                                }
+                        } 
+                        .page{
+                                .borda-left, .borda-middle, .borda-right{
+                                        display: none;
+                                }
+                                article{
+                                        .direita{
+                                                right: -60px;
+                                        }
+                                }
+                        }
+                }
+                @media screen and (max-width: 413px) and (min-width: 220px) {
+                        .esquerda, .direita{
+                                svg{
+                                        width: 35px;
+                                }
+                        }
+                              
+                }
         }
 }
 .consepe{
@@ -745,6 +923,46 @@ header{
                         }
                 }
         }
+        @media screen and (max-width: 770px) and (min-width: 426px) {
+                .estatuto{
+                        .confira{
+                                font-size: 30px;
+                                padding: 50px 0 50px 0;
+                        }
+                }
+        }
+        @media screen and (max-width: 425px) and (min-width: 220px) {
+                .info{
+                        .texto{
+                                h2{
+                                        font-size: 30px;
+                                }
+                                .sobre{
+                                        p{
+                                                font-size: 20px;     
+                                        }
+                                }
+                        }
+                }
+                .fluxo{
+                        h2{
+                                text-align: center;
+                        }
+                }
+                .estatuto{
+                        text-align: center;
+                        .confira{
+                                font-size:21px;
+                                line-height: 30px;
+                        }
+                        .down-estatuto{
+                                padding:15px;
+                                svg{
+                                        width: 30px;
+                                }
+                        }
+                }
+        }
 }
 .editais-bloco{
         padding-bottom: 120px;
@@ -804,6 +1022,47 @@ header{
                                         padding: 0 20px;
                                 }
                         }
+                }
+                @media screen and (max-width: 1024px) and (min-width: 426px) {
+                        .tds-box{
+                                .box{
+                                        margin-bottom: 5%;
+                                        padding: 0 5% 0 0;
+                                        text-align: center;
+                                        .titulo-edital{
+                                                padding: 1%;
+                                        }
+                                        a{
+                                                .down-edit{
+                                                        padding: 3%;
+                                                }
+                                        }
+                                }
+                        }  
+                }
+                @media screen and (max-width: 425px) and (min-width: 220px) {
+                        .tds-box{
+                                margin: 0px;
+                                .box{
+                                        padding: 0 5%;
+                                        .titulo-edital{
+                                                padding: 0 5%;
+                                                text-align: center;
+                                                svg{
+                                                       width: 25px; 
+                                                }
+                                        }
+                                        a{
+                                                padding-left:10px;
+                                                .down-edit{
+                                                        padding: 16px 30px;;
+                                                        span{
+                                                                display: none;
+                                                        }   
+                                                }
+                                        }
+                                }
+                        }  
                 }
         }
 }
@@ -928,6 +1187,7 @@ header{
                                         }
                                 }
                         }
+
                         .page{
                                 @extend .col-md-12;
                                 padding:0;
@@ -1000,6 +1260,92 @@ header{
                                         margin: 0;
                                 }
                         }
+                }
+                @media screen and (max-width: 1024px) and (min-width: 769px) {
+                        .second-block{      
+                                .box{
+                                        padding:13px;
+                                        margin-bottom: 30px;
+                                }
+                                .page{
+                                        article{
+                                                .esquerda, .direita{
+                                                        svg{
+                                                                width: 40px;
+                                                        }
+                                                }
+                                        }
+                                }
+
+                        }    
+                }
+                @media screen and (max-width: 768px) and (min-width: 220px) {
+                        .first-block{      
+                                .box{
+                                        width: 100%;
+                                        .conteudo{
+                                                p{
+                                                        display: block;
+                                                }
+                                        }
+                                }
+                                .box:nth-child(1) {
+                                        width: 100%;
+                                        margin: 0 0 15px 0;
+                                }                                
+                        }
+                        .second-block{
+                                .box{
+                                        padding: 29px;
+                                        margin-bottom: 0;
+                                } 
+                                .page{
+                                        .borda-left, .borda-middle, .borda-right{
+                                                display: none;
+                                        }
+                                        article{
+                                                .esquerda{
+                                                        left: auto;
+                                                        right: 40px;
+                                                }
+                                                .direita{
+                                                        right: auto;
+                                                        left: 40px;
+                                                }
+                                        }
+                                }  
+                        }    
+                }
+                @media screen and (max-width: 425px) and (min-width: 220px) {
+                        .first-block{
+                                .box{
+                                        .conteudo{
+                                                h3{
+                                                        font-size: 21px;
+                                                }
+                                                p{
+                                                        font-size: 12px;
+                                                }
+                                        }
+                                }
+                        }  
+                        .second-block{
+                                .box{
+                                        padding:16px;
+                                        .conteudo{
+                                                h3{
+                                                        font-size: 21px;   
+                                                }
+                                        }
+                                }
+                        } 
+                }
+                @media screen and (max-width: 375px) and (min-width: 220px) {
+                        .second-block{
+                                .box{
+                                        padding:14px;
+                                }
+                        } 
                 }
         }
 }
@@ -1123,6 +1469,65 @@ header{
                         }
                 }
         }
+        @media screen and (max-width: 1024px) and (min-width: 220px) {
+                .container{
+                        .conteudo{
+                                .recentes{
+                                        padding:50px 0;
+                                        display: flex;
+                                        .box{
+                                                width: 33%;
+                                                padding: 0 0 24px 0;
+                                                margin: 0 5px;
+                                                .conteudo{
+                                                        padding: 0 15px 12px;
+                                                        h3{
+                                                                font-size: 19px;
+                                                        }
+                                                }
+                                        }
+                                }
+                        }
+                }
+        }
+        @media screen and (max-width: 1024px) and (min-width: 220px) {
+                .container{
+                        .banner{
+                                .fonte{
+                                        p{
+                                              font-size: 12px;  
+                                        }
+                                }
+                        }
+                        .conteudo{
+                                .palavras{
+                                        h2{
+                                                padding: 0 0 35px 0;
+                                                font-size: 35px;
+                                        }
+                                        p{
+                                                font-size: 18px;
+                                        }
+                                        .icones{
+                                                padding: 60px 0px 0 0;
+                                        }
+                                }
+                                .recentes{
+                                        .box{
+                                                padding: 0 0 13px 0;
+                                                a{
+                                                        .conteudo{
+                                                                padding: 0 10px 0px;
+                                                                h3{
+                                                                        font-size: 12px;
+                                                                }      
+                                                        }
+                                                }
+                                        }
+                                }
+                        }
+                }
+        }
 }
 .contato{
         .container{
@@ -1227,6 +1632,25 @@ header{
                         }
                 }
         }
+        @media screen and (max-width: 1024px) and (min-width: 220px) {
+                .container{
+                        .formulario{
+                                padding: 60px;
+                        }
+                }
+        }
+        @media screen and (max-width: 425px) and (min-width: 220px) {
+                .container{
+                        .infos{
+                                .box{
+                                        padding-top:23px;
+                                        p{
+                                                font-size: 16px;
+                                        }
+                                }
+                        }
+                }
+        }
 }
 footer{
         @extend .col-md-12;
@@ -1270,5 +1694,10 @@ footer{
                         font-size: 14px;
                         text-transform: uppercase;
                 }  
+        }
+        @media screen and (max-width: 425px) and (min-width: 220px) {
+                .footer-email{
+                        padding:0px;
+                }
         }
 }       

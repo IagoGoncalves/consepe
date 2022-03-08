@@ -64,12 +64,14 @@ get_header(); ?>
 			</article>
 			<article class="second-block">
 				<?php 
-		            $args = array('post_type' => 'noticia','posts_per_page' => 6, 'offset'=> 3);
+					$args = array('post_type' => 'noticia', 'posts_per_page' => get_option('posts_per_page'), 'paged' => get_query_var('paged', -1), );
 		            $var = new WP_Query($args);    
 
 		            if($var->have_posts()):
 		                while($var->have_posts()):
-		                    $var->the_post(); ?>
+		                    $var->the_post();?>
+		                  
+
 		                        <div class="box">
 		                        	<a href="<?php the_permalink()?>">
 		                        	<div class="imagem">
@@ -85,8 +87,9 @@ get_header(); ?>
 		            endif;
 		        wp_reset_postdata(); ?>
 		        <div class="page">
-                    <p class="borda-left" ></p>
-                    <div class="swiper-pagination"></div>
+                    <p class="borda-left"></p>
+                    <div class="swiper-pagination">
+                    </div>
                     <p class="borda-middle"></p>
                     <article>
                         <div href="" class="esquerda swiper-button-prev">

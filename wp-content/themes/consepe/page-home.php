@@ -26,7 +26,9 @@ get_header();
                             <div class="conteudo">
                                 <div class="box">
                                     <h2><?php the_title(); ?></h2>
-                                    <?php the_post_thumbnail();?>
+                                    <div class="imagem">
+                                         <?php the_post_thumbnail();?>
+                                    </div>                                   
                                 </div>                                
                             </div>                                
                             <?php
@@ -77,7 +79,7 @@ get_header();
                                                     </svg>
                                                     <h4>Edital nº <?php the_title(); ?> - <?php the_time('d \d\e F \d\e Y') ?></h4>
                                                 </div>
-                                            <a href="">
+                                            <a href="" class="btn">
                                                 <div class="botao">
                                                     <span>Conferir</span>
                                                     <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -37,11 +37,11 @@ function type_post_porsonalizados() {
       );
    //Noticia--------------------------------------
       $noticia = new Odin_Post_Type(
-         'Noticia',
+         'Notícia',
          'noticia'
       );
       $noticia->set_labels(
-         array( 'menu_name' => __( 'Noticia', 'odin' ))
+         array( 'menu_name' => __( 'Notícia', 'odin' ))
       );
       $noticia->set_arguments(
          array(
