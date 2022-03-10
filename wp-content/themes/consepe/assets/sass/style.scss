@@ -22,6 +22,9 @@ Author URI: http://wpod.in/#colaboradores
 body{
         font-family: 'Exo', sans-serif;
 }
+h1, h2, h3, h4, h5, p, a, b, title, span{
+    letter-spacing: 1.0px;  
+}
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -38,7 +41,7 @@ body{
 }
 @media (min-width: 1200px){
         .container {
-            width: 1550px;
+            width: 1480px;
         }
 }
 main{
@@ -168,7 +171,7 @@ header{
                                         text-transform: uppercase;
                                         color: #FFFFFF;
                                         font-weight: 600;
-                                        font-size: 28px;
+                                        font-size: 25px;
                                         background: transparent;
                                         transition: all 0.3s;
                                         &:before{
@@ -251,7 +254,7 @@ header{
                 }
                 .logo-principal{
                         img{
-                                width: 100px;
+                                width: 75px;
                         }
                 }  
         }       
@@ -299,7 +302,11 @@ header{
                                         padding-top: 75px;
                                         color: #fff;
                                 }
-                                @media screen and (max-width: 770px) and (min-width: 425px) {
+                        }                        
+                }        
+                @media screen and (max-width: 770px) and (min-width: 425px) {
+                        .conteudo{
+                                .box{
                                         text-align: center;
                                         align-items:center;
                                         padding:0px;
@@ -312,8 +319,8 @@ header{
                                                 }
                                         }
                                 }
-                        }                        
-                }        
+                        }
+                }
                 @media screen and (max-width: 425px) and (min-width: 220px) {
                         .conteudo{
                                 .box{
@@ -349,8 +356,8 @@ header{
                                 }
                                 p{
                                         font-weight: 400;
-                                        font-size: 28px;
-                                        padding-bottom: 100px;
+                                        font-size: 22px;
+                                        padding-bottom: 65px;
                                 }
                                 .saiba-mais{
                                         text-decoration: none;
@@ -377,9 +384,7 @@ header{
                                                 transition: all .4s;
                                                 svg{
                                                         transition: all .4s;
-                                                        margin-left: 20px;
                                                         path{
-                                                                margin-left: 20px;
                                                                 transition: all .4s;
                                                                 fill: #fff;
                                                         }
@@ -414,9 +419,23 @@ header{
                                         }
                                 }
                         }
-                }  
+                } 
+                @media screen and (max-width: 1024px) and (min-width: 220px) {
+                        .texto-imagem{
+                                display: flex;
+                        }        
+                } 
                 @media screen and (max-width: 770px) and (min-width: 376px) {
-                        padding: 200px 0 150px 0;        
+                        padding: 200px 0 150px 0;    
+                        .texto-imagem{
+                                .texto{
+                                        .saiba-mais{
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                        }
+                                }
+                        }    
                 }
                 @media screen and (max-width: 375px) and (min-width: 220px) {
                         padding: 100px 0 100px 0;
@@ -446,14 +465,13 @@ header{
                                         margin-bottom: 40px;
                                         flex-flow: wrap;
                                         a{
-                                                text-decoration: none;
-                                                max-width: 100%;
+                                                text-decoration: none;                                                
                                         }
                                         .titulo-data{
                                                 border: 2px solid rgba(17, 45, 78, 0.6);
                                                 border-radius: 10px;
                                                 padding: 11px 0px;
-                                                width: 500px;
+                                                width: 470px;
                                                 text-align: center;
                                                 margin-right: 22px;
                                                 display: flex;
@@ -471,69 +489,82 @@ header{
                                                 }
                                         }
                                         .botao{
-                                                border: 2px solid rgba(17, 45, 78, 0.6);
+                                                position: relative;
+                                                border: 2px solid #112D4E;
                                                 border-radius: 10px;
                                                 padding: 18px 0px;
                                                 width: 160px;
                                                 text-align: center;
+                                                transition: all .3s; 
+                                                box-shadow: 4px 9px 21px -11px #00000000; 
                                                 svg{
                                                         transition: all .3s;
                                                         margin-left: 5%;
+                                                        path{
+                                                                transition: all .3s;                                                                      
+                                                        }
                                                 }
+
                                                 span{
                                                         font-size: 16px;
                                                         font-weight: 600;
                                                         text-transform: uppercase;
                                                         color:rgba(17, 45, 78, 0.6);
+                                                        transition: all .3s; 
                                                 }
                                                 &:hover{
                                                         background-color:#112D4E;
                                                         transition: all .3s;
-                                                        border:none;
-                                                        box-shadow: 0 5px 5px black;
+                                                        border:none; 
+                                                        box-shadow: 4px 9px 21px -11px #000000;
+                                                        border: 2px solid #112D4E;                                                     
                                                         span{
+                                                                transition: all .3s; 
                                                                 color:#fff;
                                                         }
-                                                        svg{
-                                                                transition: all .3s;
-                                                                margin-left: 10%;
+                                                        svg{                                                                                                                            
                                                                 path{
+                                                                        transition: all .3s;   
                                                                         fill: white;
                                                                 }
                                                         }
-                                                }
-                                                
+                                                }  
                                         }
                                         &:nth-child(1) {
                                                 .titulo-data{
                                                         background-color: #fff;
                                                         border: 2px solid #112d4e00;
-                                                        -webkit-box-shadow: 4px 16px 32px -11px rgba(0,0,0,0.62); 
-                                                        box-shadow: 4px 9px 21px -11px rgba(0,0,0,0.62);
+                                                        -webkit-box-shadow: 4px 9px 21px -11px #0000009e; 
+                                                        box-shadow: 4px 9px 21px -11px #0000009e;
                                                         h4{
                                                                 color:#112D4E;
                                                         }
                                                 }
                                                 .botao{
                                                         background-color: #fff;
-                                                        border: 2px solid #112d4e00;
-                                                        -webkit-box-shadow: 4px 16px 32px -11px rgba(0,0,0,0.62); 
-                                                        box-shadow: 4px 9px 21px -11px rgba(0,0,0,0.62);
+                                                        border: 2px solid #fff;
+                                                        -webkit-box-shadow: 4px 9px 21px -11px #0000009e; 
+                                                         box-shadow: 4px 9px 21px -11px #0000009e;
                                                         span{
                                                                 color:#112D4E;
                                                         }
+                                                        svg{                                                                                                                                            
+                                                                path{
+                                                                        transition: all .3s;                                                                      
+                                                                }
+                                                        }
                                                         &:hover{
-                                                                background-color:#112D4E;
-                                                                transition: all .3s;
-                                                                border:none;
-                                                                box-shadow: 0 5px 5px black;
+                                                                background-color: #112D4E;
+                                                                border: 2px solid #112D4E;
+                                                                transition: all .3s;                                                                
+                                                                box-shadow: 4px 9px 21px -11px #000000;
                                                                 span{
+                                                                        transition: all .3s;
                                                                         color:#fff;
                                                                 }
-                                                                svg{
-                                                                        transition: all .3s;
-                                                                        margin-left: 10%;
+                                                                svg{                                                                                                                                            
                                                                         path{
+                                                                                transition: all .3s;
                                                                                 fill:white;
                                                                         }
                                                                 }
@@ -636,7 +667,7 @@ header{
                                 }
                                 p{
                                         padding-bottom:60px;
-                                        font-size: 28px;
+                                        font-size: 22px;
                                         font-weight: 400;
                                         color: #112D4E;
                                 }
@@ -684,7 +715,6 @@ header{
                                 }
                                 @media screen and (max-width: 1024px) and (min-width: 220px) {
                                         padding-right:0px;
-                                        margin-top: -50px;
                                         h2{
                                                 font-size: 30px;
                                         }
@@ -724,7 +754,6 @@ header{
                                 font-weight: 600;
                                 font-size: 20px;
                         }
-
                 }
                 .page{
                         @extend .col-md-12;
@@ -809,10 +838,31 @@ header{
                                 }
                         }
                 }
+                @media screen and (max-width: 1024px) and (min-width: 220px) {
+                        .container{
+                                .mySwiper{
+                                        .swiper-wrapper{
+                                                .swiper-slide{
+                                                        .info-noticias{
+                                                                h2{
+                                                                       padding-top:0px; 
+                                                                }
+                                                                .texto{
+                                                                        text-align: center;
+                                                                }
+                                                        }
+                                                }
+                                        }
+                                }
+                        }
+                }
                 @media screen and (max-width: 770px) and (min-width: 220px) {
                         padding:0px 0 30px 0;
                         margin-bottom: 0px;;
                         .info-noticias{
+                                .texto{
+                                        height: 160px;
+                                }
                                 h2{
                                         text-align: center;
                                 }
@@ -843,13 +893,40 @@ header{
                                 }
                         }
                 }
-                @media screen and (max-width: 413px) and (min-width: 220px) {
+                @media screen and (max-width: 425px) and (min-width: 220px) {
+                        margin-top: 50px;
+                        .info-noticias{
+                                .texto{
+                                        height: 230px;
+                                }
+                                .botoes{
+                                        .cnt-lendo{
+                                                padding: 15px 25px 15px 25px;
+                                        }
+                                }
+                        }
                         .esquerda, .direita{
                                 svg{
                                         width: 35px;
                                 }
+                        }           
+                }
+                @media screen and (max-width: 375px) and (min-width: 220px) {
+                        .container{
+                                .mySwiper{
+                                        .swiper-wrapper{
+                                                .swiper-slide{
+                                                        .info-noticias{
+                                                                .botoes{
+                                                                        .cnt-lendo{
+                                                                                padding: 10px;
+                                                                        }
+                                                                }
+                                                        }
+                                                }
+                                        }
+                                }
                         }
-                              
                 }
         }
 }
@@ -869,7 +946,7 @@ header{
                 .sobre{
                         p{
                                 text-align: center;
-                                font-size: 28px;
+                                font-size: 22px;
                                 text-align: center;
                                 color: rgba(64, 64, 64, 0.8);
                                 text-transform: none;
@@ -914,12 +991,30 @@ header{
                         display: flex;
                         align-items: center;
                         justify-content: center;
+                        transition: all .3s;
+                        svg{
+                                path{
+                                        transition: all .3s;
+                                        fill: #fff;
+                                }
+                        }
                         &:hover{
                                 text-decoration: none;
                         }
                         span{
                                 padding-right: 15px;
 
+                        }
+                        &:hover{
+                                background-color: #fff;
+                                color: #112D4E;
+                                transition: all .3s;
+                                svg{
+                                        path{
+                                                transition: all .3s;
+                                                fill: #112D4E;
+                                        }
+                                }
                         }
                 }
         }
@@ -969,57 +1064,67 @@ header{
         article{
                 background: #DBE2EF;
                 border-radius: 20px;
-                padding-bottom: 100px;
                 h2{
                         text-align: center;
                         font-size: 38px;
-                        padding-top:67px
+                        padding-top:67px;
                 }
-                .logo-edital{
+                .alinhamento{
                         display: flex;
                         justify-content: center;
-                        padding: 80px 0 80px 0;
-                }
-                .tds-box{
-                        height: 430px;
-                        overflow: overlay;
-                        margin: 0 124px;
-                        .box{
+                        align-items:center;
+                        .logo-edital{
                                 display: flex;
                                 justify-content: center;
-                                align-items: center;
-                                width: 100%;
-                                    margin-bottom: 50px;
-                                .titulo-edital{
-                                        font-weight: 600;
-                                        font-size: 16px;
-                                        color: #112D4E; 
+                                padding: 80px 0 80px 0;
+                        }
+                        .tds-box{
+                                height: 495px;
+                                overflow: overlay;
+                                margin-left: 50px;
+                                .box{
                                         display: flex;
                                         justify-content: center;
                                         align-items: center;
-                                        background-color: #fff;
-                                        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                                        border-radius: 20px;
-                                        padding: 20px 90px;
-                                }
-                                a{
-                                        padding-left: 40px;
-                                        .down-edit{
+                                        width: 100%;
+                                        margin-bottom: 30px;
+                                        .titulo-edital{
                                                 font-weight: 600;
                                                 font-size: 16px;
-                                                color: #fff; 
+                                                color: #112D4E; 
                                                 display: flex;
                                                 justify-content: center;
                                                 align-items: center;
-                                                background-color: #112D4E;
-                                                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+                                                background-color: #fff;
+                                                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                                                 border-radius: 20px;
-                                                text-transform: uppercase;
-                                                padding: 20px 80px;
+                                                padding-top:25px;
+                                                padding-bottom:25px;
+                                                padding-left: 15px;
+                                                margin-left: 10px;
                                         }
-                                }
-                                span{
-                                        padding: 0 20px;
+                                        a{
+                                                .down-edit{
+                                                        font-weight: 600;
+                                                        font-size: 16px;
+                                                        color: #fff; 
+                                                        display: flex;
+                                                        justify-content: center;
+                                                        align-items: center;
+                                                        background-color: #112D4E;
+                                                        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+                                                        border-radius: 20px;
+                                                        text-transform: uppercase;
+                                                        padding-top:25px;
+                                                        padding-bottom:25px;
+                                                        padding-right: 15px;
+                                                        margin-left: 10px;
+                                                        margin-right: 50px;
+                                                }
+                                        }
+                                        span{
+                                                padding: 0 20px;
+                                        }
                                 }
                         }
                 }
@@ -1077,7 +1182,86 @@ header{
                                 position: relative;
                                 padding: 0px;
                                 margin-bottom: 15px;
-                                .imagem{                                        
+                                .imagem{
+                                        width: 100%;
+                                        height: 100%;
+                                        overflow: hidden;
+                                        border-radius:40px;
+                                        img{
+                                               
+                                                width: 100%;
+                                                max-width: 100%;
+                                                height: auto;
+                                                transition: all .4s;
+                                                transform: scale(1); 
+                                        }
+                                        &:before{
+                                                content: '';
+                                                transition: all .3s;
+                                                border-radius:40px;
+                                                position: absolute;
+                                                width: 100%;
+                                                height: 100%;                                               
+                                                background: linear-gradient(360deg, #3F72AF 0%, #3f72af00 100%);
+                                                opacity: 1;
+                                                z-index: 9;
+                                        }
+                                        
+                                        &:hover{
+                                                img{
+                                                        transition: all .4s;
+                                                        transform: scale(1.04); 
+                                                }
+                                                &:before{
+                                                        transition: all .3s;
+                                                        content: '';
+                                                        opacity: 0.6;
+                                                        background: linear-gradient(360deg, #3F72AF 0%, #3f72af00 100%);
+                                                }
+
+                                        } 
+                                }
+                                .conteudo{
+                                        position: absolute;
+                                        z-index: 99;
+                                        bottom: 0;
+                                        width: 100%;
+                                        padding: 0 35px 16px;
+                                        h3{
+                                                font-weight: 600;
+                                                font-size: 28px;
+                                                color: #FFFFFF;
+                                        }
+                                        p{
+                                                display: none;
+                                                font-size: 18px;
+                                                color: #FFFFFF;
+                                        }
+                                }
+                                &:nth-child(1) {
+                                        @extend .col-md-8;
+                                        width: 64.666667%;
+                                        padding: 0;
+                                        margin: 0 1%;
+                                        p{
+                                                display: block;
+                                                font-weight: 400;
+                                                font-size: 20px;
+                                                color: #FFFFFF;
+                                        }
+                                }
+                        }
+                        .borda-first{
+                                @extend .col-md-12;
+                                height: 5px;
+                                background: #112D4E;
+                                margin: 118px 0 60px 0;
+                        }                        
+                }
+                .second-block{
+                        position: relative;                        
+                        .box{
+                                .imagem{
                                         width: 100%;
                                         height: 100%;
                                         img{
@@ -1104,77 +1288,9 @@ header{
                                 .conteudo{
                                         position: absolute;
                                         z-index: 99;
-                                        bottom: 0;
-                                        width: 100%;
-                                        padding: 0 35px 16px;
-                                        h3{
-                                                font-weight: 600;
-                                                font-size: 28px;
-                                                color: #FFFFFF;
-                                        }
-                                        p{
-                                                display: none;
-                                                font-size: 18px;
-                                                color: #FFFFFF;
-                                        }
-                                }
-                                &:nth-child(1) {
-                                        @extend .col-md-8;
-                                        width: 64.666667%;
-                                        padding: 0;
-                                        margin: 0 1%;
-                                        p{
-                                                display: block;
-                                                font-weight: 600;
-                                                font-size: 20px;
-                                                color: #FFFFFF;
-                                        }
-                                }
-                        }
-                        .borda-first{
-                                @extend .col-md-12;
-                                height: 5px;
-                                background: #112D4E;
-                                margin: 118px 0 60px 0;
-                        }                        
-                }
-                .second-block{
-                        position: relative;                        
-                        .box{
-                                @extend .col-md-4;
-                                position: relative;
-                                padding: 20px;
-                                margin-bottom: 60px;
-                                .imagem{                                        
-                                        width: 100%;
-                                        height: 100%;
-                                        img{
-                                               border-radius:40px;
-                                                width: 100%;
-                                                max-width: 100%;
-                                                height: auto;                                               
-                                        }
-                                        &:before{
-                                                content: '';
-                                                border-radius:40px;
-                                                position: absolute;
-                                                width: 92%;
-                                                height: 89%;
-                                                background: -moz-linear-gradient(top,transparent 0%,#3f72af00 100%);
-                                                background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,transparent),color-stop(100%,#3f72af00));
-                                                background: -webkit-linear-gradient(top,transparent 0%,#3f72af00 100%);
-                                                background: -o-linear-gradient(top,transparent 0%,#3f72af00 100%);
-                                                background: -ms-linear-gradient(top,transparent 0%,#3f72af00 100%);
-                                                background: linear-gradient(to bottom,transparent 0%,#3f72af00 100%);  
-                                                background: linear-gradient(360deg, #3F72AF 0%, #3F72AF 0%, #3f72af00 100%);                                              
-                                        }
-                                }
-                                .conteudo{
-                                        position: absolute;
-                                        z-index: 99;
                                         bottom: 19px;
                                         width: 92%;
-                                        padding: 0 35px 16px;
+                                        padding: 0 35px;
                                         h3{
                                                 font-weight: 600;
                                                 font-size: 28px;
@@ -1187,7 +1303,6 @@ header{
                                         }
                                 }
                         }
-
                         .page{
                                 @extend .col-md-12;
                                 padding:0;
@@ -1258,6 +1373,24 @@ header{
                                         height: 5px;
                                         background: #112D4E;
                                         margin: 0;
+                                }
+                                .swiper-pagination-bullet {
+                                        width: 20px;
+                                        height: 0px;
+                                        text-align: center;
+                                        line-height: 20px;
+                                        font-size: 12px;
+                                        color: rgba(17, 45, 78, 0.5);
+                                        opacity: 1;
+                                        background: transparent;
+                                        font-weight: 600;
+                                        font-size: 20px;
+                                }
+                                .swiper-pagination-bullet-active {
+                                        color: #112D4E;
+                                        background: transparent;
+                                        font-weight: 600;
+                                        font-size: 20px;
                                 }
                         }
                 }
@@ -1352,7 +1485,14 @@ header{
 .noticia{
         .container{
                 .banner{
+                        border-bottom: 2px solid #4040404d;
                         .imagem{
+                                height: 600px;
+                                overflow: hidden;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                border-radius: 40px;
                                 img{
                                         border-radius: 40px;
                                 }
@@ -1381,12 +1521,6 @@ header{
                                         font-size: 16px;
                                 }
                         }
-                        .borda{
-                                height: 2px;
-                                background: #404040;
-                                opacity: 0.2;
-                                margin: 0px 0 63px 0; 
-                        }
                 }
                 .conteudo{
                         .palavras{
@@ -1397,6 +1531,7 @@ header{
                                         font-size: 38px;
                                         color: #404040;
                                         padding: 0 0 72px 0;
+                                        margin-top: 45px;
                                 }
                                 p{
                                         color: #404040;
@@ -1419,11 +1554,11 @@ header{
                                 }
                         }
                         .recentes{
-                                @extend .col-md-4;
-                                padding: 50px 0 85px 70px;
+                                @extend .col-md-3, .col-md-offset-1;
+                                margin-top: 40px;
                                 .box{
                                         position: relative;
-                                        padding: 0px 0px 44px 0px;
+                                        padding: 0px 0px 32px 0px;
                                         .imagem{                                        
                                                 width: 100%;
                                                 height: 100%;
@@ -1445,7 +1580,7 @@ header{
                                                         background: -o-linear-gradient(top,transparent 0%,#3f72af00 100%);
                                                         background: -ms-linear-gradient(top,transparent 0%,#3f72af00 100%);
                                                         background: linear-gradient(to bottom,transparent 0%,#3f72af00 100%);  
-                                                        background: linear-gradient(360deg, #3F72AF 0%, #3F72AF 0%, #3f72af00 100%);                                              
+                                                        background: linear-gradient(360deg, #3F72AF 0%, #3F72AF 0%, #3f72af00 100%);
                                                 }
                                         }
                                         .conteudo{
@@ -1456,7 +1591,7 @@ header{
                                                 padding: 0 35px 26px;
                                                 h3{
                                                         font-weight: 600;
-                                                        font-size: 28px;
+                                                        font-size: 20px;
                                                         color: #FFFFFF;
                                                 }
                                                 p{
@@ -1546,6 +1681,18 @@ header{
                                         display: flex;
                                         .telefone{
                                                 padding-left: 5px;
+                                        }
+                                }
+                                .conteudo{
+                                        display: flex;
+                                        p{
+                                                padding-right: 7px;
+                                        }
+                                }
+                                .conteudo2{
+                                        display: flex;
+                                        p{
+                                                padding-right: 7px;
                                         }
                                 }
                         }
@@ -1659,8 +1806,7 @@ footer{
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                height: 220px;
-                padding: 0px 100px 0;
+                padding: 80px 100px 80px 0;
                 .info{
                         display: flex;
                         align-items: center;
@@ -1690,9 +1836,8 @@ footer{
                 margin-left: auto;
                 .right{
                         color: #fff;
-                        font-weight: 600;
-                        font-size: 14px;
-                        text-transform: uppercase;
+                        font-weight: 400;
+                        font-size: 12px;
                 }  
         }
         @media screen and (max-width: 425px) and (min-width: 220px) {

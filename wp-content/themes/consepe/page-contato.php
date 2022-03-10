@@ -59,12 +59,44 @@ get_header();
 											<p style="display: none;"></p>
 									<?php } ?>
 	                        	</span>
-	                        	<?php if ($endereco != '') { ?>
-									<p><?php echo $logradouro?> <?php echo $endereco?>, <?php echo $numero?> <?php echo $complemento?> <?php echo $bairro?> <?php echo $cidade?> - <?php echo $estado?></p>
+	                        	<span class="conteudo">
+		                        	<?php if ($logradouro != '') { ?>
+										<p><?php echo $logradouro?> </p>
+										<?php } else { ?>
+											<p style="display: none;"></p>
+									<?php } ?>
 
-									<?php } else { ?>
-										<p style="display: none;"></p>
-								<?php } ?>
+									<?php if ($endereco != '') { ?>
+										<p> <?php echo $endereco?>, </p>
+										<?php } else { ?>
+											<p style="display: none;"></p>
+									<?php } ?>
+
+									<?php if ($numero != '') { ?>
+										<p><?php echo $numero?> <br></p>
+										<?php } else { ?>
+											<p style="display: none;"></p>
+									<?php } ?>
+
+									<?php if ($complemento != '') { ?>
+										<p><?php echo $complemento?> </p>
+										<?php } else { ?>
+											<p style="display: none;"></p>
+									<?php } ?>
+								</span>
+								<span class="conteudo2">
+									<?php if ($bairro != '') { ?>
+										<p><?php echo $bairro?> </p>
+										<?php } else { ?>
+											<p style="display: none;"></p>
+									<?php } ?>
+
+									<?php if ($cidade != '') { ?>
+										<p><?php echo $cidade?>/<?php echo $estado?></p>
+										<?php } else { ?>
+											<p style="display: none;"></p>
+									<?php } ?>
+								</span>
 	                        </div>
 
 		                    <?php

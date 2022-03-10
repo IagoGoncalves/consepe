@@ -39,7 +39,6 @@ get_header(); ?>
 					</div>
 					<p class="referencia">Imagem: Tincidunt / Pulvinar</p>
 				</article>
-				<p class="borda"></p>
 			</section>
 			<section class="conteudo">
 				<article class="palavras">

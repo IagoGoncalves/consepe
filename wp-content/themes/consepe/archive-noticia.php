@@ -63,29 +63,34 @@ get_header(); ?>
 		        <p class="borda-first"></p>
 			</article>
 			<article class="second-block">
-				<?php 
-					$args = array('post_type' => 'noticia', 'posts_per_page' => get_option('posts_per_page'), 'paged' => get_query_var('paged', -1), );
-		            $var = new WP_Query($args);    
+		        <div class="swiper-container mySwiper1 col-md-12">     
+				    <div class="swiper-wrapper">
+				        <?php 
+				            $args = array('post_type' => 'noticia','posts_per_page' => -1);
+				            $var = new WP_Query($args);    
 
-		            if($var->have_posts()):
-		                while($var->have_posts()):
-		                    $var->the_post();?>
-		                  
+				            if($var->have_posts()):
+				                while($var->have_posts()):
+				                    $var->the_post(); ?>
+				                        <div class="swiper-slide">
+				                            <div class="box">
+				                                <a href="<?php the_permalink()?>">
+				                                    <div class="imagem">
+				                                        <?php echo odin_thumbnail(1000, 650, true,true);?>
+				                                    </div>
+				                                    <div class="conteudo">
+				                                        <h3><?php the_title(); ?></h3>
+				                                    </div>
+				                                </a>  
+				                            </div>
+				                        </div>
+				                    <?php
+				                endwhile;
+				            endif;
+				        wp_reset_postdata(); ?>
+				    </div>
+				</div>
 
-		                        <div class="box">
-		                        	<a href="<?php the_permalink()?>">
-		                        	<div class="imagem">
-		                        		<?php echo odin_thumbnail(1000, 650, true,true);?>
-		                        	</div>
-		                        	<div class="conteudo">
-			                        	<h3><?php the_title(); ?></h3>
-		                        	</div>
-		                        	</a>  
-		                        </div>
-		                    <?php
-		                endwhile;
-		            endif;
-		        wp_reset_postdata(); ?>
 		        <div class="page">
                     <p class="borda-left"></p>
                     <div class="swiper-pagination">

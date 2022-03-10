@@ -33,7 +33,7 @@ function type_post_porsonalizados() {
             'menu_icon' => 'dashicons-format-image',
             'show_in_nav_menus' => true,
             'show_in_rest' => true   
-         ),
+         )
       );
    //Noticia--------------------------------------
       $noticia = new Odin_Post_Type(
@@ -68,7 +68,7 @@ function type_post_porsonalizados() {
             'has_archive' => true,
             'menu_icon' => 'dashicons-phone',
             'show_in_nav_menus' => true
-         ),
+         )
       );
    //-----------------------------------------------------      
 }
