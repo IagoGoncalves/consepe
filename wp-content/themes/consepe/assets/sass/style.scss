@@ -89,6 +89,11 @@ h2{
                         }
                 }
         }
+        @media screen and (max-width: 430px) and (min-width: 220px) {
+                ul{
+                        padding: 25px 0 0 0;
+                }
+        }
 }
 header{
         .container:before, .container:after {
@@ -257,7 +262,44 @@ header{
                                 width: 75px;
                         }
                 }  
-        }       
+        } 
+        @media screen and (max-width: 430px) and (min-width: 220px) {
+                .menu{
+                        background-color: #01244ee6;
+                        .logo-principal{
+                                img{
+                                        width: 90px;
+                                }
+                        }
+                        .navbar-collapse{
+                                overflow: hidden;
+                                .nav{
+                                        li{
+                                                a{
+                                                        font-size:13px;
+                                                        padding: 0 0 2px 0;
+                                                        border:none;
+                                                }
+                                        }
+                                }
+                        }
+                }
+                .menu-fixo{
+                        transition: all .4s;
+                        width: 100%;
+                        z-index: 999;
+                        background-color: #01244e;   
+                        .main-navigation {                      
+                                padding: 10px 0;
+                        }
+                        .logo-principal{
+                                img{
+                                        width: 75px;
+                                }
+                        }  
+                } 
+        }
+
 }
 .home{
         @extend .col-md-12;
@@ -306,6 +348,7 @@ header{
                 }        
                 @media screen and (max-width: 770px) and (min-width: 425px) {
                         .conteudo{
+
                                 .box{
                                         text-align: center;
                                         align-items:center;
@@ -322,10 +365,12 @@ header{
                         }
                 }
                 @media screen and (max-width: 425px) and (min-width: 220px) {
+                        background-size: auto;
                         .conteudo{
+                                top: 14%;
                                 .box{
                                         h2{
-                                                font-size: 45px;
+                                                font-size: 42px;
                                         }
                                 }
                         }
@@ -438,6 +483,30 @@ header{
                                 }
                         }    
                 }
+                @media screen and (max-width: 425px) and (min-width: 220px) {
+                        padding: 80px 0 55px 0;
+                        .texto-imagem{
+                                flex-direction: column-reverse;
+                                align-items:center;
+                                justify-content: center;
+                                .imagem{
+                                        padding: 0;
+                                        margin: 25px 0 0 0;;
+                                }
+                                .texto{
+                                        h2{
+                                                font-size: 34px;
+                                                padding-bottom: 40px
+                                        }
+                                        p{
+                                                padding-bottom:24px;
+                                        }
+                                        .saiba-mais{
+
+                                        }
+                                }
+                        }
+                } 
                 @media screen and (max-width: 375px) and (min-width: 220px) {
                         padding: 100px 0 100px 0;
                 }    
@@ -627,10 +696,40 @@ header{
                                }
                         }
                         @media screen and (max-width: 425px) and (min-width: 220px) {
+                                h2{
+                                      font-size: 30px;  
+                                }
+                                .imagem{
+                                        display: none;
+                                }
                                 .tds-box{
+                                        margin-top: 50px;
                                         .box{
                                                 flex-flow: wrap;
                                                 justify-content: center;
+                                                .titulo-data{
+                                                        max-width: 100%;
+                                                        width: 100%;
+                                                        padding: 0 20px;
+                                                        svg{
+                                                                width: 40px;
+                                                                height: 40px;
+                                                        }
+                                                        h4{
+                                                                font-size: 19px;
+                                                        }
+                                                }
+                                                a{
+                                                        max-width: 100%;
+                                                        width: 100%;  
+                                                        .botao{
+                                                                width: 100%;
+                                                                margin-top: 10px;
+                                                                span{
+                                                                      font-size: 19px;  
+                                                                }
+                                                        }    
+                                                }
                                         }
                                 }
                         }
@@ -905,6 +1004,9 @@ header{
                 @media screen and (max-width: 425px) and (min-width: 220px) {
                         margin-top: 50px;
                         .info-noticias{
+                                h2{
+                                        padding-bottom: 20px;
+                                }
                                 .texto{
                                         height: 230px;
                                 }
@@ -912,11 +1014,31 @@ header{
                                         .cnt-lendo{
                                                 padding: 15px 25px 15px 25px;
                                         }
+                                        .veja-mais{
+                                                display: none;
+                                        }
                                 }
                         }
-                        .esquerda, .direita{
-                                svg{
-                                        width: 35px;
+                        .page{
+                                width: 100%;
+                                .swiper-pagination{
+                                        display: none;
+                                }
+                                article{
+                                        width: 100%;
+                                        display: flex;
+                                        align-items:center;
+                                        justify-content: space-evenly;
+                                        .esquerda{
+                                                left: 0px;
+                                                direita: 0px;
+                                                position:relative;
+                                        }
+                                        .direita{
+                                                position:relative;
+                                                left: 0px;
+                                                direita: 0px;
+                                        }
                                 }
                         }           
                 }
@@ -1035,29 +1157,39 @@ header{
                         }
                 }
         }
-        @media screen and (max-width: 425px) and (min-width: 220px) {
+        @media screen and (max-width: 430px) and (min-width: 220px) {
                 .info{
                         .texto{
                                 h2{
                                         font-size: 30px;
+                                        padding: 0 0 40px 0;
                                 }
                                 .sobre{
                                         p{
-                                                font-size: 20px;     
+                                                font-size: 19px;     
                                         }
                                 }
                         }
                 }
                 .fluxo{
                         h2{
+                                font-size: 36px;
                                 text-align: center;
+                                padding: 20px 0 50px 0;
+                        }
+                        img{
+                                padding-bottom: 60px;
                         }
                 }
                 .estatuto{
                         text-align: center;
+                        padding: 20px;
+                        flex-direction: column;
+                        margin-bottom: 60px;
                         .confira{
                                 font-size:21px;
                                 line-height: 30px;
+                                padding-bottom: 12px;
                         }
                         .down-estatuto{
                                 padding:15px;
@@ -1155,30 +1287,44 @@ header{
                                 }
                         }  
                 }
-                @media screen and (max-width: 425px) and (min-width: 220px) {
-                        .tds-box{
-                                margin: 0px;
-                                .box{
-                                        padding: 0 5%;
-                                        .titulo-edital{
-                                                padding: 0 5%;
-                                                text-align: center;
-                                                svg{
-                                                       width: 25px; 
+        }
+        @media screen and (max-width: 430px) and (min-width: 220px) {
+                article{
+                        margin-top: -50px;
+                        h2{
+                                padding: 15px 0;
+                                font-size: 32px;
+                        }
+                        .alinhamento{
+                                .logo-edital{
+                                        display: none;
+                                }
+                                .tds-box{
+                                        margin: 12px;
+                                        .box{
+                                                .titulo-edital{
+                                                        padding: 10px;
+                                                        height: 60px;
+                                                        text-align: center;
+                                                        svg{
+                                                               display: none; 
+                                                        }
                                                 }
-                                        }
-                                        a{
-                                                padding-left:10px;
-                                                .down-edit{
-                                                        padding: 16px 30px;;
-                                                        span{
-                                                                display: none;
-                                                        }   
+                                                a{
+                                                        .down-edit{
+                                                                height: 60px;
+                                                                padding: 16px 30px;;
+                                                                span{
+                                                                        display: none;
+                                                                }   
+                                                        }
                                                 }
                                         }
                                 }
-                        }  
+                        }
+                          
                 }
+                padding-bottom:60px;
         }
 }
 .noticias{
@@ -1473,7 +1619,7 @@ header{
                                 }  
                         }    
                 }
-                @media screen and (max-width: 425px) and (min-width: 220px) {
+                @media screen and (max-width: 430px) and (min-width: 220px) {
                         .first-block{
                                 .box{
                                         .conteudo{
@@ -1481,7 +1627,7 @@ header{
                                                         font-size: 21px;
                                                 }
                                                 p{
-                                                        font-size: 12px;
+                                                        display: none;
                                                 }
                                         }
                                 }
@@ -1493,6 +1639,11 @@ header{
                                                 h3{
                                                         font-size: 21px;   
                                                 }
+                                        }
+                                }
+                                .page{
+                                        .swiper-pagination{
+                                                display: none;
                                         }
                                 }
                         } 
@@ -1700,6 +1851,46 @@ header{
                         }
                 }
         }
+        @media screen and (max-width: 430px) and (min-width: 220px) {
+                .container{
+                        .banner{
+                                .imagem{
+                                        height: auto;
+                                }
+                                .fonte{
+                                        flex-flow: wrap;
+                                        p{
+                                              font-size: 12px !important;  
+                                        }
+                                        .conjunto{
+                                                svg{
+                                                        display: none;
+                                                }
+                                        }
+                                }
+                        }
+                        .conteudo{
+                                .palavras{
+                                        h2{
+                                                padding: 0 0 30px 0 !important;
+                                                font-size: 35px !important;
+                                                margin-top: 35px !important;
+                                                text-align: center;
+                                        }
+                                        p{
+                                                font-size: 18px;
+                                                text-align: center;
+                                        }
+                                        .icones{
+                                                padding: 40px 0px 20px 0;
+                                        }
+                                }
+                                .recentes{
+                                        display: none;
+                                }
+                        }
+                }
+        }
 }
 .contato{
         .container{
@@ -1841,7 +2032,8 @@ header{
                         }
                 }
         }
-        @media screen and (max-width: 425px) and (min-width: 220px) {
+        @media screen and (max-width: 430px) and (min-width: 220px) {
+
                 .container{
                         .infos{
                                 .box{
@@ -1850,6 +2042,9 @@ header{
                                                 font-size: 16px;
                                         }
                                 }
+                        }
+                        .formulario{
+                                margin-bottom: 20px;
                         }
                 }
         }
@@ -1895,9 +2090,10 @@ footer{
                         font-size: 12px;
                 }  
         }
-        @media screen and (max-width: 425px) and (min-width: 220px) {
+        @media screen and (max-width: 430px) and (min-width: 220px) {
                 .footer-email{
-                        padding:0px;
+                        padding: 15px 0 15px 0;
+                        flex-direction: column;
                 }
         }
 }       
