@@ -65,6 +65,26 @@ jQuery(document).ready(function($) {
 						return '<span class="' + className + '">' + (index + 1) + "</span>";
 					},
 				},
+
+				
+				breakpoints: {
+					// when window width is >= 320px
+					320: {
+						slidesPerView: 1,
+						slidesPerColumn: 1,
+					},
+					// when window width is >= 480px
+					480: {
+						slidesPerView: 1,
+						slidesPerColumn: 1,
+					},
+					// when window width is >= 640px
+					640: {
+						slidesPerView: 4,
+						spaceBetween: 40
+					}
+				}
+	
     });
 
 	//label animada
@@ -82,4 +102,15 @@ jQuery(document).ready(function($) {
 			var input = container.querySelector("input");
 			input.addEventListener("keyup", onFloatLabelChange);
 		});
+
+		$('.input2').each(function(){
+        $(this).on('blur', function(){
+            if($(this).val().trim() != "") {
+                $(this).addClass('has-val');
+            }
+            else {
+                $(this).removeClass('has-val');
+            }
+        })    
+    })
 });

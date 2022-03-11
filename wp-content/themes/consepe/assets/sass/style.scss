@@ -127,10 +127,7 @@ header{
                                         transform: scale(1.04);
                                 }
                         }
-                }
-                .collapse{
-                        padding: 0;
-                }       
+                }                     
                 .navbar-header{
                         margin-top: -40px;
                         button{
@@ -160,13 +157,16 @@ header{
                                 margin: 0 -15px;
                                 height: inherit;
                                 transition: all .4s;
-                        }       
+                                padding: 15px 0px;
+                        }                        
                         li {
                                 padding: 0 20px;
                                 float: none;
                                 display: inline-block;  
                                 @media screen and (max-width: 770px) and (min-width: 220px) {
                                         width: 100%;
+                                        margin-top: 5px;
+                                        padding: 0 0px;
                                 }       
                                 a {
                                         position:relative;
@@ -179,6 +179,12 @@ header{
                                         font-size: 25px;
                                         background: transparent;
                                         transition: all 0.3s;
+                                        @media screen and (max-width: 430px) and (min-width: 220px) {
+                                                padding: 5px 0;
+                                                margin-top: 5px;
+                                                font-size: 20px;
+                                                margin-left: 0px;
+                                        }
                                         &:before{
                                                 transition: all .3s;
                                                 content: ''; //obrigatorio
@@ -209,11 +215,20 @@ header{
                                         color: #FFFFFF;
                                         position: relative;
                                         border-bottom: 2px solid #FFFFFF;
+                                        @media screen and (max-width: 430px) and (min-width: 220px) {
+                                               border-bottom: 0px solid #FFFFFF;
+                                               padding: 0px;
+                                               color: #addbff;
+                                        }
                                         &:hover { 
                                                 color: #FFFFFF;
                                                 border-bottom: 2px solid #FFFFFF;  
                                                 transition: all 0.3s;
                                                 background-color: transparent;
+                                                @media screen and (max-width: 430px) and (min-width: 220px) {
+                                                        border-bottom: 0px solid #FFFFFF;
+                                                        color: #addbff;
+                                                }
                                         }
                                         &:before{
                                                 transition: all .3s;
@@ -265,24 +280,13 @@ header{
         } 
         @media screen and (max-width: 430px) and (min-width: 220px) {
                 .menu{
-                        background-color: #01244ee6;
+                        background-color: #00284d;
                         .logo-principal{
                                 img{
                                         width: 90px;
                                 }
                         }
-                        .navbar-collapse{
-                                overflow: hidden;
-                                .nav{
-                                        li{
-                                                a{
-                                                        font-size:13px;
-                                                        padding: 0 0 2px 0;
-                                                        border:none;
-                                                }
-                                        }
-                                }
-                        }
+
                 }
                 .menu-fixo{
                         transition: all .4s;
@@ -348,7 +352,6 @@ header{
                 }        
                 @media screen and (max-width: 770px) and (min-width: 425px) {
                         .conteudo{
-
                                 .box{
                                         text-align: center;
                                         align-items:center;
@@ -711,6 +714,7 @@ header{
                                                         max-width: 100%;
                                                         width: 100%;
                                                         padding: 0 20px;
+                                                        margin-right: 0px;
                                                         svg{
                                                                 width: 40px;
                                                                 height: 40px;
@@ -1123,6 +1127,7 @@ header{
                         align-items: center;
                         justify-content: center;
                         transition: all .3s;
+                        text-decoration: none;
                         svg{
                                 path{
                                         transition: all .3s;
@@ -1183,7 +1188,7 @@ header{
                 }
                 .estatuto{
                         text-align: center;
-                        padding: 20px;
+                        padding: 25px;
                         flex-direction: column;
                         margin-bottom: 60px;
                         .confira{
@@ -1192,7 +1197,7 @@ header{
                                 padding-bottom: 12px;
                         }
                         .down-estatuto{
-                                padding:15px;
+                                padding:10px;
                                 svg{
                                         width: 30px;
                                 }
@@ -1634,7 +1639,7 @@ header{
                         }  
                         .second-block{
                                 .box{
-                                        padding:16px;
+                                        padding: 0px;
                                         .conteudo{
                                                 h3{
                                                         font-size: 21px;   
@@ -2096,4 +2101,13 @@ footer{
                         flex-direction: column;
                 }
         }
-}       
+} 
+
+.construcao{
+        background-image: none;
+        section{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        }
+}     
