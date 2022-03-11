@@ -51,8 +51,8 @@ get_header(); ?>
 
                                 if($var->have_posts()):
                                     while($var->have_posts()):
-                                        $var->the_post(); ?>
-                                            <!-- <a href="<?php the_permalink()?>">  -->
+                                        $var->the_post(); 
+                                        $pdf =  get_post_meta( $post->ID,'arquivo-edital', true);?>
                                             <div class="box">
                                                 <div class="titulo-edital">
                                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -61,7 +61,7 @@ get_header(); ?>
                                                     <span>Edital nº <?php the_title(); ?> - <?php the_time('d \d\e F \d\e Y') ?></span>
                                                 </div>
 
-                                                <a href="">
+                                                <a href="<?php echo $pdf?>" download="<?php the_title()?>">
                                                     <div class="down-edit">
                                                         <span>fazer download do documento</span>
                                                         <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">

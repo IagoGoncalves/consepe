@@ -2,6 +2,26 @@
 
 function custom_metabox() {
    global $post;
+   //Pagina consepe-------------------------
+     $post_metabox = new Odin_Metabox(
+        'info-pdf', // Slug/ID of the Metabox (Required)
+        'Info', // Metabox name (Required)
+        'page', // Slug of Post Type (Optional)
+        'normal', // Context (options: normal, advanced, or side) (Optional)
+        'high', // Priority (options: high, core, default or low) (Optional)
+        'page-consepe.php'
+     );
+     $post_metabox->set_fields(
+        array(
+          array(
+                'id'          => 'arquivo-consepe', // Required
+                'label'       => __( 'Selecione o arquivo', 'odin' ), // Required
+                'type'        => 'upload', // Required
+                // 'attributes' => array(), // Optional (html input elements)
+                // 'default'    => '', // Optional (file url)
+            ),    
+        )
+     );
   //Editais -----------------------------
      $post_metabox = new Odin_Metabox(
         'edital', // Slug/ID of the Metabox (Required)

@@ -382,6 +382,7 @@ header{
                                                 color: #fff;
                                                 background-color: #01244e;
                                                 transition: all .4s;
+                                                border: 2px solid #01244e;
                                                 svg{
                                                         transition: all .4s;
                                                         path{
@@ -680,22 +681,26 @@ header{
                                                 font-weight: 600;
                                                 font-size: 16px;
                                                 border-radius: 10px;
-                                                padding: 25px 45px 25px 25px;
+                                                padding: 25px;
                                                 border: 2px solid;
                                                 text-transform: uppercase;
+                                                transition: all .3s;
                                                 svg{
+                                                        margin-left:10px;
                                                         transition: all .3s;
+                                                        path{
+                                                                transition: all .4s;
+                                                        }
                                                 }
                                                 &:hover{
                                                         background-color:#112D4E;
                                                         color:#fff;
-                                                        border:none;
-                                                        box-shadow: 0 5px 5px black;
                                                         transition: all .3s;
+                                                        border-color:#112D4E;
                                                         svg{
-                                                                margin-left: 2%;
+                                                                transition: all .3s;
                                                                 path{
-                                                                        margin-left: 3%;
+                                                                        transition: all .3s;
                                                                         fill:white;
                                                                 }
                                                         }
@@ -708,7 +713,9 @@ header{
                                                 margin-left: 16px;
                                                 text-transform: uppercase;
                                                 text-decoration: none;
+                                                transition: all .3s;
                                                 &:hover{
+                                                        transition: all .3s;
                                                         color: #112D4E;
                                                 }
                                         }
@@ -790,6 +797,7 @@ header{
                                 }
                                 .esquerda{
                                         svg{
+                                                border-radius: 10px;
                                                 transition: all .3s;
                                         }
                                         &:hover{
@@ -805,6 +813,7 @@ header{
                                 }
                                 .direita{
                                         svg{
+                                                border-radius: 10px;
                                                 transition: all .3s;
                                         }
                                         &:hover{
@@ -1104,6 +1113,7 @@ header{
                                                 margin-left: 10px;
                                         }
                                         a{
+                                                text-decoration: none;
                                                 .down-edit{
                                                         font-weight: 600;
                                                         font-size: 16px;
@@ -1188,7 +1198,6 @@ header{
                                         overflow: hidden;
                                         border-radius:40px;
                                         img{
-                                               
                                                 width: 100%;
                                                 max-width: 100%;
                                                 height: auto;
@@ -1264,26 +1273,39 @@ header{
                                 .imagem{
                                         width: 100%;
                                         height: 100%;
+                                        overflow: hidden;
+                                        border-radius:40px;
                                         img{
-                                               border-radius:40px;
                                                 width: 100%;
                                                 max-width: 100%;
-                                                height: auto;                                               
+                                                height: auto;
+                                                transition: all .4s;
+                                                transform: scale(1);                                               
                                         }
                                         &:before{
                                                 content: '';
                                                 border-radius:40px;
                                                 position: absolute;
                                                 width: 100%;
-                                                height: 100%;
-                                                background: -moz-linear-gradient(top,transparent 0%,#3f72af00 100%);
-                                                background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,transparent),color-stop(100%,#3f72af00));
-                                                background: -webkit-linear-gradient(top,transparent 0%,#3f72af00 100%);
-                                                background: -o-linear-gradient(top,transparent 0%,#3f72af00 100%);
-                                                background: -ms-linear-gradient(top,transparent 0%,#3f72af00 100%);
-                                                background: linear-gradient(to bottom,transparent 0%,#3f72af00 100%);  
-                                                background: linear-gradient(360deg, #3F72AF 0%, #3F72AF 0%, #3f72af00 100%);                                              
+                                                height: 100%; 
+                                                background: linear-gradient(360deg, #3F72AF 0%, #3F72AF 0%, #3f72af00 100%);
+                                                opacity: 1;
+                                                z-index: 9; 
+                                                transition: all .4s;                                             
                                         }
+                                        &:hover{
+                                                img{
+                                                        transition: all .4s;
+                                                        transform: scale(1.04); 
+                                                }
+                                                &:before{
+                                                        transition: all .3s;
+                                                        content: '';
+                                                        opacity: 0.6;
+                                                        background: linear-gradient(360deg, #3F72AF 0%, #3f72af00 100%);
+                                                }
+
+                                        } 
                                 }
                                 .conteudo{
                                         position: absolute;
@@ -1339,6 +1361,7 @@ header{
                                         .esquerda{
                                                 svg{
                                                         transition: all .3s;
+                                                        border-radius: 10px;
                                                 }
                                                 &:hover{
                                                         svg{
@@ -1354,6 +1377,7 @@ header{
                                         .direita{
                                                 svg{
                                                         transition: all .3s;
+                                                        border-radius: 10px;
                                                 }
                                                 &:hover{
                                                         svg{
@@ -1494,7 +1518,7 @@ header{
                                 align-items: center;
                                 border-radius: 40px;
                                 img{
-                                        border-radius: 40px;
+                                        border-radius: 40px;      
                                 }
                         }
                         .fonte{
@@ -1562,11 +1586,14 @@ header{
                                         .imagem{                                        
                                                 width: 100%;
                                                 height: 100%;
+                                                overflow: hidden;
+                                                border-radius:40px;
                                                 img{
-                                                        border-radius:40px;
                                                         width: 100%;
                                                         max-width: 100%;
-                                                        height: auto;                                               
+                                                        height: auto;
+                                                        transition: all .4s;
+                                                        transform: scale(1);                                             
                                                 }
                                                 &:before{
                                                         content: '';
@@ -1574,13 +1601,23 @@ header{
                                                         position: absolute;
                                                         width: 100%;
                                                         height: 87%;
-                                                        background: -moz-linear-gradient(top,transparent 0%,#3f72af00 100%);
-                                                        background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,transparent),color-stop(100%,#3f72af00));
-                                                        background: -webkit-linear-gradient(top,transparent 0%,#3f72af00 100%);
-                                                        background: -o-linear-gradient(top,transparent 0%,#3f72af00 100%);
-                                                        background: -ms-linear-gradient(top,transparent 0%,#3f72af00 100%);
-                                                        background: linear-gradient(to bottom,transparent 0%,#3f72af00 100%);  
                                                         background: linear-gradient(360deg, #3F72AF 0%, #3F72AF 0%, #3f72af00 100%);
+                                                        opacity: 1;
+                                                        z-index: 9;
+                                                        transition: all .4s;
+                                                }
+                                                &:hover{
+                                                        img{
+                                                                transition: all .4s;
+                                                                transform: scale(1.04); 
+                                                        }
+                                                        &:before{
+                                                                transition: all .3s;
+                                                                content: '';
+                                                                opacity: 0.6;
+                                                                background: linear-gradient(360deg, #3F72AF 0%, #3f72af00 100%);
+                                                        }
+
                                                 }
                                         }
                                         .conteudo{
@@ -1747,11 +1784,29 @@ header{
                                                 border-bottom:  2px solid rgba(64, 64, 64, 0.4);
                                                 z-index: 2;
                                                 position: relative;
-                                        }       
-
+                                        }
                                         .float-label input[data-empty] + label {
                                                 top: 20px;
                                         }
+                                        .float-label textarea {
+                                                display: block;
+                                                box-sizing: border-box;
+                                                width: 100%;
+                                                background: none;
+                                                border: none;
+                                                font-weight: 600;
+                                                font-size: 20px;
+                                                color: #112D4E;
+                                                outline:0px;
+                                                top: 25px;
+                                                border-bottom:  2px solid rgba(64, 64, 64, 0.4);
+                                                z-index: 2;
+                                                position: relative;
+                                                resize: none;
+                                        }
+                                        // .float-label textarea[data-empty] + label {
+                                        //         top: 20px;
+                                        // }
                                 
                                         .botao-enviar{
                                                 display: flex;
