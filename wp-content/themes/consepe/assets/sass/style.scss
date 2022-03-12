@@ -350,7 +350,7 @@ header{
                                 }
                         }                        
                 }        
-                @media screen and (max-width: 770px) and (min-width: 425px) {
+                @media screen and (max-width: 1200px) and (min-width: 581px) {
                         .conteudo{
                                 .box{
                                         text-align: center;
@@ -367,7 +367,7 @@ header{
                                 }
                         }
                 }
-                @media screen and (max-width: 425px) and (min-width: 220px) {
+                @media screen and (max-width: 580px) and (min-width: 220px) {
                         background-size: auto;
                         .conteudo{
                                 top: 14%;
@@ -449,44 +449,34 @@ header{
                                         }
                                 } 
                         }
-                        @media screen and (max-width: 770px) and (min-width: 220px) {
-                                .imagem{
-                                        display: flex;
-                                        justify-content: center;
-                                        margin: 100px 0 0 0;
-                                }
-                                .texto{
-                                        h2, p{
-                                                text-align: center;
-                                        }
-                                        p{
-                                                padding-bottom: 70px;
-                                        }
-                                        .saiba-mais{
-                                                display: flex;
-                                                justify-content: center;
-                                        }
-                                }
-                        }
                 } 
-                @media screen and (max-width: 1024px) and (min-width: 220px) {
+                @media screen and (max-width: 1024px) and (min-width: 580px) {
                         .texto-imagem{
                                 display: flex;
-                        }        
-                } 
-                @media screen and (max-width: 770px) and (min-width: 376px) {
-                        padding: 200px 0 150px 0;    
-                        .texto-imagem{
+                                width: 100%;
                                 .texto{
+                                        width: 50%;
+                                        text-align: center;
+                                        h2{
+                                                padding-bottom: 20px;
+                                                padding-top: 20px;
+                                        }
+                                        p{
+                                                font-size: 16px;
+                                                padding-bottom: 45px;
+                                        }
                                         .saiba-mais{
-                                                display: flex;
-                                                justify-content: center;
-                                                align-items: center;
+                                                svg{
+                                                        margin-left: 0px;
+                                                }
                                         }
                                 }
-                        }    
-                }
-                @media screen and (max-width: 425px) and (min-width: 220px) {
+                                .imagem{
+                                        width: 50%;
+                                }
+                        }        
+                } 
+                @media screen and (max-width: 580px) and (min-width: 220px) {
                         padding: 80px 0 55px 0;
                         .texto-imagem{
                                 flex-direction: column-reverse;
@@ -497,15 +487,13 @@ header{
                                         margin: 25px 0 0 0;;
                                 }
                                 .texto{
+                                        text-align: center;
                                         h2{
                                                 font-size: 34px;
                                                 padding-bottom: 40px
                                         }
                                         p{
                                                 padding-bottom:24px;
-                                        }
-                                        .saiba-mais{
-
                                         }
                                 }
                         }
@@ -959,9 +947,6 @@ header{
                                                                 h2{
                                                                        padding-top:0px; 
                                                                 }
-                                                                .texto{
-                                                                        text-align: center;
-                                                                }
                                                         }
                                                 }
                                         }
@@ -1109,6 +1094,7 @@ header{
                 border-radius: 20px;
                 height: 160px;
                 margin-bottom:120px;
+                padding: 20px;
                 .confira{
                         font-weight: 600;
                         font-size: 38px;
@@ -1154,15 +1140,18 @@ header{
                         }
                 }
         }
-        @media screen and (max-width: 770px) and (min-width: 426px) {
+        @media screen and (max-width: 1200px) and (min-width: 771px) {
                 .estatuto{
-                        .confira{
-                                font-size: 30px;
-                                padding: 50px 0 50px 0;
+                        text-align: center;
+                        .down-estatuto{
+                                svg{
+                                        width: 22px;
+                                        height: 22px;
+                                }
                         }
                 }
         }
-        @media screen and (max-width: 430px) and (min-width: 220px) {
+        @media screen and (max-width: 770px) and (min-width: 220px) {
                 .info{
                         .texto{
                                 h2{
@@ -1191,6 +1180,7 @@ header{
                         padding: 25px;
                         flex-direction: column;
                         margin-bottom: 60px;
+                        padding: 0px;
                         .confira{
                                 font-size:21px;
                                 line-height: 30px;
@@ -1275,25 +1265,33 @@ header{
                                 }
                         }
                 }
-                @media screen and (max-width: 1024px) and (min-width: 426px) {
-                        .tds-box{
-                                .box{
-                                        margin-bottom: 5%;
-                                        padding: 0 5% 0 0;
-                                        text-align: center;
-                                        .titulo-edital{
-                                                padding: 1%;
+        }
+        @media screen and (max-width: 1200px) and (min-width: 771px) {
+                article{
+                        padding: 15px;
+                        h2{
+                                padding: 25px 0;
+                        }
+                        .alinhamento{
+                                .titulo-edital{
+                                        svg{
+                                                width: 30px;
                                         }
-                                        a{
-                                                .down-edit{
-                                                        padding: 3%;
+                                }
+                                a{
+                                        .down-edit{
+                                                margin-right: 35px !important;
+                                                svg{
+                                                        width: 30px;
                                                 }
                                         }
                                 }
-                        }  
+                        }
+                          
                 }
+                padding-bottom:60px;
         }
-        @media screen and (max-width: 430px) and (min-width: 220px) {
+        @media screen and (max-width: 770px) and (min-width: 421px) {
                 article{
                         margin-top: -50px;
                         h2{
@@ -1331,6 +1329,48 @@ header{
                 }
                 padding-bottom:60px;
         }
+        @media screen and (max-width: 420px) and (min-width: 220px) {
+                article{
+                        margin-top: -50px;
+                        h2{
+                                padding: 15px 0;
+                                font-size: 32px;
+                        }
+                        .alinhamento{
+                                .logo-edital{
+                                        display: none;
+                                }
+                                .tds-box{
+                                        margin: 12px;
+                                        .box{
+                                                flex-direction: column;
+                                                .titulo-edital{
+                                                        margin: 0 25px 10px 0;
+                                                        height: 60px;
+                                                        text-align: center;
+                                                        svg{
+                                                               display: none; 
+                                                        }
+                                                }
+                                                a{
+                                                        .down-edit{
+                                                                margin-left: auto; 
+                                                                margin-right: 25px;
+                                                                height: 60px;
+                                                                padding: 16px 30px;;
+                                                                span{
+                                                                        display: none;
+                                                                }   
+                                                        }
+                                                }
+                                        }
+                                }
+                        }
+                          
+                }
+                padding-bottom:60px;
+        }
+
 }
 .noticias{
         padding: 0px 0 130px 0;
@@ -2038,7 +2078,6 @@ header{
                 }
         }
         @media screen and (max-width: 430px) and (min-width: 220px) {
-
                 .container{
                         .infos{
                                 .box{
@@ -2095,14 +2134,13 @@ footer{
                         font-size: 12px;
                 }  
         }
-        @media screen and (max-width: 430px) and (min-width: 220px) {
+        @media screen and (max-width: 680px) and (min-width: 220px) {
                 .footer-email{
                         padding: 15px 0 15px 0;
                         flex-direction: column;
                 }
         }
 } 
-
 .construcao{
         background-image: none;
         section{
