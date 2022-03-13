@@ -54,7 +54,6 @@ main{
         background-position: center;
         user-select: none;
 }
-
 h2{
         font-weight: 600;
         color: #112D4E;
@@ -89,9 +88,16 @@ h2{
                         }
                 }
         }
-        @media screen and (max-width: 430px) and (min-width: 220px) {
-                ul{
-                        padding: 25px 0 0 0;
+        @media screen and (max-width: 550px) and (min-width: 220px) {
+                padding: 0 0 20px;
+                .container{
+                        margin-top: 100px;
+                        ul{
+                                padding: 25px 0 0 0;
+                                .atual{
+                                        display: none;
+                                }
+                        }
                 }
         }
 }
@@ -431,7 +437,9 @@ header{
                                                 background-color: #01244e;
                                                 transition: all .4s;
                                                 border: 2px solid #01244e;
+                                                padding: 25px 40px 25px 25px;
                                                 svg{
+                                                        margin-left: 20px;
                                                         transition: all .4s;
                                                         path{
                                                                 transition: all .4s;
@@ -551,7 +559,7 @@ header{
                                         }
                                         .botao{
                                                 position: relative;
-                                                border: 2px solid #112D4E;
+                                                border: 2px solid rgba(17, 45, 78, 0.6);
                                                 border-radius: 10px;
                                                 padding: 18px 0px;
                                                 width: 160px;
@@ -583,7 +591,8 @@ header{
                                                                 transition: all .3s; 
                                                                 color:#fff;
                                                         }
-                                                        svg{                                                                                                                            
+                                                        svg{          
+                                                                margin-left: 8%;                                                                                                                  
                                                                 path{
                                                                         transition: all .3s;   
                                                                         fill: white;
@@ -653,6 +662,7 @@ header{
                                 }
                                 @media screen and (max-width: 1024px) and (min-width: 770px) {
                                         .box{
+                                                flex-direction: column;
                                                 .titulo-data{
                                                         margin: 0 0 6px 0;
                                                 }
@@ -669,7 +679,7 @@ header{
                                 }
                                 
                         }
-                        @media screen and (max-width: 770px) and (min-width: 425px) {
+                        @media screen and (max-width: 770px) and (min-width: 551px) {
                                .imagem{
                                         display: flex;
                                         justify-content: center;
@@ -678,7 +688,7 @@ header{
                                         .box{
                                                 flex-flow: initial;
                                                 .titulo-data{
-                                                        margin-right: 0;
+                                                        margin: 0 15px 0 0;
                                                 }
                                         }
                                         .ver-todos{
@@ -686,7 +696,7 @@ header{
                                         }
                                }
                         }
-                        @media screen and (max-width: 425px) and (min-width: 220px) {
+                        @media screen and (max-width: 550px) and (min-width: 220px) {
                                 h2{
                                       font-size: 30px;  
                                 }
@@ -788,7 +798,9 @@ header{
                                                         color:#fff;
                                                         transition: all .3s;
                                                         border-color:#112D4E;
+                                                        padding: 25px 20px 25px 25px;
                                                         svg{
+                                                                margin-left: 15px;
                                                                 transition: all .3s;
                                                                 path{
                                                                         transition: all .3s;
@@ -946,6 +958,9 @@ header{
                                                         .info-noticias{
                                                                 h2{
                                                                        padding-top:0px; 
+                                                                }
+                                                                .texto{
+                                                                        text-align: center;
                                                                 }
                                                         }
                                                 }
@@ -1257,7 +1272,20 @@ header{
                                                         padding-right: 15px;
                                                         margin-left: 10px;
                                                         margin-right: 50px;
+                                                        transition: all .3s;
+                                                        &:hover{
+                                                                background-color: #fff;
+                                                                color: #112D4E;
+                                                                transition: all .3s;
+                                                                svg{
+                                                                        path{
+                                                                                transition: all .3s;
+                                                                                fill: #112D4E;
+                                                                        }
+                                                                }
+                                                        }
                                                 }
+                                                
                                         }
                                         span{
                                                 padding: 0 20px;
@@ -1664,7 +1692,7 @@ header{
                                 }  
                         }    
                 }
-                @media screen and (max-width: 430px) and (min-width: 220px) {
+                @media screen and (max-width: 550px) and (min-width: 220px) {
                         .first-block{
                                 .box{
                                         .conteudo{
@@ -1690,13 +1718,6 @@ header{
                                         .swiper-pagination{
                                                 display: none;
                                         }
-                                }
-                        } 
-                }
-                @media screen and (max-width: 375px) and (min-width: 220px) {
-                        .second-block{
-                                .box{
-                                        padding:14px;
                                 }
                         } 
                 }
@@ -1837,66 +1858,57 @@ header{
                         }
                 }
         }
-        @media screen and (max-width: 1024px) and (min-width: 220px) {
-                .container{
-                        .conteudo{
-                                .recentes{
-                                        padding:50px 0;
-                                        display: flex;
-                                        .box{
-                                                width: 33%;
-                                                padding: 0 0 24px 0;
-                                                margin: 0 5px;
-                                                .conteudo{
-                                                        padding: 0 15px 12px;
-                                                        h3{
-                                                                font-size: 19px;
-                                                        }
-                                                }
-                                        }
-                                }
-                        }
-                }
-        }
-        @media screen and (max-width: 1024px) and (min-width: 220px) {
+        @media screen and (max-width: 1200px) and (min-width: 551px) {
                 .container{
                         .banner{
+                                .imagem{
+                                        height: auto;
+                                }
                                 .fonte{
+                                        flex-flow: wrap;
                                         p{
-                                              font-size: 12px;  
+                                              font-size: 12px !important;  
+                                        }
+                                        .conjunto{
+                                                svg{
+                                                        display: none;
+                                                }
                                         }
                                 }
                         }
                         .conteudo{
                                 .palavras{
                                         h2{
-                                                padding: 0 0 35px 0;
-                                                font-size: 35px;
+                                                padding: 0 0 30px 0 !important;
+                                                font-size: 35px !important;
+                                                margin-top: 35px !important;
+                                                text-align: center;
                                         }
                                         p{
                                                 font-size: 18px;
+                                                text-align: center;
                                         }
                                         .icones{
-                                                padding: 60px 0px 0 0;
+                                                padding: 40px 0px 20px 0;
                                         }
                                 }
                                 .recentes{
-                                        .box{
-                                                padding: 0 0 13px 0;
-                                                a{
-                                                        .conteudo{
-                                                                padding: 0 10px 0px;
+                                       .box{
+                                                padding: 0px 0px 20px 0px;
+                                               a{
+                                                       .conteudo{
+                                                                padding: 0 10px 7px;
                                                                 h3{
-                                                                        font-size: 12px;
-                                                                }      
-                                                        }
-                                                }
-                                        }
+                                                                        font-size: 14px;
+                                                                }
+                                                       }
+                                               }
+                                       } 
                                 }
                         }
-                }
+                }   
         }
-        @media screen and (max-width: 430px) and (min-width: 220px) {
+        @media screen and (max-width: 990px) and (min-width: 220px) {
                 .container{
                         .banner{
                                 .imagem{
@@ -2070,20 +2082,21 @@ header{
                         }
                 }
         }
-        @media screen and (max-width: 1024px) and (min-width: 220px) {
+        @media screen and (max-width: 995px) and (min-width: 731px) {
                 .container{
                         .formulario{
                                 padding: 60px;
+                                margin-bottom: 20px;
                         }
                 }
         }
-        @media screen and (max-width: 430px) and (min-width: 220px) {
+        @media screen and (max-width: 730px) and (min-width: 220px) {
                 .container{
                         .infos{
                                 .box{
                                         padding-top:23px;
                                         p{
-                                                font-size: 16px;
+                                                font-size: 14px;
                                         }
                                 }
                         }

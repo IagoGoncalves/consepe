@@ -61,22 +61,12 @@ get_header();
 	                        	</span>
 	                        	<span class="conteudo">
 		                        	<?php if ($logradouro != '') { ?>
-										<p><?php echo $logradouro?> </p>
+										<p><?php echo $logradouro?> <?php echo $endereco?>, <?php echo $numero?> <br></p>
 										<?php } else { ?>
 											<p style="display: none;"></p>
 									<?php } ?>
 
-									<?php if ($endereco != '') { ?>
-										<p> <?php echo $endereco?>, </p>
-										<?php } else { ?>
-											<p style="display: none;"></p>
-									<?php } ?>
-
-									<?php if ($numero != '') { ?>
-										<p><?php echo $numero?> <br></p>
-										<?php } else { ?>
-											<p style="display: none;"></p>
-									<?php } ?>
+									
 
 									<?php if ($complemento != '') { ?>
 										<p><?php echo $complemento?> </p>
