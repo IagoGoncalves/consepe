@@ -2033,106 +2033,172 @@ header{
                                 }
                         }
                 }
-                .formulario{  
+                .formulario{
                         @extend .col-md-5;
                         background: #DBE2EF;
                         box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
                         border-radius: 20px;
                         margin-top: -100px;
-                        padding: 75px;  
+                        padding: 75px;
                         .fontzero{
                                 text-align: center;
                                 font-weight: 600;
                                 font-size: 32px;
                                 color: #3F72AF;
-                                padding-top:0px
-                        }        
-                        .form{
-                                .input-field{
-                                        .float-label {
-                                                position: relative;
-                                                width: 100%;
-                                                margin-top: 60px;
+                                padding-top:0px;
+                                margin-bottom: 40px;
+                        }   
+                        
+                        input {
+                                outline: none;
+                                border: none;
+                                background-color: transparent;
+                        }
+                        textarea {
+                                outline: none;
+                                border: none;
+                                background-color: transparent;
+                        }
+                        textarea:focus, input:focus {
+                                border-color: transparent !important;
+                        }
+        
+                        .campos {
+                                position: relative;			
+                                margin-bottom: 40px;
+                        }
+        
+                        .input2 {
+                                display: block;
+                                padding-left: 10px;
+                                width: 100%;
+                                font-size: 15px;
+                                color:rgba(129, 129, 129, 0.808);
+                                line-height: 1.2;
+                                font-weight: normal;
+                        }
+        
+                        .focus-input2 {
+                                position: absolute;
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                                top: 0;
+                                left: 0;
+                                pointer-events: none;
+                        }
+        
+                        .focus-input2::before {
+                                content: "";
+                                position: absolute;
+                                bottom: 0px;
+                                left: 0;
+                                width: 100%;
+                                border-bottom: 1px solid rgba(129, 129, 129, 0.808);
+                                height: 45px;
+                                transition: all 0.4s;
+                        }
+        
+                        .focus-input2::after {
+                                content: attr(data-placeholder);
+                                display: block;
+                                width: 100%;
+                                position: absolute;
+                                top: 0px;
+                                left: 10px;
+                                font-size: 18px;
+                                color:rgba(129, 129, 129, 0.808);
+                                line-height: 1.2;
+                                -webkit-transition: all 0.4s;
+                                -o-transition: all 0.4s;
+                                -moz-transition: all 0.4s;
+                                transition: all 0.4s;
+                        }
+        
+                        /*---------------------------------------------*/
+                        input.input2 {
+                                height: 55px;
+                        }
+        
+                        input.input2 + .focus-input2::after {
+                                top: 23px;
+                                left: 10px;			
+                        }
+        
+                        textarea.input2 {
+                                min-height: 129px;
+                                padding-top: 13px;
+                                padding-bottom: 13px;
+                        }
+                        textarea.input2 + .focus-input2::before {
+                                height: 120px;			
+                        }
+        
+                        textarea.input2 + .focus-input2::after {
+                                top: 12px;
+                                left: 10;			
+                        }
+        
+                        .input2:focus + .focus-input2::after {
+                                top: -11px;
+                                font-size: 15px;
+                        }
+        
+                        .input2:focus + .focus-input2::before {
+                                width: 100%;
+                                border-bottom: 1px solid #112D4E;
+                        }
+        
+                        .has-val.input2 + .focus-input2::after {
+                                top: -11px;
+                                color: #112D4E;
+                                font-size: 15px;
+                        }
+        
+                        .has-val.input2 + .focus-input2::before {
+                                width: 100%;
+                                color:#112D4E;
+                                border-bottom: 1px solid #112D4E;
+                        }
+                        .campo3{
+                                @extend .col-md-12;
+                            
+                                padding: 0;
+                        }
+                        .campo1{
+                                @extend .col-md-12;
+                                padding: 0;
+                                margin-right: 5px;
+                        }
+                        .area{
+                                resize: none;
+                        }
+                        .botao-enviar{
+                                @extend .col-md-12;
+                                text-align: center;
+                                button{
+                                        color: #fff;
+                                        background: #112D4E;           	
+                                        border:none;
+                                        padding: 15px 80px;
+                                        transition: all .3s;
+                                        font-size: 18px;
+                                        font-weight: 500;
+                                        text-transform: uppercase;
+                                        &:hover{					
+                                                transition: all .3s;
+                                                background: #3769a5;      	
                                         }
-                                        .float-label label,
-                                        .float-label input {
-                                                display: block;
-                                                box-sizing: border-box;
-                                                width: 100%;
-                                                background: none;
-                                                border: none;
-                                                font-weight: 600;
-                                                font-size: 20px;
-                                                color: #112D4E;
-                                                outline:0px;
-                                        }
-
-                                        .float-label label {
-                                                transition-duration: 0.2s;
-                                                left: 2px;
-                                                top: 0px;    
-                                                font-size: 20px;
-                                                color: #404040;
-                                                opacity: 0.4;
-                                                z-index: 0;
-                                                position: absolute;
-                                        }
-
-                                        .float-label input {
-                                                top: 25px;
-                                                border-bottom:  2px solid rgba(64, 64, 64, 0.4);
-                                                z-index: 2;
-                                                position: relative;
-                                        }
-                                        .float-label input[data-empty] + label {
-                                                top: 20px;
-                                        }
-                                        .float-label textarea {
-                                                display: block;
-                                                box-sizing: border-box;
-                                                width: 100%;
-                                                background: none;
-                                                border: none;
-                                                font-weight: 600;
-                                                font-size: 20px;
-                                                color: #112D4E;
-                                                outline:0px;
-                                                top: 25px;
-                                                border-bottom:  2px solid rgba(64, 64, 64, 0.4);
-                                                z-index: 2;
-                                                position: relative;
-                                                resize: none;
-                                        }
-                                        // .float-label textarea[data-empty] + label {
-                                        //         top: 20px;
-                                        // }
-                                
-                                        .botao-enviar{
-                                                display: flex;
-                                                align-items: center;
-                                                justify-content: center;
-                                                padding: 100px 0 0 0;
-                                                button{
-                                                        background: #112D4E;
-                                                        box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.2);
-                                                        border-radius: 10px;
-                                                        font-weight: 600;
-                                                        font-size: 16px;
-                                                        color: #FFFFFF;
-                                                        text-transform: uppercase;
-                                                        width: 240px;
-                                                        height: 70px;
-                                                        transition: all .4s;
-                                                        &:hover{
-                                                                transition: all .3s;
-                                                                font-size: 18px;
-                                                        }
-                                                }       
-                                        }
-                                }  
+                        }
+                        select{
+                                margin-top: 14px;
+                                height: 30px;
+                                width: 100%;
+                                border: 0;
                         }
                 }
         }
+}
         @media screen and (max-width: 995px) and (min-width: 731px) {
                 .container{
                         .formulario{

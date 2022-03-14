@@ -94,28 +94,38 @@ get_header();
 		            endif;
 		        wp_reset_postdata(); ?>
 			</article>
-			<article class="formulario">
-					<h2 class="fontzero">Fale conosco!</h2>
-					<form id="formulario" class="form" name="enviar-email" method="post">
-						<div class="input-field">		
-							<div class="float-label">
-								<input type="text" name="nome" autocomplete="off" data-empty>
-								<label>Nome</label>
-							</div>
-							<div class="float-label">
-								<input type="text" name="assunto" autocomplete="off" data-empty>
-								<label>Assunto</label>
-							</div>
-							<div class="float-label">
-								<textarea type="textarea" name="msg" autocomplete="off" data-empty>     </textarea>
-								<label>Mensagem</label>
-							</div>
-							<div class="botao-enviar">
-								<button value="submit">Enviar</button>	
-							</div>
-		            </form>
-			</article>
-		</section>
+			<section class="formulario container">
+		<form class="contact2-form">	
+			<h2 class="fontzero">Fale conosco!</h2>			
+			<div class="campos campo1">
+				<input class="input2" type="text" name="name" autocomplete="off" required>
+				<span class="focus-input2" data-placeholder="Nome"></span>
+			</div>
+
+			<!-- <div class="campos campo1">
+				<input class="input2" type="email" name="email" required>
+				<span class="focus-input2" data-placeholder="Seu e-mail"></span>					
+			</div> -->
+
+			<!-- <div class="campos campo2">
+				<input class="input2" type="text" name="assunto" required>
+				<span class="focus-input2" data-placeholder="Assunto"></span>
+			</div> -->
+
+			<div class="campos campo3">
+				<input class="input2" type="text" name="assunto" autocomplete="off" required>
+				<span class="focus-input2" data-placeholder="Assunto"></span>
+			</div>
+
+			<div class="campos campo1">
+				<textarea class="input2 area" name="message" autocomplete="off" required></textarea>
+				<span class="focus-input2" data-placeholder="Mensagem"></span>
+			</div>
+			<div class="botao-enviar">
+				<button class="btn">Enviar</button>
+			</div>
+		</form>	
+	</section>
 	</main>
 <?php
 get_footer();
