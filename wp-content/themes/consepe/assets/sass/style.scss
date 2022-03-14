@@ -63,6 +63,7 @@ h2{
 .breadcrumb{
         background-color:transparent;
         padding: 0 0 50px;
+        margin-bottom: 0px;
         ul{
                 display: inline-flex;
                 list-style: none;
@@ -88,15 +89,18 @@ h2{
                         }
                 }
         }
+        @media screen and (max-width: 770px) and (min-width: 220px) {
+                .container{
+                        padding-top: 100px;
+                }
+        }
         @media screen and (max-width: 550px) and (min-width: 220px) {
                 padding: 0 0 20px;
+                margin-bottom: 0px;
                 .container{
                         margin-top: 100px;
                         ul{
                                 padding: 25px 0 0 0;
-                                .atual{
-                                        display: none;
-                                }
                         }
                 }
         }
@@ -137,14 +141,14 @@ header{
                 .navbar-header{
                         margin-top: -40px;
                         button{
-                                background-color: #01244e;
+                                background-color: #89ccff;
                                 border: 1px solid #01244e;
                                 outline: -webkit-focus-ring-color auto 0px;
                                 @media screen and (max-width: 770px) and (min-width: 220px) {
                                         display: block;
                                 }
                                 &:hover{
-                                        background-color: #01244e;
+                                        background-color: #89ccff;
                                 }
                         }
                         .icon-bar{
@@ -284,7 +288,17 @@ header{
                         }
                 }  
         } 
-        @media screen and (max-width: 430px) and (min-width: 220px) {
+        @media screen and (max-width: 1200px) and (min-width: 770px) {
+                .menu{
+                        background-color: #00284d;
+                        .logo-principal{
+                                img{
+                                        width: 90px;
+                                }
+                        }
+                }
+        }
+        @media screen and (max-width: 770px) and (min-width: 220px) {
                 .menu{
                         background-color: #00284d;
                         .logo-principal{
@@ -734,7 +748,7 @@ header{
                                                 }
                                         }
                                         .ver-todos{
-                                                //padding-bottom: 30px;
+                                                padding-bottom: 30px;
                                         }
                                 }
                         }
@@ -1008,16 +1022,33 @@ header{
                                 }
                         }
                 }
-                @media screen and (max-width: 425px) and (min-width: 220px) {
+                @media screen and (max-width: 530px) and (min-width: 476px) {
+                        .info-noticias{
+                                margin-bottom: 50px;
+                                height: 320px;
+                                h2{
+                                        
+                                }
+                                .texto{
+                                        height: auto !important;
+                                        p{
+                                                font-size:18px;
+                                                padding: 0px;
+                                        }
+                                }
+                        }
+                }
+                @media screen and (max-width: 550px) and (min-width: 220px) {
                         margin-top: 50px;
                         .info-noticias{
                                 h2{
-                                        padding-bottom: 20px;
+                                        padding-bottom: 20px !important;
                                 }
                                 .texto{
                                         height: 230px;
                                 }
                                 .botoes{
+                                        margin-bottom: 25px;
                                         .cnt-lendo{
                                                 padding: 15px 25px 15px 25px;
                                         }
@@ -1035,35 +1066,30 @@ header{
                                         width: 100%;
                                         display: flex;
                                         align-items:center;
-                                        justify-content: space-evenly;
+                                        justify-content: center;
                                         .esquerda{
                                                 left: 0px;
+                                                right: 15px;
                                                 position:relative;
+                                                &:hover{
+                                                        svg{
+                                                                height: 28px;
+                                                        }
+                                                }
                                         }
                                         .direita{
                                                 position:relative;
-                                                left: 0px;
-                                        }
-                                }
-                        }           
-                }
-                @media screen and (max-width: 375px) and (min-width: 220px) {
-                        .container{
-                                .mySwiper{
-                                        .swiper-wrapper{
-                                                .swiper-slide{
-                                                        .info-noticias{
-                                                                .botoes{
-                                                                        .cnt-lendo{
-                                                                                padding: 10px;
-                                                                        }
-                                                                }
+                                                left: 15px;
+                                                &:hover{
+                                                        svg{
+                                                                height: 28px;
                                                         }
                                                 }
                                         }
                                 }
-                        }
+                        }           
                 }
+               
         }
 }
 .consepe{
@@ -1074,7 +1100,7 @@ header{
         .info{
                 .destaque{
                         text-align: center;
-                        padding:61px 0 80px 0;
+                        padding: 20px 0 80px 0;
                         font-weight: 600;
                         font-size: 38px;
                         color: #112D4E;
@@ -1332,6 +1358,7 @@ header{
                                         display: none;
                                 }
                                 .tds-box{
+                                        height: 520px;
                                         margin: 12px;
                                         .box{
                                                 .titulo-edital{
@@ -1370,6 +1397,7 @@ header{
                                         display: none;
                                 }
                                 .tds-box{
+                                        height: 480px;
                                         margin: 12px;
                                         .box{
                                                 flex-direction: column;
@@ -1718,6 +1746,9 @@ header{
                                                 }
                                         }
                                 }
+                                .borda-first{
+                                        margin: 20px 0 20px 0;
+                                }
                                 .box:nth-child(1) {
                                         width: 100%;
                                         margin: 0 0 15px 0;
@@ -1834,16 +1865,29 @@ header{
                                 .icones{
                                         padding: 81px 0px 0 0;
                                         display: flex;
-                                        justify-content: flex-end;
-                                        align-items: center;
-                                        .share{
+                                        justify-content: space-between;
+                                        .back{
+                                                text-decoration: none;
                                                 color: #404040;
-                                                opacity: 0.6; 
-                                                //padding-right: 10px;  
+                                                opacity: 0.8;
+                                                font-size: 20px;
+                                                margin-bottom: 20px;
+                                                transition: all .3s;  
+                                                &:hover{
+                                                        color: #777777;   
+                                                        transition: all .3s;  
+                                                }
                                         }
-                                        svg{
-                                                margin-left: 15px;
+                                        div{
+                                                .share{
+                                                        color: #404040;
+                                                        opacity: 0.6; 
+                                                }
+                                                svg{
+                                                        margin-left: 15px;
+                                                }
                                         }
+                                        
                                 }
                         }
                         .recentes{
@@ -2000,6 +2044,35 @@ header{
                         }
                 }
         }
+        @media screen and (max-width: 770px) and (min-width: 220px) {
+               .breadcrumb{
+                       .container{
+                               display:none;
+                       }
+               } 
+               .container{
+                       .banner{
+                                margin-top: 40px;
+                       }
+                       .conteudo{
+                               .palavras{
+                                       .icones{
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                flex-direction: column;
+                                       }
+                               }
+                       }
+               }
+        }
+        @media screen and (max-width: 550px) and (min-width: 220px) {
+                .container{
+                        .banner{
+                                 margin-top: 80px;
+                        }
+                }
+         }
 }
 .contato{
         .container{
@@ -2041,6 +2114,22 @@ header{
                         border-radius: 20px;
                         margin-top: -100px;
                         padding: 75px;
+
+                        input:-webkit-autofill,
+                        input:-webkit-autofill:hover, 
+                        input:-webkit-autofill:focus,
+                        textarea:-webkit-autofill,
+                        textarea:-webkit-autofill:hover,
+                        textarea:-webkit-autofill:focus,
+                        select:-webkit-autofill,
+                        select:-webkit-autofill:hover,
+                        select:-webkit-autofill:focus {
+                                border: none;
+                                -webkit-text-fill-color: rgba(129, 129, 129, 0.808);
+                                -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+                                transition: background-color 5000s ease-in-out 0s;
+                        }
+
                         .fontzero{
                                 text-align: center;
                                 font-weight: 600;
@@ -2217,10 +2306,17 @@ header{
                                                 }
                                         }
                                 }
-                                .formulario{
-                                        margin-bottom: 20px;
-                                }
+                                
                         }
+                        .formulario{
+                                padding: 40px 30px;
+                                margin-bottom: 70px;
+                        }
+                }
+        }
+        @media screen and (max-width: 770px){
+                .breadcrumb{
+                        margin-top: -130px;
                 }
         }
 }
@@ -2267,8 +2363,11 @@ footer{
         }
         @media screen and (max-width: 680px) and (min-width: 220px) {
                 .footer-email{
-                        padding: 15px 0 15px 0;
+                        padding: 30px;
                         flex-direction: column;
+                        .info{
+                                margin-bottom: 30px;
+                        }
                 }
         }
 } 
