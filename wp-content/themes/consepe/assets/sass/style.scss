@@ -22,7 +22,7 @@ Author URI: http://wpod.in/#colaboradores
 body{
         font-family: 'Exo', sans-serif;
 }
-h1, h2, h3, h4, h5, p, a, b, title, span{
+h1, h2, h3, h4, h5, p, a, b, title, span, input, button{
     letter-spacing: 1.0px;  
 }
 ::-webkit-scrollbar {
@@ -733,6 +733,9 @@ header{
                                                         }    
                                                 }
                                         }
+                                        .ver-todos{
+                                                //padding-bottom: 30px;
+                                        }
                                 }
                         }
                         @media screen and (max-width: 375px) and (min-width: 220px) {
@@ -1035,13 +1038,11 @@ header{
                                         justify-content: space-evenly;
                                         .esquerda{
                                                 left: 0px;
-                                                direita: 0px;
                                                 position:relative;
                                         }
                                         .direita{
                                                 position:relative;
                                                 left: 0px;
-                                                direita: 0px;
                                         }
                                 }
                         }           
@@ -2162,7 +2163,6 @@ header{
                         }
                         .campo3{
                                 @extend .col-md-12;
-                            
                                 padding: 0;
                         }
                         .campo1{
@@ -2189,36 +2189,37 @@ header{
                                                 transition: all .3s;
                                                 background: #3769a5;      	
                                         }
-                        }
-                        select{
-                                margin-top: 14px;
-                                height: 30px;
-                                width: 100%;
-                                border: 0;
-                        }
-                }
-        }
-}
-        @media screen and (max-width: 995px) and (min-width: 731px) {
-                .container{
-                        .formulario{
-                                padding: 60px;
-                                margin-bottom: 20px;
-                        }
-                }
-        }
-        @media screen and (max-width: 730px) and (min-width: 220px) {
-                .container{
-                        .infos{
-                                .box{
-                                        padding-top:23px;
-                                        p{
-                                                font-size: 14px;
-                                        }
+                                }
+                                select{
+                                        margin-top: 14px;
+                                        height: 30px;
+                                        width: 100%;
+                                        border: 0;
                                 }
                         }
-                        .formulario{
-                                margin-bottom: 20px;
+                }
+
+                @media screen and (max-width: 995px) and (min-width: 731px) {
+                        .container{
+                                .formulario{
+                                        padding: 60px;
+                                        margin-bottom: 20px;
+                                }
+                        }
+                }
+                @media screen and (max-width: 730px) and (min-width: 220px) {
+                        .container{
+                                .infos{
+                                        .box{
+                                                padding-top:23px;
+                                                p{
+                                                        font-size: 14px;
+                                                }
+                                        }
+                                }
+                                .formulario{
+                                        margin-bottom: 20px;
+                                }
                         }
                 }
         }

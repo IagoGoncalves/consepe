@@ -98,7 +98,7 @@ get_header();
 		<form class="contact2-form">	
 			<h2 class="fontzero">Fale conosco!</h2>			
 			<div class="campos campo1">
-				<input class="input2" type="text" name="name" autocomplete="off" required>
+				<input class="input2" type="text" name="name" required>
 				<span class="focus-input2" data-placeholder="Nome"></span>
 			</div>
 
@@ -113,12 +113,12 @@ get_header();
 			</div> -->
 
 			<div class="campos campo3">
-				<input class="input2" type="text" name="assunto" autocomplete="off" required>
+				<input class="input2" type="text" name="assunto" required>
 				<span class="focus-input2" data-placeholder="Assunto"></span>
 			</div>
 
 			<div class="campos campo1">
-				<textarea class="input2 area" name="message" autocomplete="off" required></textarea>
+				<textarea class="input2 area" name="message" required></textarea>
 				<span class="focus-input2" data-placeholder="Mensagem"></span>
 			</div>
 			<div class="botao-enviar">
