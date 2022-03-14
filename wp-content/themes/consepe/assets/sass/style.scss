@@ -214,7 +214,9 @@ header{
                                         }
                                         &:focus {
                                             outline: 0px auto -webkit-focus-ring-color; 
-                                            outline-offset: 0px;
+                                            outline-offset: 0px; 
+                                            color: #fff;
+                                            background-color: transparent;
                                         }                                               
                                 }
                                 &.active a { 
