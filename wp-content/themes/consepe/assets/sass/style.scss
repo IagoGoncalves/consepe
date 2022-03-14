@@ -91,14 +91,13 @@ h2{
         }
         @media screen and (max-width: 770px) and (min-width: 220px) {
                 .container{
-                        padding-top: 100px;
+                        padding-top: 60px;
                 }
         }
         @media screen and (max-width: 550px) and (min-width: 220px) {
                 padding: 0 0 20px;
                 margin-bottom: 0px;
                 .container{
-                        margin-top: 100px;
                         ul{
                                 padding: 25px 0 0 0;
                         }
@@ -186,7 +185,7 @@ header{
                                         text-transform: uppercase;
                                         color: #FFFFFF;
                                         font-weight: 600;
-                                        font-size: 25px;
+                                        font-size: 20px;
                                         background: transparent;
                                         transition: all 0.3s;
                                         @media screen and (max-width: 430px) and (min-width: 220px) {
@@ -215,8 +214,7 @@ header{
                                         }
                                         &:focus {
                                             outline: 0px auto -webkit-focus-ring-color; 
-                                            outline-offset: 0px; 
-                                            color: #fff;
+                                            outline-offset: 0px;
                                         }                                               
                                 }
                                 &.active a { 
@@ -1236,198 +1234,216 @@ header{
                         }
                 }
         }
-}
-.editais-bloco{
-        padding-bottom: 120px;
-        article{
-                background: #DBE2EF;
-                border-radius: 20px;
-                h2{
-                        text-align: center;
-                        font-size: 38px;
-                        padding-top:67px;
-                }
-                .alinhamento{
-                        display: flex;
-                        justify-content: center;
-                        align-items:center;
-                        .logo-edital{
-                                display: flex;
-                                justify-content: center;
-                                padding: 80px 0 80px 0;
+        @media screen and (max-width: 550px) and (min-width: 220px) {
+                .breadcrumb{
+                        .container{
+                                margin-top: 0px;
                         }
-                        .tds-box{
-                                height: 495px;
-                                overflow: overlay;
-                                margin-left: 50px;
-                                .box{
-                                        display: flex;
-                                        justify-content: center;
-                                        align-items: center;
-                                        width: 100%;
-                                        margin-bottom: 30px;
-                                        .titulo-edital{
-                                                font-weight: 600;
-                                                font-size: 16px;
-                                                color: #112D4E; 
-                                                display: flex;
-                                                justify-content: center;
-                                                align-items: center;
-                                                background-color: #fff;
-                                                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                                                border-radius: 20px;
-                                                padding-top:25px;
-                                                padding-bottom:25px;
-                                                padding-left: 15px;
-                                                margin-left: 10px;
-                                        }
-                                        a{
-                                                text-decoration: none;
-                                                .down-edit{
-                                                        font-weight: 600;
-                                                        font-size: 16px;
-                                                        color: #fff; 
-                                                        display: flex;
-                                                        justify-content: center;
-                                                        align-items: center;
-                                                        background-color: #112D4E;
-                                                        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-                                                        border-radius: 20px;
-                                                        text-transform: uppercase;
-                                                        padding-top:25px;
-                                                        padding-bottom:25px;
-                                                        padding-right: 15px;
-                                                        margin-left: 10px;
-                                                        margin-right: 50px;
-                                                        transition: all .3s;
-                                                        &:hover{
-                                                                background-color: #fff;
-                                                                color: #112D4E;
-                                                                transition: all .3s;
-                                                                svg{
-                                                                        path{
-                                                                                transition: all .3s;
-                                                                                fill: #112D4E;
-                                                                        }
-                                                                }
-                                                        }
-                                                }
-                                                
-                                        }
-                                        span{
-                                                padding: 0 20px;
-                                        }
+                }
+                .container{
+                        .info{
+                                .estatuto{
+                                        padding: 5px;
                                 }
                         }
                 }
         }
-        @media screen and (max-width: 1200px) and (min-width: 771px) {
+}
+.editais{
+        .editais-bloco{
+                padding-bottom: 120px;
                 article{
-                        padding: 15px;
+                        background: #DBE2EF;
+                        border-radius: 20px;
                         h2{
-                                padding: 25px 0;
+                                text-align: center;
+                                font-size: 38px;
+                                padding-top:67px;
                         }
                         .alinhamento{
-                                .titulo-edital{
-                                        svg{
-                                                width: 30px;
+                                display: flex;
+                                justify-content: center;
+                                align-items:center;
+                                .logo-edital{
+                                        display: flex;
+                                        justify-content: center;
+                                        padding: 80px 0 80px 0;
+                                }
+                                .tds-box{
+                                        height: 495px;
+                                        overflow: overlay;
+                                        margin-left: 50px;
+                                        .box{
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                width: 100%;
+                                                margin-bottom: 30px;
+                                                .titulo-edital{
+                                                        font-weight: 600;
+                                                        font-size: 16px;
+                                                        color: #112D4E; 
+                                                        display: flex;
+                                                        justify-content: center;
+                                                        align-items: center;
+                                                        background-color: #fff;
+                                                        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                                                        border-radius: 20px;
+                                                        padding-top:25px;
+                                                        padding-bottom:25px;
+                                                        padding-left: 15px;
+                                                        margin-left: 10px;
+                                                }
+                                                a{
+                                                        text-decoration: none;
+                                                        .down-edit{
+                                                                font-weight: 600;
+                                                                font-size: 16px;
+                                                                color: #fff; 
+                                                                display: flex;
+                                                                justify-content: center;
+                                                                align-items: center;
+                                                                background-color: #112D4E;
+                                                                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+                                                                border-radius: 20px;
+                                                                text-transform: uppercase;
+                                                                padding-top:25px;
+                                                                padding-bottom:25px;
+                                                                padding-right: 15px;
+                                                                margin-left: 10px;
+                                                                margin-right: 50px;
+                                                                transition: all .3s;
+                                                                &:hover{
+                                                                        background-color: #fff;
+                                                                        color: #112D4E;
+                                                                        transition: all .3s;
+                                                                        svg{
+                                                                                path{
+                                                                                        transition: all .3s;
+                                                                                        fill: #112D4E;
+                                                                                }
+                                                                        }
+                                                                }
+                                                        }
+                                                        
+                                                }
+                                                span{
+                                                        padding: 0 20px;
+                                                }
                                         }
                                 }
-                                a{
-                                        .down-edit{
-                                                margin-right: 35px !important;
+                        }
+                }
+                @media screen and (max-width: 1200px) and (min-width: 771px) {
+                        article{
+                                padding: 15px;
+                                h2{
+                                        padding: 25px 0;
+                                }
+                                .alinhamento{
+                                        .titulo-edital{
                                                 svg{
                                                         width: 30px;
                                                 }
                                         }
-                                }
-                        }
-                          
-                }
-                padding-bottom:60px;
-        }
-        @media screen and (max-width: 770px) and (min-width: 421px) {
-                article{
-                        margin-top: -50px;
-                        h2{
-                                padding: 15px 0;
-                                font-size: 32px;
-                        }
-                        .alinhamento{
-                                .logo-edital{
-                                        display: none;
-                                }
-                                .tds-box{
-                                        height: 520px;
-                                        margin: 12px;
-                                        .box{
-                                                .titulo-edital{
-                                                        padding: 10px;
-                                                        height: 60px;
-                                                        text-align: center;
+                                        a{
+                                                .down-edit{
+                                                        margin-right: 35px !important;
                                                         svg{
-                                                               display: none; 
-                                                        }
-                                                }
-                                                a{
-                                                        .down-edit{
-                                                                height: 60px;
-                                                                padding: 16px 30px;;
-                                                                span{
-                                                                        display: none;
-                                                                }   
+                                                                width: 30px;
                                                         }
                                                 }
                                         }
                                 }
+                                
                         }
-                          
+                        padding-bottom:60px;
                 }
-                padding-bottom:60px;
-        }
-        @media screen and (max-width: 420px) and (min-width: 220px) {
-                article{
-                        margin-top: -50px;
-                        h2{
-                                padding: 15px 0;
-                                font-size: 32px;
-                        }
-                        .alinhamento{
-                                .logo-edital{
-                                        display: none;
+                @media screen and (max-width: 770px) and (min-width: 421px) {
+                        article{
+                                margin-top: -50px;
+                                h2{
+                                        padding: 15px 0;
+                                        font-size: 32px;
                                 }
-                                .tds-box{
-                                        height: 480px;
-                                        margin: 12px;
-                                        .box{
-                                                flex-direction: column;
-                                                .titulo-edital{
-                                                        margin: 0 25px 10px 0;
-                                                        height: 60px;
-                                                        text-align: center;
-                                                        svg{
-                                                               display: none; 
-                                                        }
-                                                }
-                                                a{
-                                                        .down-edit{
-                                                                margin-left: auto; 
-                                                                margin-right: 25px;
+                                .alinhamento{
+                                        .logo-edital{
+                                                display: none;
+                                        }
+                                        .tds-box{
+                                                height: 520px;
+                                                margin: 12px;
+                                                .box{
+                                                        .titulo-edital{
+                                                                padding: 10px;
                                                                 height: 60px;
-                                                                padding: 16px 30px;;
-                                                                span{
-                                                                        display: none;
-                                                                }   
+                                                                text-align: center;
+                                                                svg{
+                                                                display: none; 
+                                                                }
+                                                        }
+                                                        a{
+                                                                .down-edit{
+                                                                        height: 60px;
+                                                                        padding: 16px 30px;;
+                                                                        span{
+                                                                                display: none;
+                                                                        }   
+                                                                }
                                                         }
                                                 }
                                         }
                                 }
+                                
                         }
-                          
+                        padding-bottom:60px;
                 }
-                padding-bottom:60px;
+                @media screen and (max-width: 770px) and (min-width: 421px) {
+                        margin-top: 20px;
+                }
+                @media screen and (max-width: 420px) and (min-width: 220px) {
+                        article{
+                                margin-top: 0px;
+                                h2{
+                                        padding: 15px 0;
+                                        font-size: 32px;
+                                }
+                                .alinhamento{
+                                        .logo-edital{
+                                                display: none;
+                                        }
+                                        .tds-box{
+                                                height: 480px;
+                                                margin: 12px;
+                                                .box{
+                                                        flex-direction: column;
+                                                        .titulo-edital{
+                                                                margin: 0 25px 10px 0;
+                                                                height: 60px;
+                                                                text-align: center;
+                                                                svg{
+                                                                display: none; 
+                                                                }
+                                                        }
+                                                        a{
+                                                                .down-edit{
+                                                                        margin-left: auto; 
+                                                                        margin-right: 25px;
+                                                                        height: 60px;
+                                                                        padding: 16px 30px;;
+                                                                        span{
+                                                                                display: none;
+                                                                        }   
+                                                                }
+                                                        }
+                                                }
+                                        }
+                                }
+                                
+                        }
+                        padding-bottom:60px;
+                }
         }
-
 }
 .noticias{
         padding: 0px 0 130px 0;
@@ -2297,26 +2313,20 @@ header{
                         }
                 }
                 @media screen and (max-width: 730px) and (min-width: 220px) {
-                        .container{
-                                .infos{
-                                        .box{
-                                                padding-top:23px;
+                        .infos{
+                                .box{
+                                        padding-top:23px;
+                                        span{
                                                 p{
                                                         font-size: 14px;
                                                 }
                                         }
                                 }
-                                
                         }
                         .formulario{
                                 padding: 40px 30px;
                                 margin-bottom: 70px;
                         }
-                }
-        }
-        @media screen and (max-width: 770px){
-                .breadcrumb{
-                        margin-top: -130px;
                 }
         }
 }
