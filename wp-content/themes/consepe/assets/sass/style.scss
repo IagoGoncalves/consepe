@@ -1637,12 +1637,8 @@ header{
                                 }
                         }
                 }
-                @media screen and (max-width: 1024px) and (min-width: 769px) {
-                        .second-block{      
-                                .box{
-                                        padding:13px;
-                                        margin-bottom: 30px;
-                                }
+                @media screen and (max-width: 1200px) and (min-width: 990px) {
+                        .second-block{ 
                                 .page{
                                         article{
                                                 .esquerda, .direita{
@@ -1651,6 +1647,62 @@ header{
                                                         }
                                                 }
                                         }
+                                }
+
+                        }    
+                }
+                @media screen and (max-width: 989px) and (min-width: 769px) {
+                        .first-block{      
+                                .box{
+                                        width: 100%;
+                                        .conteudo{
+                                                p{
+                                                        display: block;
+                                                }
+                                        }
+                                }
+                                .box:nth-child(1) {
+                                        width: 100%;
+                                        margin: 0 0 15px 0;
+                                }                                
+                        } 
+                        .second-block{ 
+                                .swiper-container{
+                                        .swiper-wrapper{
+                                                .swiper-slide{
+                                                        .box{
+                                                                a{
+                                                                        .conteudo{
+                                                                                width: 100%;
+                                                                                bottom:5px;
+                                                                                padding: 0 16px;
+                                                                                h3{
+                                                                                        font-size: 16px;
+                                                                                }
+                                                                        }
+                                                                }
+                                                        }
+                                                }
+                                        }
+                                }
+                                .page{
+                                        .borda-left, .borda-middle, .borda-right{
+                                                display: none;
+                                        }
+                                        article{
+                                                .esquerda, .direita{
+                                                        svg{
+                                                                width: 40px;
+                                                        }
+                                                }
+                                                .esquerda{
+                                                        left: 0;
+                                                }
+                                                .direita{
+                                                        right: -10px;
+                                                }
+                                        }
+
                                 }
 
                         }    
@@ -1672,7 +1724,6 @@ header{
                         }
                         .second-block{
                                 .box{
-                                        padding: 29px;
                                         margin-bottom: 0;
                                 } 
                                 .page{
@@ -1692,7 +1743,7 @@ header{
                                 }  
                         }    
                 }
-                @media screen and (max-width: 550px) and (min-width: 220px) {
+                @media screen and (max-width: 770px) and (min-width: 220px) {
                         .first-block{
                                 .box{
                                         .conteudo{

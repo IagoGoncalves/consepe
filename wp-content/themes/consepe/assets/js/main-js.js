@@ -77,9 +77,9 @@ jQuery(document).ready(function($) {
 				slidesPerColumn: 1,
 			},
 			// when window width is >= 640px
-			640: {
-				slidesPerView: 4,
-				spaceBetween: 40
+			770: {
+				slidesPerView: 1,
+				slidesPerColumn: 1,
 			}
 		}
     });
