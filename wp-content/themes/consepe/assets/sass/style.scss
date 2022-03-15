@@ -305,6 +305,11 @@ header{
                 }
         }
         @media screen and (max-width: 770px) and (min-width: 220px) {
+                .main-navigation{
+                        .navbar-header{
+                                margin-top: -65px;
+                        }
+                }
                 .menu{
                         background-color: #00284d;
                         .logo-principal{
@@ -418,7 +423,7 @@ header{
                                 padding-left: 0;
                                 @extend .col-md-6;
                                 img{
-                                        border-radius: 40px;
+                                        border-radius: 20px;
                                 }
                         }
                         .texto{
@@ -838,7 +843,6 @@ header{
                                                 color: rgba(64, 64, 64, 0.6);
                                                 margin-left: 16px;
                                                 text-transform: uppercase;
-                                                text-decoration: none;
                                                 transition: all .3s;
                                                 &:hover{
                                                         transition: all .3s;
@@ -860,7 +864,7 @@ header{
                                 @extend .col-md-6;
                                 .foto-banner{
                                         img{
-                                                border-radius:40px;
+                                                border-radius:20px;
                                         }
                                 }
                         }
