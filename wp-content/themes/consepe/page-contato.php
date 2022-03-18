@@ -16,7 +16,7 @@ get_header();
 			<div class="container">
 				<ul>
 					<li>
-						<a href="<?php echo esc_url( home_url( 'noticia' ) ); ?>">
+						<a href="<?php echo esc_url( home_url( 'home' ) ); ?>">
 							<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M6.00003 12L7.41003 10.59L2.83003 6L7.41004 1.41L6.00004 -1.23266e-07L3.48568e-05 6L6.00003 12Z" fill="#404040"/>
 							</svg>
@@ -95,37 +95,28 @@ get_header();
 		        wp_reset_postdata(); ?>
 			</article>
 			<section class="formulario container">
-		<form class="contact2-form">	
-			<h2 class="fontzero">Fale conosco!</h2>			
-			<div class="campos campo1">
-				<input class="input2" type="text" name="name" required>
-				<span class="focus-input2" data-placeholder="Nome"></span>
-			</div>
+				<form class="contact2-form">	
+					<h2 class="fontzero">Fale conosco!</h2>			
+					<div class="campos campo1">
+						<input class="input2" type="text" name="name" required>
+						<span class="focus-input2" data-placeholder="Nome"></span>
+					</div>
 
-			<!-- <div class="campos campo1">
-				<input class="input2" type="email" name="email" required>
-				<span class="focus-input2" data-placeholder="Seu e-mail"></span>					
-			</div> -->
+					<div class="campos campo3">
+						<input class="input2" type="text" name="assunto" required>
+						<span class="focus-input2" data-placeholder="Assunto"></span>
+					</div>
 
-			<!-- <div class="campos campo2">
-				<input class="input2" type="text" name="assunto" required>
-				<span class="focus-input2" data-placeholder="Assunto"></span>
-			</div> -->
-
-			<div class="campos campo3">
-				<input class="input2" type="text" name="assunto" required>
-				<span class="focus-input2" data-placeholder="Assunto"></span>
-			</div>
-
-			<div class="campos campo1">
-				<textarea class="input2 area" name="message" required></textarea>
-				<span class="focus-input2" data-placeholder="Mensagem"></span>
-			</div>
-			<div class="botao-enviar">
-				<button class="btn">Enviar</button>
-			</div>
-		</form>	
-	</section>
+					<div class="campos campo1">
+						<textarea class="input2 area" name="message" required></textarea>
+						<span class="focus-input2" data-placeholder="Mensagem"></span>
+					</div>
+					<div class="botao-enviar">
+						<button class="btn">Enviar</button>
+					</div>
+				</form>	
+			</section>
+		</section>
 	</main>
 <?php
 get_footer();

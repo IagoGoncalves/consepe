@@ -76,7 +76,8 @@ get_header();
                                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M18 0H6C4.9 0 4 0.9 4 2V14C4 15.1 4.9 16 6 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM9.5 7.5C9.5 8.33 8.83 9 8 9H7V11H5.5V5H8C8.83 5 9.5 5.67 9.5 6.5V7.5ZM14.5 9.5C14.5 10.33 13.83 11 13 11H10.5V5H13C13.83 5 14.5 5.67 14.5 6.5V9.5ZM18.5 6.5H17V7.5H18.5V9H17V11H15.5V5H18.5V6.5ZM7 7.5H8V6.5H7V7.5ZM2 4H0V18C0 19.1 0.9 20 2 20H16V18H2V4ZM12 9.5H13V6.5H12V9.5Z" fill="#112D4E"/>
                                                 </svg>
-                                                <h4>Edital nº <?php the_title(); ?> - <?php the_time('d \d\e F \d\e Y') ?></h4>
+                                                <h4 class="desktop">Edital Nº <?php the_title(); ?> - <?php the_time('d \d\e F \d\e Y') ?></h4>
+                                                <h4 class="mobile">Edital Nº <?php the_title(); ?> - <?php the_date('d-m-Y') ?></h4>
                                             </div>
                                             <a href="<?php echo $pdf?>" download="<?php the_title()?>">
                                                 <div class="botao">
@@ -120,20 +121,27 @@ get_header();
                                            <div class="texto" data-swiper-parallax="-700">    
                                               <p><?php echo excerpt(30); ?></p>
                                            </div> 
-                                            <div class="botoes" data-swiper-parallax="-800">
-                                                <a href="<?php the_permalink()?>" class="cnt-lendo">continuar lendo
-                                                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M2.00003 0L0.590027 1.41L5.17003 6L0.590027 10.59L2.00003 12L8.00003 6L2.00003 0Z" fill="#01244e"/>
-                                                    </svg>
-                                                </a>
-                                                <a href="<?php echo esc_url( home_url( 'noticia' ) ); ?>" class="veja-mais" data-swiper-parallax="-800">ver mais notícias</a>
-                                            </div>
+                                        <div class="botoes desktop" data-swiper-parallax="-800">
+                                            <a href="<?php the_permalink()?>" class="cnt-lendo">continuar lendo
+                                                <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M2.00003 0L0.590027 1.41L5.17003 6L0.590027 10.59L2.00003 12L8.00003 6L2.00003 0Z" fill="#01244e"/>
+                                                </svg>
+                                            </a>
+                                            <a href="<?php echo esc_url( home_url( 'noticia' ) ); ?>" class="veja-mais" data-swiper-parallax="-800">ver mais notícias</a>
+                                        </div>
                                         </article>
                                         <article class="noticia-imagem">
                                             <div class="foto-banner" data-swiper-parallax="1">
                                                 <?php echo odin_thumbnail(806, 680, true,true);?>
                                             </div>
                                         </article>
+                                        <div class="botoes mobile" data-swiper-parallax="-800">
+                                            <a href="<?php the_permalink()?>" class="cnt-lendo">continuar lendo
+                                                <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M2.00003 0L0.590027 1.41L5.17003 6L0.590027 10.59L2.00003 12L8.00003 6L2.00003 0Z" fill="#01244e"/>
+                                                </svg>
+                                            </a>
+                                        </div>
                                     </div>
                                     <?php
                                 endwhile;

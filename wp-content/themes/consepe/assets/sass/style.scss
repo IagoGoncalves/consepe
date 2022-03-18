@@ -25,15 +25,16 @@ body{
 h1, h2, h3, h4, h5, p, a, b, title, span, input, button{
     letter-spacing: 1.0px;  
 }
+
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
 }
 ::-webkit-scrollbar-track {
   background: rgba(64, 64, 64, 0.6);
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
+    -webkit-border-radius: 10px; 
     background: #404040; 
 }
 .desabilitado{
@@ -62,7 +63,7 @@ h2{
 }
 .breadcrumb{
         background-color:transparent;
-        padding: 0 0 50px;
+        padding: 0px;
         margin-bottom: 0px;
         ul{
                 display: inline-flex;
@@ -89,15 +90,13 @@ h2{
                         }
                 }
         }
-        @media screen and (max-width: 770px) and (min-width: 220px) {
-                .container{
-                        padding-top: 60px;
-                }
-        }
+        
         @media screen and (max-width: 550px) and (min-width: 220px) {
-                padding: 0 0 20px;
+                padding:0px;
                 margin-bottom: 0px;
+                margin-top: 0px;
                 .container{
+                        padding-top: 10px;
                         ul{
                                 padding: 25px 0 0 0;
                         }
@@ -116,7 +115,6 @@ header{
         .main-navigation {
                 background: transparent;
                 background-color: transparent;
-                margin: 0 !important;   
                 border: none;
                 display: flex;
                 justify-content: space-between;
@@ -304,7 +302,23 @@ header{
                         }
                 }
         }
-        @media screen and (max-width: 770px) and (min-width: 220px) {
+        @media screen and (max-width: 1000px) and (min-width: 770px){
+                .menu{
+                        background-color: #00284d;
+                        .logo-principal{
+                                display: none;
+                        }
+
+                }
+        }
+        @media screen and (max-width: 772px) and (min-width: 768px) {
+                .main-navigation{
+                        .logo-principal{
+                                display: none;
+                        }
+                }
+        }
+        @media screen and (max-width: 768px) and (min-width: 220px) {
                 .main-navigation{
                         .navbar-header{
                                 margin-top: -65px;
@@ -326,6 +340,7 @@ header{
                         background-color: #01244e;   
                         .main-navigation {                      
                                 padding: 10px 0;
+
                         }
                         .logo-principal{
                                 img{
@@ -404,7 +419,8 @@ header{
                                 top: 14%;
                                 .box{
                                         h2{
-                                                font-size: 42px;
+                                                font-size: 40px;
+                                                text-align: center;
                                         }
                                 }
                         }
@@ -510,7 +526,7 @@ header{
                         }        
                 } 
                 @media screen and (max-width: 580px) and (min-width: 220px) {
-                        padding: 80px 0 55px 0;
+                        padding: 80px 15px 50px 15px;
                         .texto-imagem{
                                 flex-direction: column-reverse;
                                 align-items:center;
@@ -522,11 +538,17 @@ header{
                                 .texto{
                                         text-align: center;
                                         h2{
-                                                font-size: 34px;
-                                                padding-bottom: 40px
+                                                font-size: 20px;
+                                                padding-bottom: 0px;
+                                                padding-top: 20px;
                                         }
                                         p{
-                                                padding-bottom:24px;
+                                                padding: 20px 0;
+                                                font-size: 16px;
+                                                margin: 0 0 20px;
+                                        }
+                                        .saiba-mais{
+                                                padding: 15px 25px 15px 15px;
                                         }
                                 }
                         }
@@ -537,7 +559,7 @@ header{
         }
         .editais-home{
                 @extend .col-md-12;
-                padding: 0;
+                padding: 0 15px;
                 position: relative;
                 article{
                         @extend .col-md-12;
@@ -704,6 +726,21 @@ header{
                                 }
                                 
                         }
+                        @media screen and (max-width: 2000px) and (min-width: 771px) {
+                                .tds-box{
+                                         .box{
+                                                .titulo-data{
+                                                        .mobile{
+                                                                font-size: 16px;
+                                                                display: none;
+                                                        }
+                                                        .desktop{
+                                                                font-size: 16px;
+                                                        }
+                                                }
+                                         }
+                                }
+                         }
                         @media screen and (max-width: 770px) and (min-width: 551px) {
                                .imagem{
                                         display: flex;
@@ -714,6 +751,13 @@ header{
                                                 flex-flow: initial;
                                                 .titulo-data{
                                                         margin: 0 15px 0 0;
+                                                        .mobile{
+                                                                font-size: 16px;
+                                                        }
+                                                        .desktop{
+                                                                display: none;
+                                                                font-size: 16px;
+                                                        }
                                                 }
                                         }
                                         .ver-todos{
@@ -723,7 +767,7 @@ header{
                         }
                         @media screen and (max-width: 550px) and (min-width: 220px) {
                                 h2{
-                                      font-size: 30px;  
+                                      font-size: 22px;  
                                 }
                                 .imagem{
                                         display: none;
@@ -731,35 +775,39 @@ header{
                                 .tds-box{
                                         margin-top: 50px;
                                         .box{
-                                                flex-flow: wrap;
+                                                flex-flow: row;
                                                 justify-content: center;
+                                                margin-bottom: 20px;
                                                 .titulo-data{
-                                                        max-width: 100%;
-                                                        width: 100%;
                                                         padding: 0 20px;
-                                                        margin-right: 0px;
+                                                        height: 50px;
                                                         svg{
-                                                                width: 40px;
-                                                                height: 40px;
+                                                                display: none; 
                                                         }
-                                                        h4{
-                                                                font-size: 19px;
+                                                        .mobile{
+                                                                font-size: 14px;
+                                                        }
+                                                        .desktop{
+                                                                display: none;
+                                                                font-size: 16px;
                                                         }
                                                 }
                                                 a{
-                                                        max-width: 100%;
-                                                        width: 100%;  
                                                         .botao{
-                                                                width: 100%;
-                                                                margin-top: 10px;
+                                                                width: auto;
+                                                                height: 50px;
+                                                                padding: 15px 30px;
                                                                 span{
-                                                                      font-size: 19px;  
-                                                                }
-                                                        }    
+                                                                        display: none;
+                                                                }   
+                                                        }
                                                 }
                                         }
                                         .ver-todos{
+                                                padding-top: 10px;
                                                 padding-bottom: 30px;
+                                                text-align: center;
+                                                padding-right: 0px;
                                         }
                                 }
                         }
@@ -801,55 +849,7 @@ header{
                                         font-weight: 400;
                                         color: #112D4E;
                                 }
-                                .botoes{
-                                        margin-bottom: 25px;
-                                        .cnt-lendo{
-                                                text-decoration: none;
-                                                color: #01244e;
-                                                border-color:#01244e;
-                                                font-weight: 600;
-                                                font-size: 16px;
-                                                border-radius: 10px;
-                                                padding: 25px;
-                                                border: 2px solid;
-                                                text-transform: uppercase;
-                                                transition: all .3s;
-                                                svg{
-                                                        margin-left:10px;
-                                                        transition: all .3s;
-                                                        path{
-                                                                transition: all .4s;
-                                                        }
-                                                }
-                                                &:hover{
-                                                        background-color:#112D4E;
-                                                        color:#fff;
-                                                        transition: all .3s;
-                                                        border-color:#112D4E;
-                                                        padding: 25px 20px 25px 25px;
-                                                        svg{
-                                                                margin-left: 15px;
-                                                                transition: all .3s;
-                                                                path{
-                                                                        transition: all .3s;
-                                                                        fill:white;
-                                                                }
-                                                        }
-                                                }
-                                        }
-                                        .veja-mais{
-                                                font-weight: 600;
-                                                font-size: 16px;
-                                                color: rgba(64, 64, 64, 0.6);
-                                                margin-left: 16px;
-                                                text-transform: uppercase;
-                                                transition: all .3s;
-                                                &:hover{
-                                                        transition: all .3s;
-                                                        color: #112D4E;
-                                                }
-                                        }
-                                }
+                                
                                 @media screen and (max-width: 1024px) and (min-width: 220px) {
                                         padding-right:0px;
                                         h2{
@@ -859,6 +859,58 @@ header{
                                                 font-size: 20px;
                                         }
                                 }
+                        }
+                        .botoes{
+                                margin-bottom: 25px;
+                                .cnt-lendo{
+                                        text-decoration: none;
+                                        color: #01244e;
+                                        border-color:#01244e;
+                                        font-weight: 600;
+                                        font-size: 16px;
+                                        border-radius: 10px;
+                                        padding: 25px;
+                                        border: 2px solid;
+                                        text-transform: uppercase;
+                                        transition: all .3s;
+                                        svg{
+                                                margin-left:10px;
+                                                transition: all .3s;
+                                                path{
+                                                        transition: all .4s;
+                                                }
+                                        }
+                                        &:hover{
+                                                background-color:#112D4E;
+                                                color:#fff;
+                                                transition: all .3s;
+                                                border-color:#112D4E;
+                                                padding: 25px 20px 25px 25px;
+                                                svg{
+                                                        margin-left: 15px;
+                                                        transition: all .3s;
+                                                        path{
+                                                                transition: all .3s;
+                                                                fill:white;
+                                                        }
+                                                }
+                                        }
+                                }
+                                .veja-mais{
+                                        font-weight: 600;
+                                        font-size: 16px;
+                                        color: rgba(64, 64, 64, 0.6);
+                                        margin-left: 16px;
+                                        text-transform: uppercase;
+                                        transition: all .3s;
+                                        &:hover{
+                                                transition: all .3s;
+                                                color: #112D4E;
+                                        }
+                                }
+                        }
+                        .mobile{
+                                display: none;
                         }
                         .noticia-imagem{
                                 @extend .col-md-6;
@@ -977,7 +1029,7 @@ header{
                                 }
                         }
                 }
-                @media screen and (max-width: 1024px) and (min-width: 220px) {
+                @media screen and (max-width: 1500px) and (min-width: 220px) {
                         .container{
                                 .mySwiper{
                                         .swiper-wrapper{
@@ -1016,10 +1068,6 @@ header{
                         .noticia-imagem{
                                 width: 100%;
                                 top: 0;
-                                .foto-banner{
-                                        img{
-                                        }
-                                }
                         } 
                         .page{
                                 .borda-left, .borda-middle, .borda-right{
@@ -1032,49 +1080,41 @@ header{
                                 }
                         }
                 }
-                @media screen and (max-width: 530px) and (min-width: 476px) {
-                        .info-noticias{
-                                margin-bottom: 50px;
-                                height: 320px;
-                                h2{
-                                        
-                                }
-                                .texto{
-                                        height: auto !important;
-                                        p{
-                                                font-size:18px;
-                                                padding: 0px;
-                                        }
-                                }
-                        }
-                }
                 @media screen and (max-width: 550px) and (min-width: 220px) {
-                        margin-top: 50px;
+                        margin-top: 35px;
                         .info-noticias{
                                 h2{
                                         padding-bottom: 20px !important;
+                                        font-size: 20px !important;
                                 }
                                 .texto{
-                                        height: 230px;
+                                        display: none;
+                                        p{
+                                                font-size: 16px !important;
+                                        }
                                 }
-                                .botoes{
-                                        margin-bottom: 25px;
-                                        .cnt-lendo{
-                                                padding: 15px 25px 15px 25px;
-                                        }
-                                        .veja-mais{
-                                                display: none;
-                                        }
+                                .desktop{
+                                        display: none;
+                                }
+                        }
+                        .mobile{
+                                display: block !important;
+                                text-align: center;
+                                margin-top: 40px;
+                                margin-bottom: 15px;
+                                .cnt-lendo{
+                                        padding: 15px 25px 15px 25px !important;
+                                }
+                                .veja-mais{
+                                        display: none;
                                 }
                         }
                         .page{
                                 width: 100%;
-                                .swiper-pagination{
-                                        display: none;
-                                }
+                                margin-top: 30px;
                                 article{
                                         width: 100%;
-                                        display: flex;
+                                        display: none;
                                         align-items:center;
                                         justify-content: center;
                                         .esquerda{
@@ -1098,8 +1138,7 @@ header{
                                         }
                                 }
                         }           
-                }
-               
+                } 
         }
 }
 .consepe{
@@ -1257,6 +1296,15 @@ header{
                                 .estatuto{
                                         padding: 5px;
                                 }
+                                .fluxo{
+                                        div{
+                                                margin-bottom: 30px;
+                                                overflow-x: scroll;
+                                                img{
+                                                        max-width: 200%;
+                                                }
+                                        }
+                                }
                         }
                 }
         }
@@ -1391,7 +1439,7 @@ header{
                                                                 height: 60px;
                                                                 text-align: center;
                                                                 svg{
-                                                                display: none; 
+                                                                        display: none; 
                                                                 }
                                                         }
                                                         a{
@@ -1409,9 +1457,6 @@ header{
                                 
                         }
                         padding-bottom:60px;
-                }
-                @media screen and (max-width: 770px) and (min-width: 421px) {
-                        margin-top: 20px;
                 }
                 @media screen and (max-width: 420px) and (min-width: 220px) {
                         article{
@@ -1458,7 +1503,7 @@ header{
         }
 }
 .noticias{
-        padding: 0px 0 130px 0;
+        padding: 0px 0 100px 0;
         .container{
                 .first-block{
                         position: relative;                        
@@ -1472,7 +1517,7 @@ header{
                                         width: 100%;
                                         height: 100%;
                                         overflow: hidden;
-                                        border-radius:40px;
+                                        border-radius:20px;
                                         img{
                                                 width: 100%;
                                                 max-width: 100%;
@@ -1483,7 +1528,7 @@ header{
                                         &:before{
                                                 content: '';
                                                 transition: all .3s;
-                                                border-radius:40px;
+                                                border-radius:20px;
                                                 position: absolute;
                                                 width: 100%;
                                                 height: 100%;                                               
@@ -1538,9 +1583,9 @@ header{
                         }
                         .borda-first{
                                 @extend .col-md-12;
-                                height: 5px;
+                                height: 3px;
                                 background: #112D4E;
-                                margin: 118px 0 60px 0;
+                                margin: 60px 0px;
                         }                        
                 }
                 .second-block{
@@ -1550,7 +1595,7 @@ header{
                                         width: 100%;
                                         height: 100%;
                                         overflow: hidden;
-                                        border-radius:40px;
+                                        border-radius:20px;
                                         img{
                                                 width: 100%;
                                                 max-width: 100%;
@@ -1560,7 +1605,7 @@ header{
                                         }
                                         &:before{
                                                 content: '';
-                                                border-radius:40px;
+                                                border-radius:20px;
                                                 position: absolute;
                                                 width: 100%;
                                                 height: 100%; 
@@ -1604,7 +1649,7 @@ header{
                         .page{
                                 @extend .col-md-12;
                                 padding:0;
-                                margin-top: 50px;
+                                margin-top: 60px;
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
@@ -1844,9 +1889,9 @@ header{
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
-                                border-radius: 40px;
+                                border-radius: 20px;
                                 img{
-                                        border-radius: 40px;      
+                                        border-radius: 20px;      
                                 }
                         }
                         .fonte{
@@ -1901,9 +1946,19 @@ header{
                                                 font-size: 20px;
                                                 margin-bottom: 20px;
                                                 transition: all .3s;  
+                                                display: flex;
+                                                align-items: center;
                                                 &:hover{
                                                         color: #777777;   
                                                         transition: all .3s;  
+                                                        svg{
+                                                                path{
+                                                                        fill: #777777;
+                                                                }
+                                                        }
+                                                }
+                                                svg{
+                                                        margin-bottom: 1px;
                                                 }
                                         }
                                         div{
@@ -1928,7 +1983,7 @@ header{
                                                 width: 100%;
                                                 height: 100%;
                                                 overflow: hidden;
-                                                border-radius:40px;
+                                                border-radius:20px;
                                                 img{
                                                         width: 100%;
                                                         max-width: 100%;
@@ -1938,7 +1993,7 @@ header{
                                                 }
                                                 &:before{
                                                         content: '';
-                                                        border-radius:40px;
+                                                        border-radius:20px;
                                                         position: absolute;
                                                         width: 100%;
                                                         height: 87%;
@@ -2108,7 +2163,7 @@ header{
                         padding-bottom: 120px;
                         @extend .col-md-6;
                         .box{
-                                padding-top: 35px;
+                                padding-top: 30px;
                                 p{
                                         margin: 0;
                                         font-weight: 600;
@@ -2125,12 +2180,14 @@ header{
                                         display: flex;
                                         p{
                                                 padding-right: 7px;
+                                                font-size: 16px;
                                         }
                                 }
                                 .conteudo2{
                                         display: flex;
                                         p{
                                                 padding-right: 7px;
+                                                font-size: 16px;
                                         }
                                 }
                         }
@@ -2225,6 +2282,7 @@ header{
                                 top: 0px;
                                 left: 10px;
                                 font-size: 18px;
+                                font-weight: 600;
                                 color:rgba(129, 129, 129, 0.808);
                                 line-height: 1.2;
                                 -webkit-transition: all 0.4s;
@@ -2264,19 +2322,19 @@ header{
         
                         .input2:focus + .focus-input2::before {
                                 width: 100%;
-                                border-bottom: 1px solid #112D4E;
+                                border-bottom: 2px solid #3F72AF;
                         }
         
                         .has-val.input2 + .focus-input2::after {
                                 top: -11px;
-                                color: #112D4E;
+                                color: #3F72AF;
                                 font-size: 15px;
                         }
         
                         .has-val.input2 + .focus-input2::before {
                                 width: 100%;
-                                color:#112D4E;
-                                border-bottom: 1px solid #112D4E;
+                                color:#3F72AF;
+                                border-bottom: 1px solid #3F72AF;
                         }
                         .campo3{
                                 @extend .col-md-12;
@@ -2300,7 +2358,7 @@ header{
                                         padding: 15px 80px;
                                         transition: all .3s;
                                         font-size: 18px;
-                                        font-weight: 500;
+                                        font-weight: 600;
                                         text-transform: uppercase;
                                         &:hover{					
                                                 transition: all .3s;
@@ -2325,10 +2383,21 @@ header{
                         }
                 }
                 @media screen and (max-width: 730px) and (min-width: 220px) {
+                        display: flex;
+                        flex-direction: column-reverse;
+                        .banner{
+                                display: none;
+                        }
                         .infos{
+                                padding-bottom: 60px;
                                 .box{
                                         padding-top:23px;
-                                        span{
+                                        .nome{
+                                                p{
+                                                        font-size: 16px;
+                                                }
+                                        }
+                                        .conteudo, .conteudo2{
                                                 p{
                                                         font-size: 14px;
                                                 }
@@ -2336,8 +2405,9 @@ header{
                                 }
                         }
                         .formulario{
-                                padding: 40px 30px;
-                                margin-bottom: 70px;
+                                padding: 30px 50px;
+                                margin-bottom: 30px;
+                                margin-top: auto;
                         }
                 }
         }
@@ -2386,9 +2456,22 @@ footer{
         @media screen and (max-width: 680px) and (min-width: 220px) {
                 .footer-email{
                         padding: 30px;
-                        flex-direction: column;
+                        flex-direction: column-reverse;
                         .info{
+                                svg{
+                                        width: 30px;
+                                        height: 30px;
+                                }
+                                span{
+                                        font-size: 16px;
+                                }
+                        }
+                        .icn{
                                 margin-bottom: 30px;
+                                svg{
+                                        width: 30px;
+                                        height: 30px;
+                                }
                         }
                 }
         }
