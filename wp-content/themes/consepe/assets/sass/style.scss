@@ -323,6 +323,9 @@ header{
                         .navbar-header{
                                 margin-top: -65px;
                         }
+                        .navbar-collapse{
+                                margin-top: 20px;
+                        }
                 }
                 .menu{
                         background-color: #00284d;
@@ -1421,7 +1424,6 @@ header{
                 }
                 @media screen and (max-width: 770px) and (min-width: 421px) {
                         article{
-                                margin-top: -50px;
                                 h2{
                                         padding: 15px 0;
                                         font-size: 32px;
