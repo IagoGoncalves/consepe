@@ -30,7 +30,7 @@ function type_post_porsonalizados() {
             'public' => true,
             'supports' => array('title','thumbnail'),
             'has_archive' => true,
-            'menu_icon' => 'dashicons-format-image',
+            'menu_icon' => 'dashicons-format-aside',
             'show_in_nav_menus' => true,
             'show_in_rest' => true   
          )
@@ -48,7 +48,7 @@ function type_post_porsonalizados() {
             'public' => true,
             'supports' => array('title','author','thumbnail','revisions', 'editor'),
             'has_archive' => true,
-            'menu_icon' => 'dashicons-format-gallery',
+            'menu_icon' => 'dashicons-welcome-widgets-menus',
             'show_in_nav_menus' => true,
             'show_in_rest' => true
          )
