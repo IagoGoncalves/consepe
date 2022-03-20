@@ -45,7 +45,12 @@ get_header(); ?>
 					<h2 class="destaque"><?php the_title(); ?></h2>
 					<?php the_content(); ?>
 					<div class="icones">
-						<a href="#" onclick='history.go(-1)' class="back">Voltar</a>
+						<a href="#" onclick='history.go(-1)' class="back">
+							<svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M32 26L33.41 24.59L28.83 20L33.41 15.41L32 14L26 20L32 26Z" fill="#404040"/>
+                            </svg>
+							<span>Voltar</span>
+						</a>
 						<div>
 							<span class="share">Compartilhe em: </span>
 							<a href="https://www.facebook.com/sharer.php?u=<?php the_permalink() ?>" target="_blank" title="Compartilhar <?php the_title();?> no Facebook">

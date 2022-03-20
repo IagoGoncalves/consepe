@@ -36,7 +36,9 @@ get_header();
 				</article>
 				<article class="fluxo">
 					<h2>Confira os membros do Consepe</h2>
-					<img class="logo-edital" src="<?php echo get_template_directory_uri(); ?>/assets/images/fluxograma.png"/>
+					<div>
+						<img class="logo-edital" src="<?php echo get_template_directory_uri(); ?>/assets/images/fluxograma.png"/>
+					</div>
 				</article>
 				<article class="estatuto">
 					<?php $pdf =  get_post_meta( $post->ID,'arquivo-consepe', true);?>
