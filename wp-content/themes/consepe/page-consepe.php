@@ -37,13 +37,14 @@ get_header();
 				<article class="fluxo">
 					<h2>Confira os membros do Consepe</h2>
 					<div>
-						<img class="logo-edital" src="<?php echo get_template_directory_uri(); ?>/assets/images/fluxograma.png"/>
+						<img class="logo-edital" src="<?php echo get_template_directory_uri(); ?>/assets/images/fluxograma1.png"/>
 					</div>
 				</article>
 				<article class="estatuto">
 					<?php $pdf =  get_post_meta( $post->ID,'arquivo-consepe', true);?>
 					<span class="confira">Clique e confira Estatuto do Consepe</span>
-					<a href="<?php echo $pdf?>" download="<?php the_title()?>" class="down-estatuto">
+					<a href="https://www.camaraextrema.mg.gov.br/site-antigo/noticias/4850/imprensa/4850/" class="down-estatuto">
+					<!-- <a href="<?php echo $pdf?>" download="<?php the_title()?>" class="down-estatuto"> -->
 						<span>fazer download do documento</span>
 						<svg width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M0 17H14V15H0V17ZM14 6H10V0H4V6H0L7 13L14 6Z" fill="white"/>

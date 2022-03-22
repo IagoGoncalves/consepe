@@ -90,13 +90,16 @@ h2{
                         }
                 }
         }
-        
+        @media screen and (max-width: 770px) and (min-width: 220px) {
+                .container{
+                        padding-top: 45px;
+                }
+        }
         @media screen and (max-width: 550px) and (min-width: 220px) {
                 padding:0px;
                 margin-bottom: 0px;
                 margin-top: 0px;
                 .container{
-                        padding-top: 10px;
                         ul{
                                 padding: 25px 0 0 0;
                         }
@@ -158,7 +161,7 @@ header{
                         justify-content: center;
                         align-items: flex-end;
                         transition: all .4s;
-                        @media screen and (max-width: 480px) and (min-width: 220px) {
+                        @media screen and (max-width: 770px) and (min-width: 220px) {
                                 display: block;
                                 background: transparent;
                                 margin: 0 -15px;
@@ -352,7 +355,6 @@ header{
                         }  
                 } 
         }
-
 }
 .home{
         @extend .col-md-12;
@@ -424,6 +426,11 @@ header{
                                         h2{
                                                 font-size: 40px;
                                                 text-align: center;
+                                        }
+                                        .imagem{
+                                                img{
+                                                        width: 250px;
+                                                }
                                         }
                                 }
                         }
@@ -529,7 +536,7 @@ header{
                         }        
                 } 
                 @media screen and (max-width: 580px) and (min-width: 220px) {
-                        padding: 80px 15px 50px 15px;
+                        padding: 0px 15px 50px 15px;
                         .texto-imagem{
                                 flex-direction: column-reverse;
                                 align-items:center;
@@ -768,7 +775,7 @@ header{
                                         }
                                }
                         }
-                        @media screen and (max-width: 550px) and (min-width: 220px) {
+                        @media screen and (max-width: 560px) and (min-width: 220px) {
                                 h2{
                                       font-size: 22px;  
                                 }
@@ -1083,7 +1090,7 @@ header{
                                 }
                         }
                 }
-                @media screen and (max-width: 550px) and (min-width: 220px) {
+                @media screen and (max-width: 560px) and (min-width: 220px) {
                         margin-top: 35px;
                         .info-noticias{
                                 h2{
@@ -1176,8 +1183,13 @@ header{
                         padding: 121px 0 80px 0;
                         text-transform: none;    
                 }
-                img{
-                        padding-bottom:120px;
+                div{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        img{
+                                padding-bottom:120px;
+                        }
                 }
         }
         .estatuto{
@@ -1185,7 +1197,7 @@ header{
                 justify-content: space-evenly;
                 align-items: center;
                 background-color: #DBE2EF;
-                border-radius: 20px;
+                border-radius: 10px;
                 height: 160px;
                 margin-bottom:120px;
                 padding: 20px;
@@ -1198,7 +1210,7 @@ header{
                 }
                 .down-estatuto{
                         background-color: #112D4E;
-                        border-radius: 20px;
+                        border-radius: 10px;
                         color: #fff;
                         font-weight: 600;
                         font-size: 16px;
@@ -1249,19 +1261,19 @@ header{
                 .info{
                         .texto{
                                 h2{
-                                        font-size: 30px;
-                                        padding: 0 0 40px 0;
+                                        font-size: 20px;
+                                        padding: 0 0 20px 0;
                                 }
                                 .sobre{
                                         p{
-                                                font-size: 19px;     
+                                                font-size: 16px;     
                                         }
                                 }
                         }
                 }
                 .fluxo{
                         h2{
-                                font-size: 36px;
+                                font-size: 20px;
                                 text-align: center;
                                 padding: 20px 0 50px 0;
                         }
@@ -1276,7 +1288,7 @@ header{
                         margin-bottom: 60px;
                         padding: 0px;
                         .confira{
-                                font-size:21px;
+                                font-size:20px;
                                 line-height: 30px;
                                 padding-bottom: 12px;
                         }
@@ -1351,7 +1363,7 @@ header{
                                                         align-items: center;
                                                         background-color: #fff;
                                                         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                                                        border-radius: 20px;
+                                                        border-radius: 10px;
                                                         padding-top:25px;
                                                         padding-bottom:25px;
                                                         padding-left: 15px;
@@ -1368,7 +1380,7 @@ header{
                                                                 align-items: center;
                                                                 background-color: #112D4E;
                                                                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-                                                                border-radius: 20px;
+                                                                border-radius: 10px;
                                                                 text-transform: uppercase;
                                                                 padding-top:25px;
                                                                 padding-bottom:25px;
@@ -1561,7 +1573,7 @@ header{
                                         padding: 0 35px 16px;
                                         h3{
                                                 font-weight: 600;
-                                                font-size: 28px;
+                                                font-size: 20px;
                                                 color: #FFFFFF;
                                         }
                                         p{
@@ -1575,6 +1587,11 @@ header{
                                         width: 64.666667%;
                                         padding: 0;
                                         margin: 0 1%;
+                                        h3{
+                                                font-weight: 600;
+                                                font-size: 30px;
+                                                color: #FFFFFF;
+                                        }
                                         p{
                                                 display: block;
                                                 font-weight: 400;
@@ -1638,12 +1655,12 @@ header{
                                         padding: 0 35px;
                                         h3{
                                                 font-weight: 600;
-                                                font-size: 28px;
+                                                font-size: 20px;
                                                 color: #FFFFFF;
                                         }
                                         p{
                                                 display: none;
-                                                font-size: 18px;
+                                                font-size: 16px;
                                                 color: #FFFFFF;
                                         }
                                 }
@@ -1929,13 +1946,14 @@ header{
                                         font-weight: 600;
                                         font-size: 38px;
                                         color: #404040;
-                                        padding: 0 0 72px 0;
+                                        padding: 0 0 50px 0;
                                         margin-top: 45px;
                                 }
                                 p{
                                         color: #404040;
                                         opacity: 0.8;
                                         font-size: 20px;
+                                        text-align: justify;
                                 }
                                 .icones{
                                         padding: 81px 0px 0 0;
@@ -2157,7 +2175,7 @@ header{
                                  margin-top: 80px;
                         }
                 }
-         }
+        }
 }
 .contato{
         .container{
@@ -2423,14 +2441,17 @@ footer{
                 align-items: center;
                 padding: 80px 100px 80px 0;
                 .info{
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        span{
-                                padding-left: 12px;
-                                color: white;
-                                font-weight: 600;
-                                font-size: 20px;
+                        a{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                text-decoration: none;
+                                span{
+                                        padding-left: 12px;
+                                        color: white;
+                                        font-weight: 600;
+                                        font-size: 20px;
+                                }
                         }
                 }
                 .icn{

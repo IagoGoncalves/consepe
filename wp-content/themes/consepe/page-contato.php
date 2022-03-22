@@ -60,13 +60,11 @@ get_header();
 									<?php } ?>
 	                        	</span>
 	                        	<span class="conteudo">
-		                        	<?php if ($logradouro != '') { ?>
+		                        	<?php if ($logradouro != '' and $logradouro != '-') { ?>
 										<p><?php echo $logradouro?> <?php echo $endereco?>, <?php echo $numero?> <br></p>
 										<?php } else { ?>
 											<p style="display: none;"></p>
 									<?php } ?>
-
-									
 
 									<?php if ($complemento != '') { ?>
 										<p><?php echo $complemento?> </p>
