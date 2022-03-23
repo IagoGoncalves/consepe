@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, p, a, b, title, span, input, button{
 .desabilitado{
         display: none;
 }
-@media (min-width: 1200px){
+@media (min-width: 1500px){
         .container {
             width: 1480px;
         }
@@ -107,6 +107,8 @@ h2{
         }
 }
 header{
+        @extend .col-md-12;
+        padding: 0;
         .container:before, .container:after {
             content: " ";
             display: none;
@@ -262,7 +264,7 @@ header{
                 }                               
         }
         #menu{
-                @media (min-width: 1200px){
+                @media (min-width: 1500px){
                         .container {
                                 width: 1550px;
                         }
@@ -282,8 +284,9 @@ header{
                 }  
         }
         .menu-fixo{
-                transition: all .4s;
                 width: 100%;
+                padding: 0;
+                transition: all .4s;
                 z-index: 999;
                 background-color: #01244ed6;   
                 .main-navigation {                      
@@ -295,7 +298,7 @@ header{
                         }
                 }  
         } 
-        @media screen and (max-width: 1200px) and (min-width: 770px) {
+        @media screen and (max-width: 1500px) and (min-width: 1000px) {
                 .menu{
                         background-color: #00284d;
                         .logo-principal{
@@ -401,7 +404,7 @@ header{
                                 }
                         }                        
                 }        
-                @media screen and (max-width: 1200px) and (min-width: 581px) {
+                @media screen and (max-width: 1500px) and (min-width: 581px) {
                         .conteudo{
                                 .box{
                                         text-align: center;
@@ -509,7 +512,7 @@ header{
                                 } 
                         }
                 } 
-                @media screen and (max-width: 1024px) and (min-width: 580px) {
+                @media screen and (max-width: 1500px) and (min-width: 580px) {
                         .texto-imagem{
                                 display: flex;
                                 width: 100%;
@@ -534,7 +537,7 @@ header{
                                         width: 50%;
                                 }
                         }        
-                } 
+                }
                 @media screen and (max-width: 580px) and (min-width: 220px) {
                         padding: 0px 15px 50px 15px;
                         .texto-imagem{
@@ -750,7 +753,7 @@ header{
                                                 }
                                          }
                                 }
-                         }
+                        }
                         @media screen and (max-width: 770px) and (min-width: 551px) {
                                .imagem{
                                         display: flex;
@@ -1096,6 +1099,10 @@ header{
                                 h2{
                                         padding-bottom: 20px !important;
                                         font-size: 20px !important;
+                                        height: 110px;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
                                 }
                                 .texto{
                                         display: none;
@@ -1149,6 +1156,65 @@ header{
                                 }
                         }           
                 } 
+        }
+        @media screen and (max-width: 992px) and (min-width: 770px) {
+                .texto-home{
+                        padding: 200px 0 100px 0;
+                }
+                .editais-home{
+                        .imagem{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                        }
+                        .tds-box{
+                                margin-top: 50px;
+                        }
+                }
+                .noticias-home{
+                        margin-top: 50px;
+                        margin-bottom: 0;
+                        padding-bottom: 50px;
+                        .container{
+                                .swiper-container{
+                                        .swiper-wrapper{
+                                                .swiper-slide{
+                                                        .info-noticias{
+                                                                h2{
+                                                                        height: 150px;
+                                                                        display: flex;
+                                                                        justify-content: center;
+                                                                        align-items: center;
+                                                                        overflow: hidden;
+                                                                }
+                                                                .texto{
+                                                                        p{
+                                                                                height: 200px;
+                                                                                display: flex;
+                                                                                justify-content: center;
+                                                                                align-items: center;
+                                                                                overflow: hidden;
+                                                                        }
+                                                                }
+                                                                .botoes{
+                                                                        display: flex;
+                                                                        justify-content: center;
+                                                                        align-items: center
+                                                                }
+                                                        }
+                                                }
+                                        }
+                                }
+                        } 
+                        article.container{
+                                .page{
+                                        .borda-left, .borda-middle, .borda-right, .esquerda, .direita{
+                                                display: none;
+                                        }
+                                }
+                        }   
+                }
+
         }
 }
 .consepe{
@@ -1246,7 +1312,7 @@ header{
                         }
                 }
         }
-        @media screen and (max-width: 1200px) and (min-width: 771px) {
+        @media screen and (max-width: 1500px) and (min-width: 771px) {
                 .estatuto{
                         text-align: center;
                         .down-estatuto{
@@ -1313,6 +1379,7 @@ header{
                                 }
                                 .fluxo{
                                         div{
+                                                display: block;
                                                 margin-bottom: 30px;
                                                 overflow-x: scroll;
                                                 img{
@@ -1409,7 +1476,7 @@ header{
                                 }
                         }
                 }
-                @media screen and (max-width: 1200px) and (min-width: 771px) {
+                @media screen and (max-width: 1500px) and (min-width: 771px) {
                         article{
                                 padding: 15px;
                                 h2{
@@ -1758,7 +1825,7 @@ header{
                                 }
                         }
                 }
-                @media screen and (max-width: 1200px) and (min-width: 990px) {
+                @media screen and (max-width: 1500px) and (min-width: 990px) {
                         .second-block{ 
                                 .page{
                                         article{
@@ -2057,7 +2124,7 @@ header{
                         }
                 }
         }
-        @media screen and (max-width: 1200px) and (min-width: 551px) {
+        @media screen and (max-width: 1500px) and (min-width: 551px) {
                 .container{
                         .banner{
                                 .imagem{
