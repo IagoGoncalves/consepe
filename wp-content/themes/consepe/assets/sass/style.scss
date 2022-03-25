@@ -1157,6 +1157,60 @@ header{
                         }           
                 } 
         }
+        @media screen and (max-width: 1285px) and (min-width: 1275px) {
+                .texto-home{
+                        padding: 100px 0 150px 0;
+                }
+                .editais-home{
+                        .container{
+                                article{
+                                        .tds-box{
+                                                .box{
+                                                        justify-content: center;
+                                                        .titulo-data{
+                                                                margin-bottom: 10px;
+                                                        }
+                                                }
+                                        }
+                                }
+                        }
+                }
+                .noticias-home{
+                        .container{
+                                .swiper-container{
+                                        .swiper-wrapper{
+                                                .swiper-slide{
+                                                        .info-noticias{
+                                                                h2{
+                                                                        font-size: 30px;
+                                                                }
+                                                                .texto{
+                                                                        text-align: inherit;
+                                                                }
+                                                                .botoes{
+                                                                        .veja-mais{
+                                                                                font-size: 13px;
+                                                                        }
+                                                                }
+                                                        }
+                                                }
+                                        }
+                                }
+                        }
+                        .page{
+                                .swiper-pagination{
+                                        width: 10.333333%;
+                                }
+                                article{
+                                        .esquerda, .direita{
+                                                svg{
+                                                        width: 50px;
+                                                }
+                                        }
+                                }
+                        }
+                }
+        }
         @media screen and (max-width: 992px) and (min-width: 770px) {
                 .texto-home{
                         padding: 200px 0 100px 0;
