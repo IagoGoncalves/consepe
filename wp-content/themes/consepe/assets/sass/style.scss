@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, p, a, b, title, span, input, button{
 .desabilitado{
         display: none;
 }
-@media (min-width: 1200px){
+@media (min-width: 1500px){
         .container {
             width: 1480px;
         }
@@ -90,13 +90,16 @@ h2{
                         }
                 }
         }
-        
+        @media screen and (max-width: 770px) and (min-width: 220px) {
+                .container{
+                        padding-top: 45px;
+                }
+        }
         @media screen and (max-width: 550px) and (min-width: 220px) {
                 padding:0px;
                 margin-bottom: 0px;
                 margin-top: 0px;
                 .container{
-                        padding-top: 10px;
                         ul{
                                 padding: 25px 0 0 0;
                         }
@@ -104,6 +107,9 @@ h2{
         }
 }
 header{
+        @extend .col-md-12;
+        min-height: 0px;
+        padding: 0;
         .container:before, .container:after {
             content: " ";
             display: none;
@@ -158,7 +164,7 @@ header{
                         justify-content: center;
                         align-items: flex-end;
                         transition: all .4s;
-                        @media screen and (max-width: 480px) and (min-width: 220px) {
+                        @media screen and (max-width: 770px) and (min-width: 220px) {
                                 display: block;
                                 background: transparent;
                                 margin: 0 -15px;
@@ -259,7 +265,7 @@ header{
                 }                               
         }
         #menu{
-                @media (min-width: 1200px){
+                @media (min-width: 1500px){
                         .container {
                                 width: 1550px;
                         }
@@ -279,8 +285,9 @@ header{
                 }  
         }
         .menu-fixo{
-                transition: all .4s;
                 width: 100%;
+                padding: 0;
+                transition: all .4s;
                 z-index: 999;
                 background-color: #01244ed6;   
                 .main-navigation {                      
@@ -292,7 +299,7 @@ header{
                         }
                 }  
         } 
-        @media screen and (max-width: 1200px) and (min-width: 770px) {
+        @media screen and (max-width: 1500px) and (min-width: 1000px) {
                 .menu{
                         background-color: #00284d;
                         .logo-principal{
@@ -352,7 +359,6 @@ header{
                         }  
                 } 
         }
-
 }
 .home{
         @extend .col-md-12;
@@ -370,7 +376,7 @@ header{
                 color: #fff;
                 font-weight: 600;
                 position: relative;
-                height: 80vh;
+                height: 85vh;
                 .conteudo{
                         position: absolute;
                         top: 25%;
@@ -399,7 +405,7 @@ header{
                                 }
                         }                        
                 }        
-                @media screen and (max-width: 1200px) and (min-width: 581px) {
+                @media screen and (max-width: 1500px) and (min-width: 581px) {
                         .conteudo{
                                 .box{
                                         text-align: center;
@@ -418,12 +424,19 @@ header{
                 }
                 @media screen and (max-width: 580px) and (min-width: 220px) {
                         background-size: auto;
+                        height: auto;
                         .conteudo{
-                                top: 14%;
+                                position: relative;
+                                margin-top: 45px;
                                 .box{
                                         h2{
                                                 font-size: 40px;
                                                 text-align: center;
+                                        }
+                                        .imagem{
+                                                img{
+                                                        width: 250px;
+                                                }
                                         }
                                 }
                         }
@@ -502,7 +515,7 @@ header{
                                 } 
                         }
                 } 
-                @media screen and (max-width: 1024px) and (min-width: 580px) {
+                @media screen and (max-width: 1500px) and (min-width: 580px) {
                         .texto-imagem{
                                 display: flex;
                                 width: 100%;
@@ -527,9 +540,9 @@ header{
                                         width: 50%;
                                 }
                         }        
-                } 
+                }
                 @media screen and (max-width: 580px) and (min-width: 220px) {
-                        padding: 80px 15px 50px 15px;
+                        padding: 0px 15px 50px 15px;
                         .texto-imagem{
                                 flex-direction: column-reverse;
                                 align-items:center;
@@ -743,7 +756,7 @@ header{
                                                 }
                                          }
                                 }
-                         }
+                        }
                         @media screen and (max-width: 770px) and (min-width: 551px) {
                                .imagem{
                                         display: flex;
@@ -768,7 +781,7 @@ header{
                                         }
                                }
                         }
-                        @media screen and (max-width: 550px) and (min-width: 220px) {
+                        @media screen and (max-width: 560px) and (min-width: 220px) {
                                 h2{
                                       font-size: 22px;  
                                 }
@@ -1083,12 +1096,16 @@ header{
                                 }
                         }
                 }
-                @media screen and (max-width: 550px) and (min-width: 220px) {
+                @media screen and (max-width: 560px) and (min-width: 220px) {
                         margin-top: 35px;
                         .info-noticias{
                                 h2{
                                         padding-bottom: 20px !important;
                                         font-size: 20px !important;
+                                        height: 110px;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
                                 }
                                 .texto{
                                         display: none;
@@ -1143,6 +1160,119 @@ header{
                         }           
                 } 
         }
+        @media screen and (max-width: 1286px) and (min-width: 1275px) {
+                .texto-home{
+                        padding: 100px 0 150px 0;
+                }
+                .editais-home{
+                        .container{
+                                article{
+                                        .tds-box{
+                                                .box{
+                                                        justify-content: center;
+                                                        .titulo-data{
+                                                                margin-bottom: 10px;
+                                                        }
+                                                }
+                                        }
+                                }
+                        }
+                }
+                .noticias-home{
+                        .container{
+                                .swiper-container{
+                                        .swiper-wrapper{
+                                                .swiper-slide{
+                                                        .info-noticias{
+                                                                h2{
+                                                                        font-size: 30px;
+                                                                }
+                                                                .texto{
+                                                                        text-align: inherit;
+                                                                }
+                                                                .botoes{
+                                                                        .veja-mais{
+                                                                                font-size: 13px;
+                                                                        }
+                                                                }
+                                                        }
+                                                }
+                                        }
+                                }
+                        }
+                        .page{
+                                .swiper-pagination{
+                                        width: 10.333333%;
+                                }
+                                article{
+                                        .esquerda, .direita{
+                                                svg{
+                                                        width: 50px;
+                                                }
+                                        }
+                                }
+                        }
+                }
+        }
+        @media screen and (max-width: 992px) and (min-width: 770px) {
+                .texto-home{
+                        padding: 200px 0 100px 0;
+                }
+                .editais-home{
+                        .imagem{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                        }
+                        .tds-box{
+                                margin-top: 50px;
+                        }
+                }
+                .noticias-home{
+                        margin-top: 50px;
+                        margin-bottom: 0;
+                        padding-bottom: 50px;
+                        .container{
+                                .swiper-container{
+                                        .swiper-wrapper{
+                                                .swiper-slide{
+                                                        .info-noticias{
+                                                                h2{
+                                                                        height: 150px;
+                                                                        display: flex;
+                                                                        justify-content: center;
+                                                                        align-items: center;
+                                                                        overflow: hidden;
+                                                                }
+                                                                .texto{
+                                                                        p{
+                                                                                height: 200px;
+                                                                                display: flex;
+                                                                                justify-content: center;
+                                                                                align-items: center;
+                                                                                overflow: hidden;
+                                                                        }
+                                                                }
+                                                                .botoes{
+                                                                        display: flex;
+                                                                        justify-content: center;
+                                                                        align-items: center
+                                                                }
+                                                        }
+                                                }
+                                        }
+                                }
+                        } 
+                        article.container{
+                                .page{
+                                        .borda-left, .borda-middle, .borda-right, .esquerda, .direita{
+                                                display: none;
+                                        }
+                                }
+                        }   
+                }
+
+        }
 }
 .consepe{
         @extend .col-md-12;
@@ -1176,8 +1306,13 @@ header{
                         padding: 121px 0 80px 0;
                         text-transform: none;    
                 }
-                img{
-                        padding-bottom:120px;
+                div{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        img{
+                                padding-bottom:120px;
+                        }
                 }
         }
         .estatuto{
@@ -1185,7 +1320,7 @@ header{
                 justify-content: space-evenly;
                 align-items: center;
                 background-color: #DBE2EF;
-                border-radius: 20px;
+                border-radius: 10px;
                 height: 160px;
                 margin-bottom:120px;
                 padding: 20px;
@@ -1198,7 +1333,7 @@ header{
                 }
                 .down-estatuto{
                         background-color: #112D4E;
-                        border-radius: 20px;
+                        border-radius: 10px;
                         color: #fff;
                         font-weight: 600;
                         font-size: 16px;
@@ -1234,7 +1369,7 @@ header{
                         }
                 }
         }
-        @media screen and (max-width: 1200px) and (min-width: 771px) {
+        @media screen and (max-width: 1500px) and (min-width: 771px) {
                 .estatuto{
                         text-align: center;
                         .down-estatuto{
@@ -1249,19 +1384,19 @@ header{
                 .info{
                         .texto{
                                 h2{
-                                        font-size: 30px;
-                                        padding: 0 0 40px 0;
+                                        font-size: 20px;
+                                        padding: 0 0 20px 0;
                                 }
                                 .sobre{
                                         p{
-                                                font-size: 19px;     
+                                                font-size: 16px;     
                                         }
                                 }
                         }
                 }
                 .fluxo{
                         h2{
-                                font-size: 36px;
+                                font-size: 20px;
                                 text-align: center;
                                 padding: 20px 0 50px 0;
                         }
@@ -1276,7 +1411,7 @@ header{
                         margin-bottom: 60px;
                         padding: 0px;
                         .confira{
-                                font-size:21px;
+                                font-size:20px;
                                 line-height: 30px;
                                 padding-bottom: 12px;
                         }
@@ -1301,6 +1436,7 @@ header{
                                 }
                                 .fluxo{
                                         div{
+                                                display: block;
                                                 margin-bottom: 30px;
                                                 overflow-x: scroll;
                                                 img{
@@ -1351,7 +1487,7 @@ header{
                                                         align-items: center;
                                                         background-color: #fff;
                                                         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                                                        border-radius: 20px;
+                                                        border-radius: 10px;
                                                         padding-top:25px;
                                                         padding-bottom:25px;
                                                         padding-left: 15px;
@@ -1368,7 +1504,7 @@ header{
                                                                 align-items: center;
                                                                 background-color: #112D4E;
                                                                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-                                                                border-radius: 20px;
+                                                                border-radius: 10px;
                                                                 text-transform: uppercase;
                                                                 padding-top:25px;
                                                                 padding-bottom:25px;
@@ -1397,7 +1533,7 @@ header{
                                 }
                         }
                 }
-                @media screen and (max-width: 1200px) and (min-width: 771px) {
+                @media screen and (max-width: 1500px) and (min-width: 771px) {
                         article{
                                 padding: 15px;
                                 h2{
@@ -1561,7 +1697,7 @@ header{
                                         padding: 0 35px 16px;
                                         h3{
                                                 font-weight: 600;
-                                                font-size: 28px;
+                                                font-size: 20px;
                                                 color: #FFFFFF;
                                         }
                                         p{
@@ -1575,6 +1711,11 @@ header{
                                         width: 64.666667%;
                                         padding: 0;
                                         margin: 0 1%;
+                                        h3{
+                                                font-weight: 600;
+                                                font-size: 30px;
+                                                color: #FFFFFF;
+                                        }
                                         p{
                                                 display: block;
                                                 font-weight: 400;
@@ -1638,12 +1779,12 @@ header{
                                         padding: 0 35px;
                                         h3{
                                                 font-weight: 600;
-                                                font-size: 28px;
+                                                font-size: 20px;
                                                 color: #FFFFFF;
                                         }
                                         p{
                                                 display: none;
-                                                font-size: 18px;
+                                                font-size: 16px;
                                                 color: #FFFFFF;
                                         }
                                 }
@@ -1741,7 +1882,7 @@ header{
                                 }
                         }
                 }
-                @media screen and (max-width: 1200px) and (min-width: 990px) {
+                @media screen and (max-width: 1500px) and (min-width: 990px) {
                         .second-block{ 
                                 .page{
                                         article{
@@ -1929,13 +2070,14 @@ header{
                                         font-weight: 600;
                                         font-size: 38px;
                                         color: #404040;
-                                        padding: 0 0 72px 0;
+                                        padding: 0 0 50px 0;
                                         margin-top: 45px;
                                 }
                                 p{
                                         color: #404040;
                                         opacity: 0.8;
                                         font-size: 20px;
+                                        text-align: justify;
                                 }
                                 .icones{
                                         padding: 81px 0px 0 0;
@@ -2039,7 +2181,7 @@ header{
                         }
                 }
         }
-        @media screen and (max-width: 1200px) and (min-width: 551px) {
+        @media screen and (max-width: 1500px) and (min-width: 551px) {
                 .container{
                         .banner{
                                 .imagem{
@@ -2157,7 +2299,7 @@ header{
                                  margin-top: 80px;
                         }
                 }
-         }
+        }
 }
 .contato{
         .container{
@@ -2350,9 +2492,21 @@ header{
                         .area{
                                 resize: none;
                         }
+                        .g-recaptcha_align{
+                                .g-recaptcha{
+                                        div{
+                                                text-align: center;
+                                                width: auto !important;
+                                        }
+                                }
+                        }
+                        svg{ // loading
+                                width: 100%;
+                        }
                         .botao-enviar{
                                 @extend .col-md-12;
                                 text-align: center;
+                                margin-top: 60px;
                                 button{
                                         color: #fff;
                                         background: #112D4E;           	
@@ -2423,14 +2577,17 @@ footer{
                 align-items: center;
                 padding: 80px 100px 80px 0;
                 .info{
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        span{
-                                padding-left: 12px;
-                                color: white;
-                                font-weight: 600;
-                                font-size: 20px;
+                        a{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                text-decoration: none;
+                                span{
+                                        padding-left: 12px;
+                                        color: white;
+                                        font-weight: 600;
+                                        font-size: 20px;
+                                }
                         }
                 }
                 .icn{
@@ -2485,4 +2642,31 @@ footer{
                 justify-content: center;
                 align-items: center;
         }
+}
+.load, .load-emprensa{
+        display: none;
 }     
+.valida-envio{
+    font-size: 24px;
+    text-align: center;
+    color: #1167b1;
+    margin-top: 10px;
+    font-weight: 300;
+        .botao-enviar{
+                a{
+                        font-size: 18px;                                        
+                        background: #691512;
+                        padding: 10px 20px;
+                        color: #fff;
+                        margin: 10px;
+                        cursor: pointer;
+                        font-weight: 500;
+                        text-decoration: none;
+                        transition: all .3s;
+                        &:hover{
+                                background: #a50904;
+                                transition: all .3s;
+                        }
+                }
+        }
+}

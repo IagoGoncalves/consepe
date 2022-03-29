@@ -37,7 +37,7 @@ get_header();
 				<article class="fluxo">
 					<h2>Confira os membros do Consepe</h2>
 					<div>
-						<img class="logo-edital" src="<?php echo get_template_directory_uri(); ?>/assets/images/fluxograma.png"/>
+						<img class="logo-edital" src="<?php echo get_template_directory_uri(); ?>/assets/images/fluxograma1.png"/>
 					</div>
 				</article>
 				<article class="estatuto">

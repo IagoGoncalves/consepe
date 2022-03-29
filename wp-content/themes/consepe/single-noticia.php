@@ -37,7 +37,7 @@ get_header(); ?>
 						</svg>
 						<p class="data"><?php the_time('d \d\e F \d\e Y') ?></p>
 					</div>
-					<p class="referencia">Imagem: Tincidunt / Pulvinar</p>
+					<p class="referencia">Imagem: Divulgação</p>
 				</article>
 			</section>
 			<section class="conteudo">
