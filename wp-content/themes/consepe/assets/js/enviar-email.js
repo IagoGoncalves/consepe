@@ -2,6 +2,7 @@ var form = document.forms.namedItem("enviar-email");
 form.addEventListener('submit', function(ev) {
 
 	document.querySelector(".botao-enviar").style.display = 'none';
+	document.querySelector(".g-recaptcha_align").style.display = 'none';
 	document.querySelector(".load").style.display = 'block';
 
 	var oOutput = document.querySelector(".valida-envio"),

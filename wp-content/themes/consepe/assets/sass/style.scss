@@ -108,6 +108,7 @@ h2{
 }
 header{
         @extend .col-md-12;
+        min-height: 0px;
         padding: 0;
         .container:before, .container:after {
             content: " ";
@@ -375,7 +376,7 @@ header{
                 color: #fff;
                 font-weight: 600;
                 position: relative;
-                height: 80vh;
+                height: 85vh;
                 .conteudo{
                         position: absolute;
                         top: 25%;
@@ -423,8 +424,10 @@ header{
                 }
                 @media screen and (max-width: 580px) and (min-width: 220px) {
                         background-size: auto;
+                        height: auto;
                         .conteudo{
-                                top: 14%;
+                                position: relative;
+                                margin-top: 45px;
                                 .box{
                                         h2{
                                                 font-size: 40px;
@@ -2489,9 +2492,21 @@ header{
                         .area{
                                 resize: none;
                         }
+                        .g-recaptcha_align{
+                                .g-recaptcha{
+                                        div{
+                                                text-align: center;
+                                                width: auto !important;
+                                        }
+                                }
+                        }
+                        svg{ // loading
+                                width: 100%;
+                        }
                         .botao-enviar{
                                 @extend .col-md-12;
                                 text-align: center;
+                                margin-top: 60px;
                                 button{
                                         color: #fff;
                                         background: #112D4E;           	
@@ -2627,4 +2642,31 @@ footer{
                 justify-content: center;
                 align-items: center;
         }
+}
+.load, .load-emprensa{
+        display: none;
 }     
+.valida-envio{
+    font-size: 24px;
+    text-align: center;
+    color: #1167b1;
+    margin-top: 10px;
+    font-weight: 300;
+        .botao-enviar{
+                a{
+                        font-size: 18px;                                        
+                        background: #691512;
+                        padding: 10px 20px;
+                        color: #fff;
+                        margin: 10px;
+                        cursor: pointer;
+                        font-weight: 500;
+                        text-decoration: none;
+                        transition: all .3s;
+                        &:hover{
+                                background: #a50904;
+                                transition: all .3s;
+                        }
+                }
+        }
+}

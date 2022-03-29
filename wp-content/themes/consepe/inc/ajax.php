@@ -6,37 +6,19 @@ add_action( 'wp_ajax_nopriv_enviar-email', 'my_action_enviar_email' );
 function my_action_enviar_email() {
 
 	if (($_POST['tipo-email']) == "contato"){
-		$deNome = $_POST['nome'];
-		$deEmail = $_POST['email'];
-		$demensagem = $_POST['mensagem'];
+		$deNome = $_POST['name'];
+		$deAssunto = $_POST['assunto'];
+		$demensagem = $_POST['message'];
 	    
 	    $mensagem = 
-			"Contato Fuji Multimarcas \n\n" . 
-			"Nome: " . $deNome . "\n" .
-			"E-mail: " . $deEmail . "\n" .
-			"Mensagem: " . $demensagem . "\n\n".
-			"Mensagem Enviada pelo Site Fuji Multimarcas";
-
-	}else if (($_POST['tipo-email']) == "proposta") {
-		$deNome = $_POST['nome'];
-		$deEmail = $_POST['email'];
-		$telefone = $_POST['telefone'];		
-		$celular= $_POST['celular'];
-		$demensagem = $_POST['mensagem'];
-		$modelo = $_POST['idVeiculo'];
-
-		$mensagem = 
-			"Proposta Fuji Multimarcas \n\n" .
-			"Interesse no Veículo: " . $modelo . "\n" .
-			"Nome: " . $deNome . "\n" .
-			"E-mail: " . $deEmail . "\n" .
-			"Telefone: " . $telefone . "\n" .
-			"Celular: " . $celular . "\n" .
-			"Mensagem: " . $demensagem . "\n\n".
-			"Mensagem Enviada pelo site Fuji Multimarcas";
+			"Contato Consepe \n\n". 
+			"Nome: " . $deNome . "\n".
+			"Assunto: " . $deAssunto ."\n".
+			"Mensagem: " . $demensagem ."\n\n".
+			"Mensagem Enviada pelo Consepe";
 	}
 
-
+		require_once('class.phpmailer.php');
 
 		$mailer = new PHPMailer();
 		$mailer->IsSMTP();
@@ -52,14 +34,13 @@ function my_action_enviar_email() {
 		date_default_timezone_set('America/Sao_Paulo');
 
 		$mailer->FromName = $deNome; //Nome que será exibido para o destinatário
-		$mailer->From = $deEmail; //Obrigatório ser a mesma caixa postal indicada em "username"
-		$mailer->AddReplyTo($deEmail,$deNome);
-		$mailer->AddAddress('adriano@comunicandoideias.com.br'); //Destinatários
+		$mailer->From = 'contato@consepeextrema.org'; //Obrigatório ser a mesma caixa postal indicada em "username"
+		$mailer->AddReplyTo('contato@consepeextrema.org', $deNome);
+		$mailer->AddAddress('contato@consepeextrema.org'); //Destinatários
 
 		//Conversor UTF-8 para acentuação
-		//$assunto = "Página Orçamento";
 		$mailer->Subject = $assunto = '=?UTF-8?B?'.base64_encode($assunto).'?=';		
-		$mailer->Subject = "E-mail do Site Fuji Multimarcas" ." - ".date("H:i").'-'.date("d/m/Y");
+		$mailer->Subject = "E-mail do Site Consepe" ." - ".date("H:i").'-'.date("d/m/Y");
 		$mailer->Body = $mensagem;
 		$mailer->CharSet = "UTF-8";
 
@@ -68,6 +49,6 @@ function my_action_enviar_email() {
 		<?php }
 
 		else { ?>
-			<h3 class='erro'>A mensagem não pode ser enviada, tente novamente ou tente mais tarde </h3>
-		<?php }	
+			<h3 class='erro'>A mensagem não pode ser enviada, tente novamente ou tente mais tarde</h3>
+		<?php }
 }
