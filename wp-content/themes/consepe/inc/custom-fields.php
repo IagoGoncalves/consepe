@@ -2,7 +2,7 @@
 
 function custom_metabox() {
    global $post;
-   //Pagina consepe-------------------------
+  //Pagina consepe-------------------------
      $post_metabox = new Odin_Metabox(
         'info-pdf', // Slug/ID of the Metabox (Required)
         'Info', // Metabox name (Required)
@@ -41,6 +41,25 @@ function custom_metabox() {
             ),    
         )
      );
+  //Noticia ------------------------------
+    $post_metabox = new Odin_Metabox(
+      'fonte-foto', // Slug/ID of the Metabox (Required)
+      'Fonte', // Metabox name (Required)
+      'noticia', // Slug of Post Type (Optional)
+      'normal', // Context (options: normal, advanced, or side) (Optional)
+      'high' // Priority (options: high, core, default or low) (Optional)
+    );
+    $post_metabox->set_fields(
+      array(
+        array(
+              'id'          => 'fonte-divulgacao', // Required
+              'label'       => __( 'Digite a fonte', 'odin' ), // Required
+              'type'        => 'text', // Obrigatório
+              'default'     => '', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
+              'description' => __( 'Insira o autor da foto', 'odin' ), // Optional
+          ),    
+      )
+    );
   //Contatos -----------------------------
      $post_metabox = new Odin_Metabox(
         'contatos', // Slug/ID of the Metabox (Required)

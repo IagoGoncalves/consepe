@@ -37,7 +37,14 @@ get_header(); ?>
 						</svg>
 						<p class="data"><?php the_time('d \d\e F \d\e Y') ?></p>
 					</div>
-					<p class="referencia">Imagem: Divulgação</p>
+					<?php
+						$fonte =  get_post_meta( $post->ID,'fonte-divulgacao', true);
+					?>
+					<?php if ($fonte != '') { ?>
+						<p class="referencia">Imagem: <?php echo $fonte?></p>
+					<?php } else { ?>
+						<p class="referencia">Imagem: Divulgação</p>
+					<?php } ?>
 				</article>
 			</section>
 			<section class="conteudo">
