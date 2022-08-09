@@ -25,7 +25,6 @@ body{
 h1, h2, h3, h4, h5, p, a, b, title, span, input, button{
     letter-spacing: 1.0px;  
 }
-
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -189,7 +188,7 @@ header{
                                         text-transform: uppercase;
                                         color: #FFFFFF;
                                         font-weight: 600;
-                                        font-size: 20px;
+                                        font-size: 18px;
                                         background: transparent;
                                         transition: all 0.3s;
                                         @media screen and (max-width: 430px) and (min-width: 220px) {
@@ -396,7 +395,7 @@ header{
                                 h2{
                                         @extend .col-md-7;
                                         padding: 0;
-                                        font-size: 64px;
+                                        font-size: 60px;
                                         font-weight: 600;
                                         text-transform: uppercase;
                                         width: 630px;
@@ -411,9 +410,6 @@ header{
                                         text-align: center;
                                         align-items:center;
                                         padding:0px;
-                                        h2{
-                                                font-size:60px
-                                        }
                                         .imagem{
                                                 img{
                                                         width: 350px;
@@ -463,11 +459,11 @@ header{
                                 h2{
                                         padding-bottom: 40px;
                                         font-weight: 600;
-                                        font-size: 38px;
+                                        font-size: 35px;
                                 }
                                 p{
                                         font-weight: 400;
-                                        font-size: 22px;
+                                        font-size: 18px;
                                         padding-bottom: 65px;
                                 }
                                 .saiba-mais{
@@ -478,7 +474,7 @@ header{
                                         font-weight: 600;
                                         font-size: 16px;
                                         border-radius: 10px;
-                                        padding: 25px 45px 25px 25px;
+                                        padding: 20px 40px 20px 20px;
                                         border: 2px solid;
                                         text-transform: uppercase;
                                         transition: all .4s;
@@ -508,9 +504,6 @@ header{
                                 @media screen and (max-width: 1024px) and (min-width: 220px) {
                                         h2{
                                                 font-size: 30px;
-                                        }
-                                        p{
-                                                font-size: 20px;;
                                         }
                                 } 
                         }
@@ -855,24 +848,20 @@ header{
                                 padding-right: 145px;
                                 h2{
                                         padding-bottom:40px;     
-                                        font-size: 38px;
+                                        font-size: 35px;
                                         font-weight: 600;
                                         color: #112D4E;
                                 }
                                 p{
                                         padding-bottom:60px;
-                                        font-size: 22px;
+                                        font-size: 18px;
                                         font-weight: 400;
                                         color: #112D4E;
                                 }
-                                
                                 @media screen and (max-width: 1024px) and (min-width: 220px) {
                                         padding-right:0px;
                                         h2{
                                                 font-size: 30px;
-                                        }
-                                        p{
-                                                font-size: 20px;
                                         }
                                 }
                         }
@@ -885,7 +874,7 @@ header{
                                         font-weight: 600;
                                         font-size: 16px;
                                         border-radius: 10px;
-                                        padding: 25px;
+                                        padding: 20px;
                                         border: 2px solid;
                                         text-transform: uppercase;
                                         transition: all .3s;
@@ -901,7 +890,7 @@ header{
                                                 color:#fff;
                                                 transition: all .3s;
                                                 border-color:#112D4E;
-                                                padding: 25px 20px 25px 25px;
+                                                padding: 20px 15px 20px 20px;
                                                 svg{
                                                         margin-left: 15px;
                                                         transition: all .3s;
@@ -1284,13 +1273,13 @@ header{
                         text-align: center;
                         padding: 20px 0 80px 0;
                         font-weight: 600;
-                        font-size: 38px;
+                        font-size: 35px;
                         color: #112D4E;
                 }
                 .sobre{
                         p{
                                 text-align: center;
-                                font-size: 22px;
+                                font-size: 18px;
                                 text-align: center;
                                 color: rgba(64, 64, 64, 0.8);
                                 text-transform: none;
@@ -1300,7 +1289,7 @@ header{
         .fluxo{
                 h2{
                         font-weight: 600;
-                        font-size: 38px;
+                        font-size: 35px;
                         line-height: 51px;
                         color: #404040;
                         padding: 121px 0 80px 0;
@@ -1326,7 +1315,7 @@ header{
                 padding: 20px;
                 .confira{
                         font-weight: 600;
-                        font-size: 38px;
+                        font-size: 35px;
                         line-height: 51px;
                         color: #112D4E;
                         text-transform: none;
@@ -2068,7 +2057,7 @@ header{
                                 padding: 0;
                                 .destaque{
                                         font-weight: 600;
-                                        font-size: 38px;
+                                        font-size: 35px;
                                         color: #404040;
                                         padding: 0 0 50px 0;
                                         margin-top: 45px;
@@ -2076,7 +2065,7 @@ header{
                                 p{
                                         color: #404040;
                                         opacity: 0.8;
-                                        font-size: 20px;
+                                        font-size: 18px;
                                         text-align: justify;
                                 }
                                 .icones{
@@ -2582,17 +2571,36 @@ footer{
                                 align-items: center;
                                 justify-content: center;
                                 text-decoration: none;
+                                svg{
+                                        transition: all .3s;
+                                }
                                 span{
                                         padding-left: 12px;
                                         color: white;
                                         font-weight: 600;
                                         font-size: 20px;
                                 }
+                                &:hover{
+                                        text-decoration: underline;
+                                        color: #fff;
+                                        svg{
+                                                transform: scale(0.9);
+                                                transition: all .3s;
+                                        }
+                                }
                         }
                 }
                 .icn{
-                        svg{
-                                margin-right: 20px;
+                        a{
+                                text-decoration: none;
+                                svg{
+                                        margin-right: 20px;
+                                        transition: all .3s;
+                                        &:hover{
+                                                transform: scale(0.9);
+                                                transition: all .3s;
+                                        }
+                                }
                         }
                 }
         }
